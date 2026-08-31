@@ -1,0 +1,22 @@
+﻿{
+  "short_name": "Elysian Global",
+  "name": "Elysian Consulting Ltd | International Professional Services & Advisory",
+  "description": "International professional services, independent project oversight, UK healthcare governance, and diaspora advisory across Southern Africa and Europe.",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1E2A38",
+  "background_color": "#F7F4EE",
+  "orientation": "portrait-primary"
+}

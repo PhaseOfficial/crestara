@@ -1,0 +1,191 @@
+=== PAGE 1 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+WEBSITE LEGAL & 
+COMPLIANCE PACK
+For a Data Protection, Cybersecurity & Financial Consultancy
+This pack contains draft website documents that can be adapted once the company's ﬁnal registered details, website 
+domain, service providers and actual data-processing practices are conﬁrmed. Replace all text in square brackets 
+before publication.
+Information to Complete Before Publishing
+• Data Shield Consultancy Group
+• Company Registration Number
+• Registered/Business Address
+• Country of Incorporation-Zimbabwe
+• Website Domain-www.datashield.it.com
+• General Contact Email-info@datashield.it.com
+• Privacy Contact.
+• Telephone Number-+263 775040725
+• [Hosting Provider]
+• [Analytics Provider, if any]
+• [Cookie/Consent Platform, if any]
+Template for completion and legal/compliance review before publication
+
+=== PAGE 2 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+PART 1 - WEBSITE PRIV ACY NOTICE
+1. Who We Are And What We Offer
+Cybersecurity, ﬁnancial consultancy and related professional services. This Privacy Notice should explain how we 
+collect, use, disclose, retain and protect personal information.When one visits www.datashield.it.com,one must get to 
+contact us, request a quotation, subscribe to communications or otherwise interact with us through the website.
+2. Information We May Collect
+Depending on how one interacts with us, we may collect the name, job title, organisation, email address, telephone 
+number, information included in enquiries or uploaded documents, quotation/service interests, correspondence 
+records, technical information such as IP address and browser/device information, and cookie or analytics information 
+where applicable.
+3. How We Collect Information
+We may collect information directly from the client when they complete a form, send an email, telephone us, request 
+a quotation or provide information during an enquiry. Some technical information may be collected automatically 
+through the website, server logs and permitted cookies or similar technologies. We may also receive business contact 
+information from authorised representatives of organisations that engage with us.
+4. Legal and Compliance Basis
+We will process personal information only where there is an appropriate legal basis under the laws applicable to the 
+particular processing activity. Depending on the circumstances, this may include consent, contractual necessity, 
+compliance with a legal obligation, legitimate business interests, or another basis recognised by applicable data-
+protection law. The precise basis should be conﬁrmed for each material processing activity before this notice is 
+published.
+5. Sharing of Information
+We may share information with authorised personnel, professional advisers, technology/hosting providers, email or 
+CRM providers, payment or accounting service providers, regulators, courts or public authorities where required, and 
+other processors or service providers that support legitimate business operations. Appropriate contractual and security 
+safeguards should be used where required.
+6. International Transfers
+If personal information is transferred or accessed outside the country in which it was collected, we will take steps 
+required by applicable law to ensure an appropriate level of protection. The ﬁnal website notice should identify any 
+material cross-border hosting or service-provider arrangements once conﬁrmed.
+7. Retention
+We retain personal information only for as long as reasonably necessary for the purpose for which it was collected 
+and to meet legal, regulatory, contractual, accounting, dispute-resolution and security requirements. Speciﬁc retention 
+periods should be documented in the company's retention schedule.
+8. Security
+We use reasonable technical and organisational measures designed to protect personal information against 
+unauthorised access, loss, misuse, alteration or disclosure.Users should avoid sending unnecessary sensitive 
+information through general website forms.
+Template for completion and legal/compliance review before publication
+
+=== PAGE 3 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+9. Your Rights
+Depending on applicable law and the circumstances, individuals should have rights relating to access, correction, 
+deletion, restriction, objection, portability, withdrawal of consent and complaints to an appropriate regulator. Requests 
+may be sent to info@datashield.it.com. We may need to verify identity before acting on a request.
+10. Children
+The website and professional services are primarily directed to organisations and adults. We do not intentionally use 
+the website to solicit personal information from children. If the company's services later involve children's 
+information, this section should be revised to reﬂect the actual processing and applicable safeguards.
+11. Contact
+Privacy questions or requests may be directed to: 
+Data Shield Advisory 
+[Business Address] 
+Email: info@datashield.it.com 
+Telephone: +263 775 040 725 
+Website: www.datashield.it.com
+Template for completion and legal/compliance review before publication
+
+=== PAGE 4 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+PART 2 - COOKIE POLICY
+The website may use strictly necessary cookies required for security and core functionality; preference cookies; 
+analytics cookies; and, only if actually implemented, marketing or advertising cookies. The ﬁnal policy must reﬂect 
+the technologies actually deployed on the live website.
+Before launch, create a live cookie register identifying each cookie or similar technology, its provider, purpose, 
+duration and category. Do not publish a generic list that does not match the website….(only when necessary)
+Users may manage consent through Cookie Settings Link / Consent Platform and may also control cookies through 
+browser settings. Disabling certain cookies may affect website functionality.
+Questions about cookies may be sent to compliance@datashield.it.com
+Template for completion and legal/compliance review before publication
+
+=== PAGE 5 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+PART 3 - WEBSITE TERMS OF USE
+1. Acceptance
+By accessing www.datashield.it.com, one agrees to use the website lawfully and in accordance with these Terms of 
+Use.
+2. Informational Purpose
+Website content should provide general information about the company and its services. It should not by itself create 
+a client relationship or constitute tailored legal, regulatory, cybersecurity, accounting, tax, investment or ﬁnancial 
+advice.
+3. Engagements
+Professional services are provided only after the company accepts an engagement and the parties agree the applicable 
+scope, fees and contractual terms.
+4. Intellectual Property
+Unless otherwise stated, website text, branding, graphics, templates and other original materials are owned by or 
+licensed to Data Shield Advisory. Users may not reproduce or commercially exploit them without permission except 
+where permitted by law.
+5. Acceptable Use
+Users must not attempt unauthorised access, introduce malicious code, interfere with website security, scrape 
+protected information, impersonate another person, misuse forms, or use the website for unlawful purposes.
+6. Third-Party Links
+The website may link to third-party resources. We are not responsible for third-party content, availability, security or 
+privacy practices merely because a link is provided.
+7. Accuracy and Availability
+We should aim to keep website information useful and current but do not guarantee that all content is complete, error-
+free or continuously available. Regulatory information may change and should be conﬁrmed for a speciﬁc 
+engagement.
+8. Liability
+To the extent permitted by applicable law, liability arising solely from reliance on general website content may be 
+limited. Nothing in these terms excludes liability that cannot lawfully be excluded. Final limitation wording should be 
+reviewed by qualiﬁed counsel in the relevant jurisdiction.
+10. Contact
+Questions concerning these Terms may be sent to compliance@datashield.it.com
+Template for completion and legal/compliance review before publication
+
+=== PAGE 6 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+PART 4 - PROFESSIONAL SERVICES DISCLAIMER
+Information published on this website is general in nature and is provided to describe Data Shield Advisory and its 
+services. It should not be treated as a substitute for advice based on a client's particular circumstances. 
+ 
+Data-protection and cybersecurity requirements should depend on the organisation, information processed, systems 
+used, contractual arrangements and applicable law. Financial consultancy content on the website should not be 
+interpreted as regulated investment, legal, tax or accounting advice unless the company is speciﬁcally authorised and 
+engaged to provide the relevant service. 
+ 
+No professional-client relationship is created merely by visiting the website, submitting a general enquiry or receiving 
+preliminary information. A formal engagement begins only when accepted by the company under agreed terms. 
+ 
+Regulatory fees, statutory charges or third-party costs displayed or discussed on the website should be clearly 
+distinguished from the company's own professional fees and should be veriﬁed before a client commits to a service.
+Template for completion and legal/compliance review before publication
+
+=== PAGE 7 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+PART 5 - CONTACT FORM PRIV ACY WORDING
+We will use the information provided to respond to the clients´enquiry and, where relevant, prepare a quotation or 
+discuss our services. Unnecessary sensitive or conﬁdential information should not be submitted at this point.For more 
+information about how we handle personal information one should refer to our Privacy Notice.
+Suggested Form Fields(can also be changed)
+• Full name
+• Organisation
+• Work email
+• Telephone (optional)
+• Service required
+• Message / enquiry
+Optional Marketing Consent
+If the company intends to send optional marketing communications, use a separate unticked consent mechanism 
+where required. Example: "I would like to receive occasional updates about Data Shield Advisory's services and 
+insights. I understand that I can unsubscribe at any time." Do not bundle optional marketing consent with submission 
+of an ordinary enquiry.
+Template for completion and legal/compliance review before publication
+
+=== PAGE 8 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+PART 6 - WEBSITE LEGAL / COMPANY INFORMATION
+-Our Team includes professionals holding certiﬁcations in Financial Modelling and Valuation analysis,Business 
+Intelligence And Data Analysis,Banking and Investment Management,CFA,DPO Certiﬁcation,Cyber Security and 
+Forensic Auditing,Comptia Sec,Ec-Council CEH Practical.
+Item Information to Publish
+Registered company name Data Shield Advisory
+Registration number
+Registered Business Address
+Country of incorporation Zimbabwe
+General email info@datashield.it.com
+Privacy Contact /email compliace@datashield.it.com
+Telephone 263775040725
+Website Domain www.datashield.it.com
+Relevant licences/Accreditations
+Template for completion and legal/compliance review before publication
+
+=== PAGE 9 ===
+WEBSITE LEGAL & COMPLIANCE PACK | DRAFT
+Template for completion and legal/compliance review before publication
+
