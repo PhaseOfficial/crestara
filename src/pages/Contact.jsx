@@ -26,12 +26,6 @@ const Contact = () => {
       icon: "military_tech"
     },
     {
-      role: "Executive Director (Direct)",
-      email: "natashazama@crestaraadvisorygroup.com",
-      desc: "Direct leadership correspondence with Natasha Zama",
-      icon: "person"
-    },
-    {
       role: "General Inquiries & Client Desk",
       email: "info@crestaraadvisorygroup.com",
       desc: "New client onboarding, service scoping & commercial billing",
@@ -88,25 +82,25 @@ const Contact = () => {
       />
 
       {/* Hero Header */}
-      <section className="py-20 px-6 md:px-12 bg-[#3B010B] animate-hero-gradient text-white relative overflow-hidden text-center space-y-6 border-b border-[#F2D9A0]/20">
+      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 animate-hero-gradient text-[#3B010B] relative overflow-hidden text-center space-y-6 border-b border-[#F2D9A0]">
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
-            <span className="material-symbols-outlined text-sm text-[#F2D9A0]">contact_support</span>
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
+            <span className="material-symbols-outlined text-sm text-[#75162D]">contact_support</span>
             Direct Executive & Practice Desk
           </div>
           
           <motion.h1 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-4xl md:text-6xl font-extrabold tracking-tight text-white font-display"
+            className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#3B010B] font-display"
           >
-            Initiate Your <span className="gold-gradient-text">Advisory Engagement</span>
+            Initiate Your <span className="burgundy-gradient-text">Advisory Engagement</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-base md:text-xl text-[#F2E5C6]/90 max-w-2xl mx-auto font-light leading-relaxed"
+            className="text-base md:text-xl text-[#560B18]/90 max-w-2xl mx-auto font-light leading-relaxed"
           >
             Connect directly with Natasha Zama and our senior certified directors across Data Protection, Cybersecurity, and Financial Advisory.
           </motion.p>
@@ -120,17 +114,40 @@ const Contact = () => {
           {/* Left Column: Direct Directory & Quick Desk Cards */}
           <div className="lg:col-span-5 space-y-6">
             
+            {/* Visual Corporate Desk Banner */}
+            <div className="relative h-36 rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                alt="Crestara Advisory Group Client Engagement Desk"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/85 via-[#75162D]/60 to-transparent flex items-center p-5">
+                <div className="text-white space-y-1">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#F2D9A0] bg-white/10 px-2.5 py-0.5 rounded-full border border-[#F2D9A0]/30 font-display">
+                    Harare & Southern Africa
+                  </span>
+                  <h3 className="text-base font-bold font-display text-white">
+                    Direct Partner Engagement
+                  </h3>
+                  <p className="text-[11px] text-[#F2E5C6]/90 font-light">
+                    Confidential scoping & RFP turn-around in 24 hrs
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Quick Hotline Card */}
-            <div className="bg-[#3B010B] rounded-3xl p-6 text-white border border-[#F2D9A0]/30 shadow-xl space-y-4">
+            <div className="bg-gradient-to-br from-[#F2E5C6] via-white to-[#F2D9A0]/70 rounded-3xl p-6 text-[#3B010B] border-2 border-[#F2D9A0] shadow-xl space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#F2D9A0]">Direct Practice Hotline</span>
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#75162D] font-display">Direct Practice Hotline</span>
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               </div>
               <div>
-                <a href="tel:+263775040725" className="text-2xl font-extrabold text-white hover:text-[#F2D9A0] transition-colors block font-display">
+                <a href="tel:+263775040725" className="text-2xl font-extrabold text-[#3B010B] hover:text-[#75162D] transition-colors block font-display">
                   +263 775 040 725
                 </a>
-                <p className="text-xs text-[#F2E5C6]/80 font-light mt-1">
+                <p className="text-xs text-gray-600 font-light mt-1">
                   Harare, Zimbabwe • Southern Africa • International Client Support
                 </p>
               </div>
@@ -139,7 +156,7 @@ const Contact = () => {
                   href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20request%20an%20advisory%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-2 shadow-lg font-display"
                 >
                   <FaWhatsapp className="text-lg" />
                   <span>Instant WhatsApp Advisory</span>
@@ -148,9 +165,9 @@ const Contact = () => {
             </div>
 
             {/* Comprehensive 5-Email Directory */}
-            <div className="bg-white rounded-3xl p-6 border border-[#F2E5C6] shadow-sm space-y-4">
+            <div className="bg-white rounded-3xl p-6 border border-[#F2D9A0] shadow-sm space-y-4">
               <div className="flex items-center gap-3 pb-3 border-b border-[#FAF7F2]">
-                <div className="w-10 h-10 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 shadow-sm">
                   <span className="material-symbols-outlined text-xl">alternate_email</span>
                 </div>
                 <div>
@@ -164,22 +181,22 @@ const Contact = () => {
                   <a
                     key={idx}
                     href={`mailto:${item.email}`}
-                    className="block p-3.5 rounded-2xl bg-[#FAF7F2] hover:bg-[#3B010B] hover:text-white transition-all text-[#3B010B] group border border-[#F2E5C6]/80"
+                    className="block p-3.5 rounded-2xl bg-[#FAF7F2] hover:bg-[#F2E5C6]/60 hover:border-[#75162D] transition-all text-[#3B010B] group border border-[#F2D9A0]"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div className="space-y-0.5 min-w-0">
-                        <div className="text-[10px] font-bold uppercase tracking-wider text-[#75162D] group-hover:text-[#F2D9A0] flex items-center gap-1.5">
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-[#75162D] flex items-center gap-1.5 font-display">
                           <span className="material-symbols-outlined text-xs">{item.icon}</span>
                           <span>{item.role}</span>
                         </div>
-                        <div className="text-xs font-semibold group-hover:text-white truncate font-mono">
+                        <div className="text-xs font-semibold text-[#3B010B] group-hover:text-[#75162D] truncate font-mono">
                           {item.email}
                         </div>
-                        <div className="text-[11px] text-gray-500 group-hover:text-white/70 font-light leading-snug">
+                        <div className="text-[11px] text-gray-500 font-light leading-snug">
                           {item.desc}
                         </div>
                       </div>
-                      <span className="material-symbols-outlined text-sm text-[#75162D] group-hover:text-[#F2D9A0] flex-shrink-0 mt-1">arrow_outward</span>
+                      <span className="material-symbols-outlined text-sm text-[#75162D] group-hover:translate-x-0.5 transition-transform flex-shrink-0 mt-1">arrow_outward</span>
                     </div>
                   </a>
                 ))}
@@ -187,8 +204,8 @@ const Contact = () => {
             </div>
 
             {/* Regulatory Safeguards Notice */}
-            <div className="bg-[#FAF7F2] p-5 rounded-2xl border border-[#F2E5C6] text-xs text-gray-600 font-light leading-relaxed space-y-1">
-              <div className="font-bold text-[#75162D] uppercase tracking-wider flex items-center gap-1 text-[11px]">
+            <div className="bg-[#FAF7F2] p-5 rounded-2xl border border-[#F2D9A0] text-xs text-gray-600 font-light leading-relaxed space-y-1">
+              <div className="font-bold text-[#75162D] uppercase tracking-wider flex items-center gap-1 text-[11px] font-display">
                 <span className="material-symbols-outlined text-sm">lock</span>
                 <span>Confidentiality & Non-Disclosure</span>
               </div>
@@ -205,10 +222,10 @@ const Contact = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 md:p-10 rounded-3xl border border-[#F2E5C6] shadow-xl space-y-6"
+              className="bg-white p-8 md:p-10 rounded-3xl border-2 border-[#F2D9A0] shadow-xl space-y-6"
             >
               <div className="space-y-1 border-b border-[#FAF7F2] pb-4">
-                <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full">
+                <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
                   <span className="material-symbols-outlined text-sm">edit_note</span>
                   Quotation & RFP Portal
                 </div>
@@ -229,7 +246,7 @@ const Contact = () => {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="px-6 py-2.5 bg-[#3B010B] text-[#F2D9A0] rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#75162D]"
+                    className="px-6 py-2.5 bg-[#75162D] text-[#F2E5C6] rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#3B010B] font-display"
                   >
                     Submit Another Inquiry
                   </button>
@@ -248,7 +265,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
                         placeholder="e.g. Tendai Moyo" 
                       />
                     </div>
@@ -263,7 +280,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
                         placeholder="t.moyo@enterprise.co.zw" 
                       />
                     </div>
@@ -280,7 +297,7 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
                         placeholder="+263 77... or international" 
                       />
                     </div>
@@ -294,7 +311,7 @@ const Contact = () => {
                         name="organization"
                         value={formData.organization}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
                         placeholder="e.g. Apex Financial Services" 
                       />
                     </div>
@@ -309,7 +326,7 @@ const Contact = () => {
                         name="pillar"
                         value={formData.pillar}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
                       >
                         <option>Data Protection & Outsourced DPO</option>
                         <option>Cybersecurity & Penetration Testing</option>
@@ -327,7 +344,7 @@ const Contact = () => {
                         name="packageInterest"
                         value={formData.packageInterest}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
                       >
                         <option>Compliance Starter Pack</option>
                         <option>Essential DPO Retainer</option>
@@ -358,7 +375,7 @@ const Contact = () => {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                      className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
                       placeholder="Please outline your entity size, current compliance status, technical environment, or required deliverables..."
                     ></textarea>
                   </div>
@@ -390,7 +407,7 @@ const Contact = () => {
 
                   <button 
                     type="submit" 
-                    className="w-full bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 font-display"
+                    className="w-full bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 font-display border border-[#F2D9A0]/30"
                   >
                     <FaWhatsapp className="text-lg text-[#25D366]" />
                     <span>Transmit Advisory Inquiry via WhatsApp Desk</span>

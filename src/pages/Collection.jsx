@@ -257,25 +257,25 @@ const Collection = () => {
       />
 
       {/* Hero Header */}
-      <section className="bg-[#3B010B] py-20 px-6 md:px-12 text-white animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]/20">
+      <section className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-20 px-6 md:px-12 text-[#3B010B] animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]">
         <div className="max-w-6xl mx-auto text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
-            <span className="material-symbols-outlined text-sm text-[#F2D9A0]">grid_view</span>
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
+            <span className="material-symbols-outlined text-sm text-[#75162D]">grid_view</span>
             Multidisciplinary Practice Catalog
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-display">
-            Services & <span className="gold-gradient-text">Advisory Packages</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-display text-[#3B010B]">
+            Services & <span className="burgundy-gradient-text">Advisory Packages</span>
           </h1>
 
-          <p className="text-base md:text-xl text-[#F2E5C6]/90 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-base md:text-xl text-[#560B18]/90 max-w-3xl mx-auto font-light leading-relaxed">
             Institutional-grade advisory solutions tailored for Zimbabwean, regional, and international enterprises. Select specialized service packages across our three disciplines or engage unified multi-pillar retainers.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
               to="/contact"
-              className="bg-[#F2D9A0] text-[#3B010B] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#F2E5C6] transition-all shadow-xl font-semibold font-display"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl font-semibold font-display border border-[#F2D9A0]/40"
             >
               Request Custom Proposal
             </Link>
@@ -283,7 +283,7 @@ const Collection = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20service%20packages."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl"
+              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl font-display"
             >
               <FaWhatsapp className="text-lg" />
               <span>WhatsApp Advisory Desk</span>
@@ -293,7 +293,7 @@ const Collection = () => {
       </section>
 
       {/* Pillar Selection Tabs */}
-      <section className="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-[#F2E5C6] shadow-sm py-4 px-6 md:px-12">
+      <section className="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-[#F2D9A0] shadow-sm py-4 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 md:gap-3 overflow-x-auto no-scrollbar py-1">
           {[
             { id: "all", label: "All Packages", icon: "dashboard" },
@@ -305,10 +305,10 @@ const Collection = () => {
             <button
               key={tab.id}
               onClick={() => setActivePillar(tab.id)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap font-display ${
                 activePillar === tab.id
-                  ? "bg-[#3B010B] text-[#F2D9A0] shadow-md"
-                  : "bg-[#FAF7F2] text-gray-700 hover:bg-[#F2E5C6]/60 border border-[#F2E5C6]"
+                  ? "bg-[#75162D] text-[#F2E5C6] shadow-md border border-[#F2D9A0]/40"
+                  : "bg-white text-gray-800 hover:bg-[#F2E5C6]/60 border border-[#F2D9A0]"
               }`}
             >
               <span className="material-symbols-outlined text-base">{tab.icon}</span>
@@ -324,20 +324,36 @@ const Collection = () => {
         {/* 1. Cybersecurity & Forensics */}
         {(activePillar === "all" || activePillar === "cy") && (
           <div className="space-y-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2E5C6] pb-4">
-              <div>
-                <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full mb-2">
-                  <span className="material-symbols-outlined text-sm">security</span>
-                  Offensive Security & Defense
+            <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+                alt="Cybersecurity & Offensive Security Operations"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
+                <div className="space-y-2 text-white max-w-2xl">
+                  <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
+                    <span className="material-symbols-outlined text-sm">security</span>
+                    Pillar 01 • Offensive Validation
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight text-white">
+                    Cybersecurity, Pentesting & Digital Forensics
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#F2E5C6]/90 font-light hidden sm:block">
+                    EC-Council CEH Practical and CompTIA Security+ certified offensive simulations and forensic diagnostics.
+                  </p>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#3B010B] font-display">
-                  Cybersecurity, Pentesting & Digital Forensics
-                </h2>
-                <p className="text-gray-600 text-sm font-light">
-                  EC-Council CEH Practical and CompTIA Security+ certified offensive validation, vulnerability assessments, and digital forensic investigations.
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2D9A0] pb-3">
+              <div>
+                <p className="text-gray-600 text-xs sm:text-sm font-light">
+                  Select an authorized testing scope or continuous defense retainer below.
                 </p>
               </div>
-              <Link to="/cybersecurity" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1">
+              <Link to="/cybersecurity" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
                 <span>View Dedicated Cyber Practice</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
@@ -349,12 +365,12 @@ const Collection = () => {
                   key={srv.id}
                   className={`rounded-3xl p-7 border transition-all flex flex-col justify-between group ${
                     srv.popular 
-                      ? "bg-[#3B010B] text-white border-2 border-[#F2D9A0] shadow-xl relative" 
-                      : "bg-white text-gray-800 border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D]"
+                      ? "bg-gradient-to-b from-[#F2E5C6]/60 via-white to-[#F2D9A0]/70 text-[#3B010B] border-2 border-[#75162D] shadow-xl relative" 
+                      : "bg-white text-gray-800 border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D]"
                   }`}
                 >
                   {srv.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F2D9A0] text-[#3B010B] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md font-sans">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#75162D] text-[#F2E5C6] text-[10px] font-black uppercase tracking-widest px-3.5 py-1 rounded-full shadow-md font-sans border border-[#F2D9A0]">
                       Offensive Security Flagship
                     </div>
                   )}
@@ -362,42 +378,40 @@ const Collection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                        srv.popular ? "bg-white/10 text-[#F2D9A0]" : "bg-[#75162D]/10 text-[#75162D]"
+                        srv.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
                       }`}>
                         {srv.tag}
                       </span>
-                      <span className={`text-[11px] font-medium ${srv.popular ? "text-white/70" : "text-gray-500"}`}>
+                      <span className="text-[11px] font-medium text-gray-500">
                         {srv.type}
                       </span>
                     </div>
 
-                    <h3 className={`text-xl font-bold font-display ${srv.popular ? "text-white" : "text-[#3B010B] group-hover:text-[#75162D]"} transition-colors`}>
+                    <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
                       {srv.title}
                     </h3>
 
-                    <p className={`text-xs font-light leading-relaxed ${srv.popular ? "text-white/80" : "text-gray-600"}`}>
+                    <p className="text-xs font-light leading-relaxed text-gray-600">
                       {srv.desc}
                     </p>
 
-                    <div className="p-3.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 space-y-1">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider block ${srv.popular ? "text-[#F2D9A0]" : "text-[#75162D]"}`}>
+                    <div className="p-3.5 rounded-2xl bg-[#F2E5C6]/40 border border-[#F2D9A0] space-y-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider block text-[#75162D]">
                         Key Value / Benefit:
                       </span>
-                      <p className={`text-xs font-light ${srv.popular ? "text-white/90" : "text-gray-700"}`}>
+                      <p className="text-xs font-light text-gray-800">
                         {srv.benefits}
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/10 dark:border-white/10">
-                      <span className={`text-[11px] font-bold uppercase tracking-wider block ${srv.popular ? "text-[#F2D9A0]" : "text-[#3B010B]"}`}>
+                    <div className="space-y-2 pt-2 border-t border-black/5">
+                      <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B]">
                         Deliverables Include:
                       </span>
                       <ul className="space-y-1.5">
                         {srv.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2">
-                            <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
-                              srv.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
-                            }`}>check_circle</span>
+                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
+                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
                             <span>{f}</span>
                           </li>
                         ))}
@@ -405,14 +419,10 @@ const Collection = () => {
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-4 border-t border-black/10 dark:border-white/10">
+                  <div className="pt-6 mt-4 border-t border-black/5">
                     <Link
                       to="/contact"
-                      className={`w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display ${
-                        srv.popular 
-                          ? "bg-[#F2D9A0] text-[#3B010B] hover:bg-[#F2E5C6] shadow-lg" 
-                          : "bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white shadow-sm"
-                      }`}
+                      className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] shadow-md border border-[#F2D9A0]/30"
                     >
                       <span>Request Security Scope</span>
                       <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -427,20 +437,36 @@ const Collection = () => {
         {/* 2. Data Protection & Outsourced DPO */}
         {(activePillar === "all" || activePillar === "dp") && (
           <div className="space-y-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2E5C6] pb-4">
-              <div>
-                <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full mb-2">
-                  <span className="material-symbols-outlined text-sm">policy</span>
-                  Regulatory Governance
+            <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
+              <img
+                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80"
+                alt="Data Protection & Regulatory Compliance"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
+                <div className="space-y-2 text-white max-w-2xl">
+                  <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
+                    <span className="material-symbols-outlined text-sm">policy</span>
+                    Pillar 02 • POTRAZ Statutory Compliance
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight text-white">
+                    Data Protection & Outsourced DPO Packages
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#F2E5C6]/90 font-light hidden sm:block">
+                    Full statutory alignment with the Data Protection Act [Chapter 12:07] and POTRAZ regulatory directives.
+                  </p>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#3B010B] font-display">
-                  Data Protection & Outsourced DPO Packages
-                </h2>
-                <p className="text-gray-600 text-sm font-light">
-                  Full statutory compliance with the Data Protection Act [Chapter 12:07] and POTRAZ regulatory directives.
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2D9A0] pb-3">
+              <div>
+                <p className="text-gray-600 text-xs sm:text-sm font-light">
+                  Appoint an independent accredited DPO or launch your organization-wide compliance roadmap.
                 </p>
               </div>
-              <Link to="/data-protection" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1">
+              <Link to="/data-protection" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
                 <span>View Dedicated DPO Practice</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
@@ -452,12 +478,12 @@ const Collection = () => {
                   key={srv.id}
                   className={`rounded-3xl p-7 border transition-all flex flex-col justify-between group ${
                     srv.popular 
-                      ? "bg-[#3B010B] text-white border-2 border-[#F2D9A0] shadow-xl relative" 
-                      : "bg-white text-gray-800 border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D]"
+                      ? "bg-gradient-to-b from-[#F2E5C6]/60 via-white to-[#F2D9A0]/70 text-[#3B010B] border-2 border-[#75162D] shadow-xl relative" 
+                      : "bg-white text-gray-800 border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D]"
                   }`}
                 >
                   {srv.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F2D9A0] text-[#3B010B] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md font-sans">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#75162D] text-[#F2E5C6] text-[10px] font-black uppercase tracking-widest px-3.5 py-1 rounded-full shadow-md font-sans border border-[#F2D9A0]">
                       Recommended Retainer
                     </div>
                   )}
@@ -465,42 +491,40 @@ const Collection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                        srv.popular ? "bg-white/10 text-[#F2D9A0]" : "bg-[#75162D]/10 text-[#75162D]"
+                        srv.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
                       }`}>
                         {srv.tag}
                       </span>
-                      <span className={`text-[11px] font-medium ${srv.popular ? "text-white/70" : "text-gray-500"}`}>
+                      <span className="text-[11px] font-medium text-gray-500">
                         {srv.type}
                       </span>
                     </div>
 
-                    <h3 className={`text-xl font-bold font-display ${srv.popular ? "text-white" : "text-[#3B010B] group-hover:text-[#75162D]"} transition-colors`}>
+                    <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
                       {srv.title}
                     </h3>
 
-                    <p className={`text-xs font-light leading-relaxed ${srv.popular ? "text-white/80" : "text-gray-600"}`}>
+                    <p className="text-xs font-light leading-relaxed text-gray-600">
                       {srv.desc}
                     </p>
 
-                    <div className="p-3.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 space-y-1">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider block ${srv.popular ? "text-[#F2D9A0]" : "text-[#75162D]"}`}>
+                    <div className="p-3.5 rounded-2xl bg-[#F2E5C6]/40 border border-[#F2D9A0] space-y-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider block text-[#75162D]">
                         Key Value / Benefit:
                       </span>
-                      <p className={`text-xs font-light ${srv.popular ? "text-white/90" : "text-gray-700"}`}>
+                      <p className="text-xs font-light text-gray-800">
                         {srv.benefits}
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/10 dark:border-white/10">
-                      <span className={`text-[11px] font-bold uppercase tracking-wider block ${srv.popular ? "text-[#F2D9A0]" : "text-[#3B010B]"}`}>
+                    <div className="space-y-2 pt-2 border-t border-black/5">
+                      <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B]">
                         Deliverables Include:
                       </span>
                       <ul className="space-y-1.5">
                         {srv.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2">
-                            <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
-                              srv.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
-                            }`}>check_circle</span>
+                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
+                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
                             <span>{f}</span>
                           </li>
                         ))}
@@ -508,14 +532,10 @@ const Collection = () => {
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-4 border-t border-black/10 dark:border-white/10">
+                  <div className="pt-6 mt-4 border-t border-black/5">
                     <Link
                       to="/contact"
-                      className={`w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display ${
-                        srv.popular 
-                          ? "bg-[#F2D9A0] text-[#3B010B] hover:bg-[#F2E5C6] shadow-lg" 
-                          : "bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white shadow-sm"
-                      }`}
+                      className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] shadow-md border border-[#F2D9A0]/30"
                     >
                       <span>Appoint DPO / Request Scope</span>
                       <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -530,20 +550,36 @@ const Collection = () => {
         {/* 3. Financial Analysis & Valuation Models */}
         {(activePillar === "all" || activePillar === "fin") && (
           <div className="space-y-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2E5C6] pb-4">
-              <div>
-                <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full mb-2">
-                  <span className="material-symbols-outlined text-sm">calculate</span>
-                  Financial Intelligence
+            <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                alt="Financial Analysis & FMVA Financial Modelling"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
+                <div className="space-y-2 text-white max-w-2xl">
+                  <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
+                    <span className="material-symbols-outlined text-sm">calculate</span>
+                    Pillar 03 • Quantitative Capital Intelligence
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight text-white">
+                    Financial Analysis, FMVA® Modelling & Dashboards
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#F2E5C6]/90 font-light hidden sm:block">
+                    Institutional 3-statement models, dynamic DCF valuations, and executive BIDA® analytics dashboards.
+                  </p>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#3B010B] font-display">
-                  Financial Analysis, FMVA® Modelling & Dashboards
-                </h2>
-                <p className="text-gray-600 text-sm font-light">
-                  Institutional 3-statement financial models, dynamic DCF company valuations, automated BIDA® dashboards, and fractional CFO advisory.
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2D9A0] pb-3">
+              <div>
+                <p className="text-gray-600 text-xs sm:text-sm font-light">
+                  Commission bankable models or fractional CFO management reporting.
                 </p>
               </div>
-              <Link to="/financial-advisory" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1">
+              <Link to="/financial-advisory" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
                 <span>View Dedicated Finance Practice</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
@@ -555,12 +591,12 @@ const Collection = () => {
                   key={srv.id}
                   className={`rounded-3xl p-7 border transition-all flex flex-col justify-between group ${
                     srv.popular 
-                      ? "bg-[#3B010B] text-white border-2 border-[#F2D9A0] shadow-xl relative" 
-                      : "bg-white text-gray-800 border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D]"
+                      ? "bg-gradient-to-b from-[#F2E5C6]/60 via-white to-[#F2D9A0]/70 text-[#3B010B] border-2 border-[#75162D] shadow-xl relative" 
+                      : "bg-white text-gray-800 border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D]"
                   }`}
                 >
                   {srv.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F2D9A0] text-[#3B010B] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md font-sans">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#75162D] text-[#F2E5C6] text-[10px] font-black uppercase tracking-widest px-3.5 py-1 rounded-full shadow-md font-sans border border-[#F2D9A0]">
                       Institutional Benchmark
                     </div>
                   )}
@@ -568,42 +604,40 @@ const Collection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                        srv.popular ? "bg-white/10 text-[#F2D9A0]" : "bg-[#75162D]/10 text-[#75162D]"
+                        srv.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
                       }`}>
                         {srv.tag}
                       </span>
-                      <span className={`text-[11px] font-medium ${srv.popular ? "text-white/70" : "text-gray-500"}`}>
+                      <span className="text-[11px] font-medium text-gray-500">
                         {srv.type}
                       </span>
                     </div>
 
-                    <h3 className={`text-xl font-bold font-display ${srv.popular ? "text-white" : "text-[#3B010B] group-hover:text-[#75162D]"} transition-colors`}>
+                    <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
                       {srv.title}
                     </h3>
 
-                    <p className={`text-xs font-light leading-relaxed ${srv.popular ? "text-white/80" : "text-gray-600"}`}>
+                    <p className="text-xs font-light leading-relaxed text-gray-600">
                       {srv.desc}
                     </p>
 
-                    <div className="p-3.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 space-y-1">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider block ${srv.popular ? "text-[#F2D9A0]" : "text-[#75162D]"}`}>
+                    <div className="p-3.5 rounded-2xl bg-[#F2E5C6]/40 border border-[#F2D9A0] space-y-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider block text-[#75162D]">
                         Key Value / Benefit:
                       </span>
-                      <p className={`text-xs font-light ${srv.popular ? "text-white/90" : "text-gray-700"}`}>
+                      <p className="text-xs font-light text-gray-800">
                         {srv.benefits}
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/10 dark:border-white/10">
-                      <span className={`text-[11px] font-bold uppercase tracking-wider block ${srv.popular ? "text-[#F2D9A0]" : "text-[#3B010B]"}`}>
+                    <div className="space-y-2 pt-2 border-t border-black/5">
+                      <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B]">
                         Deliverables Include:
                       </span>
                       <ul className="space-y-1.5">
                         {srv.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2">
-                            <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
-                              srv.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
-                            }`}>check_circle</span>
+                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
+                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
                             <span>{f}</span>
                           </li>
                         ))}
@@ -611,14 +645,10 @@ const Collection = () => {
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-4 border-t border-black/10 dark:border-white/10">
+                  <div className="pt-6 mt-4 border-t border-black/5">
                     <Link
                       to="/contact"
-                      className={`w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display ${
-                        srv.popular 
-                          ? "bg-[#F2D9A0] text-[#3B010B] hover:bg-[#F2E5C6] shadow-lg" 
-                          : "bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white shadow-sm"
-                      }`}
+                      className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] shadow-md border border-[#F2D9A0]/30"
                     >
                       <span>Commission Financial Model</span>
                       <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -633,20 +663,36 @@ const Collection = () => {
         {/* 4. Integrated Retainer Packages */}
         {(activePillar === "all" || activePillar === "int") && (
           <div className="space-y-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2E5C6] pb-4">
-              <div>
-                <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full mb-2">
-                  <span className="material-symbols-outlined text-sm">hub</span>
-                  Synergized Protection
+            <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+                alt="Integrated Corporate Governance Retainers"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
+                <div className="space-y-2 text-white max-w-2xl">
+                  <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
+                    <span className="material-symbols-outlined text-sm">hub</span>
+                    Synergized Enterprise Architecture
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight text-white">
+                    Integrated Multi-Pillar Retainers
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#F2E5C6]/90 font-light hidden sm:block">
+                    Unified coordination spanning Data Protection Officer mandates, Offensive Security, and Financial Intelligence.
+                  </p>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#3B010B] font-display">
-                  Integrated Multi-Pillar Retainers
-                </h2>
-                <p className="text-gray-600 text-sm font-light">
-                  Combine Data Protection, Cybersecurity, and Financial Intelligence under a unified advisory mandate.
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#F2D9A0] pb-3">
+              <div>
+                <p className="text-gray-600 text-xs sm:text-sm font-light">
+                  Single-point advisory coordination with substantial commercial efficiencies.
                 </p>
               </div>
-              <Link to="/contact" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1">
+              <Link to="/contact" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
                 <span>Request Custom Retainer Scope</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
@@ -658,50 +704,48 @@ const Collection = () => {
                   key={pkg.id}
                   className={`rounded-3xl p-7 flex flex-col justify-between transition-all ${
                     pkg.popular
-                      ? "bg-[#3B010B] text-white shadow-2xl border-2 border-[#F2D9A0] relative"
-                      : "bg-white text-gray-800 border border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D]"
+                      ? "bg-gradient-to-b from-[#F2E5C6]/60 via-white to-[#F2D9A0]/70 text-[#3B010B] shadow-xl border-2 border-[#75162D] relative"
+                      : "bg-white text-gray-800 border border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D]"
                   }`}
                 >
                   {pkg.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F2D9A0] text-[#3B010B] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md font-sans">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#75162D] text-[#F2E5C6] text-[10px] font-black uppercase tracking-widest px-3.5 py-1 rounded-full shadow-md font-sans border border-[#F2D9A0]">
                       Most Popular Suite
                     </div>
                   )}
 
                   <div className="space-y-4">
                     <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block ${
-                      pkg.popular ? "bg-white/10 text-[#F2D9A0] border border-[#F2D9A0]/30" : "bg-[#75162D]/10 text-[#75162D]"
+                      pkg.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
                     }`}>
                       {pkg.tag}
                     </span>
 
-                    <h3 className={`text-xl font-bold font-display ${pkg.popular ? "text-white" : "text-[#3B010B]"}`}>
+                    <h3 className="text-xl font-bold font-display text-[#3B010B]">
                       {pkg.title}
                     </h3>
 
-                    <p className={`text-xs font-light leading-relaxed ${pkg.popular ? "text-white/80" : "text-gray-600"}`}>
+                    <p className="text-xs font-light leading-relaxed text-gray-600">
                       {pkg.desc}
                     </p>
 
-                    <div className="p-3.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 space-y-1">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider block ${pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"}`}>
+                    <div className="p-3.5 rounded-2xl bg-[#F2E5C6]/40 border border-[#F2D9A0] space-y-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider block text-[#75162D]">
                         Key Value / Benefit:
                       </span>
-                      <p className={`text-xs font-light ${pkg.popular ? "text-white/90" : "text-gray-700"}`}>
+                      <p className="text-xs font-light text-gray-800">
                         {pkg.benefits}
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/10 dark:border-white/10">
-                      <p className={`text-[11px] font-bold uppercase tracking-wider ${pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"}`}>
+                    <div className="space-y-2 pt-2 border-t border-black/5">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#75162D]">
                         Included Disciplines:
                       </p>
                       <ul className="space-y-1.5">
                         {pkg.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2">
-                            <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
-                              pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
-                            }`}>check_circle</span>
+                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
+                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
                             <span>{f}</span>
                           </li>
                         ))}
@@ -709,14 +753,10 @@ const Collection = () => {
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-4 border-t border-black/10 dark:border-white/10">
+                  <div className="pt-6 mt-4 border-t border-black/5">
                     <Link
                       to="/contact"
-                      className={`w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display ${
-                        pkg.popular
-                          ? "bg-[#F2D9A0] text-[#3B010B] hover:bg-[#F2E5C6] shadow-lg"
-                          : "bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white"
-                      }`}
+                      className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] shadow-md border border-[#F2D9A0]/30"
                     >
                       <span>Request Retainer SLA</span>
                       <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -732,7 +772,7 @@ const Collection = () => {
 
       {/* Notice on Professional Boundaries */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-10">
-        <div className="bg-white p-8 rounded-3xl border border-[#F2E5C6] space-y-3">
+        <div className="bg-white p-8 rounded-3xl border border-[#F2D9A0] space-y-3 shadow-sm">
           <div className="flex items-center gap-2 text-[#75162D] font-bold text-xs uppercase tracking-wider font-display">
             <span className="material-symbols-outlined text-base">verified</span>
             <span>Professional Boundaries & Regulatory Authorization</span>
@@ -745,17 +785,17 @@ const Collection = () => {
 
       {/* Bottom CTA */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
-        <div className="bg-[#3B010B] p-10 md:p-14 rounded-3xl text-center text-white space-y-6 border border-[#F2D9A0]/30 shadow-2xl">
-          <h2 className="text-2xl md:text-4xl font-extrabold font-display">
+        <div className="bg-gradient-to-br from-[#F2E5C6] via-white to-[#F2D9A0]/70 p-10 md:p-14 rounded-3xl text-center text-[#3B010B] space-y-6 border-2 border-[#F2D9A0] shadow-2xl">
+          <h2 className="text-2xl md:text-4xl font-extrabold font-display text-[#3B010B]">
             Need a Custom Advisory Proposal or Multi-Entity SLA?
           </h2>
-          <p className="text-sm md:text-base text-[#F2E5C6]/90 max-w-2xl mx-auto font-light">
+          <p className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto font-light">
             Our directors will prepare a structured Request for Proposal (RFP) tailored to your operational volume, system infrastructure, and regulatory requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
               to="/contact"
-              className="bg-[#F2D9A0] text-[#3B010B] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#F2E5C6] transition-all shadow-xl font-semibold font-display"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl font-semibold font-display border border-[#F2D9A0]/30"
             >
               Request Custom Proposal
             </Link>
@@ -763,7 +803,7 @@ const Collection = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20request%20a%20commercial%20quotation."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl"
+              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl font-display"
             >
               <FaWhatsapp className="text-lg" />
               <span>WhatsApp Desk (+263 775 040 725)</span>

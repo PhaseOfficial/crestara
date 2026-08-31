@@ -116,18 +116,18 @@ const AboutApproach = () => {
       </section>
 
       {/* The Crestara Commitment */}
-      <section className="py-16 px-6 md:px-12 bg-[#3B010B] text-white relative overflow-hidden font-sans border-b border-[#F2D9A0]/20">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#75162D]/30 rounded-full blur-3xl pointer-events-none"></div>
+      <section className="py-16 px-6 md:px-12 bg-gradient-to-b from-[#F2E5C6]/60 via-white to-[#F2D9A0]/50 text-[#3B010B] relative overflow-hidden font-sans border-b border-[#F2D9A0]">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#F2D9A0]/40 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
           <motion.div {...fadeIn} className="lg:col-span-5 space-y-3">
-            <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30">
-              <span className="material-symbols-outlined text-sm">workspace_premium</span>
+            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/60 px-4 py-1.5 rounded-full border border-[#75162D]/30 shadow-sm font-display">
+              <span className="material-symbols-outlined text-sm text-[#75162D]">workspace_premium</span>
               Our Executive Pledge
             </div>
-            <h2 className="text-2xl md:text-3xl font-extrabold leading-tight text-white font-display">
+            <h2 className="text-2xl md:text-3xl font-extrabold leading-tight text-[#3B010B] font-display">
               The Crestara Standard of Professional Integrity
             </h2>
-            <p className="text-white/75 font-light text-xs sm:text-sm leading-relaxed">
+            <p className="text-gray-600 font-light text-xs sm:text-sm leading-relaxed">
               Every client mandate is governed by explicit professional commitments designed to safeguard your data, systems, and capital.
             </p>
           </motion.div>
@@ -137,10 +137,10 @@ const AboutApproach = () => {
               {commitments.map((c, idx) => (
                 <li
                   key={idx}
-                  className="flex items-start gap-3 p-4 rounded-2xl bg-[#560B18]/70 border border-[#F2E5C6]/20 hover:border-[#F2D9A0]/50 transition-colors"
+                  className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] shadow-sm transition-colors"
                 >
-                  <span className="material-symbols-outlined text-[#F2D9A0] mt-0.5 flex-shrink-0 text-base">check_circle</span>
-                  <span className="text-white/90 font-light text-xs sm:text-sm leading-relaxed">{c}</span>
+                  <span className="material-symbols-outlined text-[#75162D] mt-0.5 flex-shrink-0 text-base">check_circle</span>
+                  <span className="text-gray-800 font-light text-xs sm:text-sm leading-relaxed">{c}</span>
                 </li>
               ))}
             </ul>

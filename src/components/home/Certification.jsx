@@ -12,12 +12,12 @@ const Certification = () => {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-[#FAF7F2] text-[#3B010B] relative overflow-hidden border-b border-[#F2E5C6]/60 font-sans">
+    <section className="py-20 px-6 md:px-12 bg-[#FAF7F2] text-[#3B010B] relative overflow-hidden border-b border-[#F2D9A0] font-sans">
       <div className="max-w-7xl mx-auto space-y-12 relative z-10">
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center lg:items-start space-y-3 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-4 py-1 rounded-full border border-[#75162D]/30">
+            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1 rounded-full border border-[#75162D]/30 shadow-sm font-display">
               <span className="material-symbols-outlined text-sm text-[#75162D]">verified</span>
               Recognised Professional Accreditations
             </div>
@@ -31,7 +31,7 @@ const Certification = () => {
 
           <Link
             to="/about"
-            className="flex-shrink-0 bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2"
+            className="flex-shrink-0 bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2 font-display border border-[#F2D9A0]/30"
           >
             <span>Learn About Leadership</span>
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -44,13 +44,13 @@ const Certification = () => {
             <motion.div
               key={i}
               whileHover={{ y: -4 }}
-              className="bg-white p-5 rounded-2xl border border-[#F2E5C6] shadow-sm hover:shadow-lg transition-all flex flex-col justify-between space-y-3 group text-center"
+              className="bg-white p-5 rounded-2xl border border-[#F2D9A0] shadow-sm hover:shadow-lg hover:border-[#75162D] transition-all flex flex-col justify-between space-y-3 group text-center"
             >
-              <div className="w-10 h-10 mx-auto rounded-xl bg-[#FAF7F2] text-[#75162D] flex items-center justify-center group-hover:bg-[#3B010B] group-hover:text-[#F2D9A0] transition-colors">
+              <div className="w-10 h-10 mx-auto rounded-xl bg-[#FAF7F2] text-[#75162D] flex items-center justify-center group-hover:bg-[#75162D] group-hover:text-[#F2D9A0] transition-colors">
                 <span className="material-symbols-outlined text-xl">{cert.icon}</span>
               </div>
               <div>
-                <span className="text-base font-extrabold text-[#3B010B] block">{cert.code}</span>
+                <span className="text-base font-extrabold text-[#3B010B] block font-display">{cert.code}</span>
                 <span className="text-[11px] font-semibold text-gray-700 block leading-snug mt-1">{cert.title}</span>
                 <span className="text-[10px] text-gray-500 block mt-1">{cert.org}</span>
               </div>
@@ -64,4 +64,5 @@ const Certification = () => {
 };
 
 export default Certification;
+
 

@@ -5,10 +5,10 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
   return (
-    <section className="relative min-h-screen flex items-center pt-36 pb-24 px-6 md:px-12 overflow-hidden animate-hero-gradient text-white border-b border-[#F2D9A0]/20">
-      {/* Subtle Background Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#75162D]/30 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-[#F2D9A0]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <section className="relative min-h-screen flex items-center pt-36 pb-24 px-6 md:px-12 overflow-hidden animate-hero-gradient text-[#3B010B] border-b border-[#F2D9A0]">
+      {/* Subtle Warm Amber & Champagne Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F2D9A0]/40 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-[#F2E5C6]/60 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
         
@@ -19,27 +19,27 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
           animate="animate"
           className="lg:col-span-7 space-y-8 text-center lg:text-left"
         >
-          {/* Badge */}
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
-            <span className="material-symbols-outlined text-sm text-[#F2D9A0]">verified_user</span>
+          {/* Badge - Sand Gold & Burgundy */}
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm">
+            <span className="material-symbols-outlined text-sm text-[#75162D] font-bold">verified_user</span>
             Multidisciplinary Corporate Advisory
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12] font-display">
+          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#3B010B] leading-[1.12] font-display">
             Data Protection. <br />
             Cybersecurity. <br />
-            <span className="gold-gradient-text">Financial Advisory.</span>
+            <span className="burgundy-gradient-text">Financial Advisory.</span>
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-base sm:text-lg md:text-xl text-[#F2E5C6]/90 max-w-3xl leading-relaxed mx-auto lg:mx-0 font-light">
+          <motion.p variants={fadeInUp} className="text-base sm:text-lg md:text-xl text-[#560B18]/90 max-w-3xl leading-relaxed mx-auto lg:mx-0 font-light">
             Crestara Advisory Group is an elite multidisciplinary firm providing outsourced DPO governance (POTRAZ compliant), offensive and defensive cybersecurity & digital forensics, and quantitative financial modelling & business intelligence.
           </motion.p>
 
-          {/* Action CTAs */}
+          {/* Action CTAs - Burgundy Primary & Sand Gold Secondary */}
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 pt-2 justify-center lg:justify-start">
             <Link 
               to="/contact" 
-              className="bg-[#F2D9A0] text-[#3B010B] px-8 py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-[#F2E5C6] hover:scale-105 transition-all flex items-center gap-3 uppercase tracking-wider font-semibold"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-[#3B010B] hover:text-[#F2D9A0] hover:scale-105 transition-all flex items-center gap-3 uppercase tracking-wider font-semibold border border-[#F2D9A0]/40 font-display"
             >
               REQUEST A QUOTATION
               <span className="material-symbols-outlined text-sm font-bold">arrow_forward</span>
@@ -48,7 +48,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#F2D9A0]/50 bg-white/5 text-white px-8 py-4 rounded-xl font-semibold text-sm hover:bg-white/15 transition-all flex items-center gap-3 backdrop-blur-md"
+              className="border-2 border-[#F2D9A0] bg-white/90 text-[#3B010B] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#F2E5C6] hover:border-[#75162D] transition-all flex items-center gap-3 shadow-md font-display"
             >
               <FaWhatsapp className="text-[#25D366] text-lg" />
               <span>WHATSAPP DESK</span>
@@ -56,84 +56,108 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
           </motion.div>
 
           {/* Credential Metrics */}
-          <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-4 sm:gap-6 pt-8 border-t border-white/15 text-left">
+          <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-4 sm:gap-6 pt-8 border-t border-[#F2D9A0] text-left">
             <div className="space-y-1">
-              <span className="text-2xl sm:text-3xl text-[#F2D9A0] font-extrabold block">DPO</span>
-              <span className="text-[11px] sm:text-xs text-white/70 uppercase tracking-wider font-medium">Outsourced & POTRAZ</span>
+              <span className="text-2xl sm:text-3xl text-[#75162D] font-extrabold block font-display">DPO</span>
+              <span className="text-[11px] sm:text-xs text-[#560B18]/80 uppercase tracking-wider font-medium">Outsourced & POTRAZ</span>
             </div>
-            <div className="space-y-1 border-l border-white/15 pl-4 sm:pl-6">
-              <span className="text-2xl sm:text-3xl text-white font-extrabold block">CEH / Sec+</span>
-              <span className="text-[11px] sm:text-xs text-white/70 uppercase tracking-wider font-medium">Offensive Security</span>
+            <div className="space-y-1 border-l border-[#F2D9A0] pl-4 sm:pl-6">
+              <span className="text-2xl sm:text-3xl text-[#3B010B] font-extrabold block font-display">CEH / Sec+</span>
+              <span className="text-[11px] sm:text-xs text-[#560B18]/80 uppercase tracking-wider font-medium">Offensive Security</span>
             </div>
-            <div className="space-y-1 border-l border-white/15 pl-4 sm:pl-6">
-              <span className="text-2xl sm:text-3xl text-[#F2D9A0] font-extrabold block">FMVA / CFA</span>
-              <span className="text-[11px] sm:text-xs text-white/70 uppercase tracking-wider font-medium">Financial Analytics</span>
+            <div className="space-y-1 border-l border-[#F2D9A0] pl-4 sm:pl-6">
+              <span className="text-2xl sm:text-3xl text-[#75162D] font-extrabold block font-display">FMVA / CFA</span>
+              <span className="text-[11px] sm:text-xs text-[#560B18]/80 uppercase tracking-wider font-medium">Financial Analytics</span>
             </div>
           </motion.div>
         </motion.div>
 
-        {/* Right Column: Hero Visual Card with Integrated Practice Pillars */}
+        {/* Right Column: Hero Visual Card with Sand Gold / Champagne Theme & Burgundy Accents */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative rounded-3xl overflow-hidden border border-[#F2D9A0]/30 shadow-2xl bg-gradient-to-b from-[#560B18] to-[#3B010B] p-7 sm:p-9 space-y-6">
+          <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-2xl bg-gradient-to-b from-white via-[#FAF7F2] to-[#F2E5C6]/60 p-6 sm:p-8 space-y-5">
             
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#F2D9A0] text-[#3B010B] flex items-center justify-center font-bold">
-                  <span className="material-symbols-outlined text-2xl">verified_user</span>
-                </div>
-                <div>
-                  <h2 className="text-sm font-bold uppercase tracking-wider text-white font-display">Integrated Protection</h2>
-                  <p className="text-[11px] text-[#F2D9A0]">Unified Advisory Governance</p>
+            {/* Top Corporate Visual Header */}
+            <div className="relative h-28 sm:h-32 rounded-2xl overflow-hidden border border-[#F2D9A0] shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Crestara Advisory Group Corporate Headquarters"
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/85 via-[#75162D]/65 to-transparent flex items-center p-4 sm:p-5">
+                <div className="space-y-1 text-white">
+                  <div className="inline-flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-[#F2D9A0] bg-white/10 px-2.5 py-0.5 rounded-full backdrop-blur-sm border border-[#F2D9A0]/30 font-display">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    Multidisciplinary Advisory
+                  </div>
+                  <h3 className="text-base sm:text-lg font-extrabold font-display leading-tight text-white">
+                    Corporate Resilience Architecture
+                  </h3>
+                  <p className="text-[11px] text-[#F2E5C6]/85 font-light">
+                    Harare • Southern Africa • Global Standards
+                  </p>
                 </div>
               </div>
-              <span className="text-xs bg-[#75162D] text-[#F2E5C6] px-3 py-1 rounded-full font-bold uppercase tracking-widest border border-[#F2D9A0]/20 font-display">
-                Advisory Pillars
+            </div>
+
+            <div className="flex items-center justify-between border-b border-[#F2D9A0] pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-[#75162D] text-[#F2D9A0] flex items-center justify-center font-bold shadow-md">
+                  <span className="material-symbols-outlined text-lg">verified_user</span>
+                </div>
+                <div>
+                  <h2 className="text-xs font-bold uppercase tracking-wider text-[#3B010B] font-display">Integrated Retainers</h2>
+                  <p className="text-[10px] text-[#75162D] font-semibold">Unified Advisory Governance</p>
+                </div>
+              </div>
+              <span className="text-[10px] bg-[#F2D9A0] text-[#75162D] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-widest border border-[#75162D]/30 font-display">
+                3 Pillars
               </span>
             </div>
 
-            {/* 3 Core Interactive Pillar Cards */}
+            {/* 3 Core Interactive Pillar Cards - Sand Gold & Champagne Surface with Burgundy Accents */}
             <div className="space-y-3">
-              <div className="p-4 rounded-2xl bg-black/25 border border-white/10 hover:border-[#F2D9A0]/40 transition-all flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md transition-all flex items-start gap-4 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                   <span className="material-symbols-outlined text-xl">privacy_tip</span>
                 </div>
                 <div className="space-y-0.5 flex-1">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-sm font-bold text-white font-display">Data Protection & DPO</h3>
-                    <span className="text-[11px] font-bold text-[#F2D9A0] uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded">POTRAZ Compliant</span>
+                    <h3 className="text-sm font-bold text-[#3B010B] font-display">Data Protection & DPO</h3>
+                    <span className="text-[10px] font-bold text-[#75162D] uppercase tracking-wider bg-[#F2E5C6] px-2 py-0.5 rounded border border-[#F2D9A0]">POTRAZ Compliant</span>
                   </div>
-                  <p className="text-xs text-white/70 font-light">Gap audits, DPIAs, processing registers & regulatory compliance.</p>
+                  <p className="text-xs text-gray-600 font-light">Gap audits, DPIAs, processing registers & regulatory compliance.</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-black/25 border border-white/10 hover:border-[#F2D9A0]/40 transition-all flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#560B18] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md transition-all flex items-start gap-4 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                   <span className="material-symbols-outlined text-xl">security</span>
                 </div>
                 <div className="space-y-0.5 flex-1">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-sm font-bold text-white font-display">Cybersecurity & Forensics</h3>
-                    <span className="text-[11px] font-bold text-[#F2D9A0] uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded">CEH Practical</span>
+                    <h3 className="text-sm font-bold text-[#3B010B] font-display">Cybersecurity & Forensics</h3>
+                    <span className="text-[10px] font-bold text-[#75162D] uppercase tracking-wider bg-[#F2E5C6] px-2 py-0.5 rounded border border-[#F2D9A0]">CEH Practical</span>
                   </div>
-                  <p className="text-xs text-white/70 font-light">Ethical hacking, pentesting, breach investigation & vulnerability audits.</p>
+                  <p className="text-xs text-gray-600 font-light">Ethical hacking, pentesting, breach investigation & vulnerability audits.</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-black/25 border border-white/10 hover:border-[#F2D9A0]/40 transition-all flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md transition-all flex items-start gap-4 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                   <span className="material-symbols-outlined text-xl">analytics</span>
                 </div>
                 <div className="space-y-0.5 flex-1">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-sm font-bold text-white font-display">Financial Advisory</h3>
-                    <span className="text-[11px] font-bold text-[#F2D9A0] uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded">FMVA® / BIDA®</span>
+                    <h3 className="text-sm font-bold text-[#3B010B] font-display">Financial Advisory</h3>
+                    <span className="text-[10px] font-bold text-[#75162D] uppercase tracking-wider bg-[#F2E5C6] px-2 py-0.5 rounded border border-[#F2D9A0]">FMVA® / BIDA®</span>
                   </div>
-                  <p className="text-xs text-white/70 font-light">FMVA financial models, BIDA dashboards, budgeting & valuation.</p>
+                  <p className="text-xs text-gray-600 font-light">FMVA financial models, BIDA dashboards, budgeting & valuation.</p>
                 </div>
               </div>
             </div>
@@ -141,16 +165,16 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
             {/* Bottom floating summary */}
             <motion.div 
               {...floatAnimation}
-              className="p-4 bg-gradient-to-r from-[#75162D] to-[#560B18] rounded-2xl border border-[#F2D9A0]/30 flex items-center justify-between"
+              className="p-4 bg-gradient-to-r from-[#F2E5C6] to-[#F2D9A0] rounded-2xl border border-[#75162D]/30 flex items-center justify-between shadow-md"
             >
               <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-2xl text-[#F2D9A0]">hub</span>
+                <span className="material-symbols-outlined text-2xl text-[#75162D]">hub</span>
                 <div>
-                  <span className="text-xs font-bold text-[#F2D9A0] uppercase block font-display">Integrated Protection</span>
-                  <span className="text-[11px] text-white/80">Synchronized DPO + Cyber + Finance Retainers</span>
+                  <span className="text-xs font-bold text-[#3B010B] uppercase block font-display">Integrated Protection</span>
+                  <span className="text-[11px] text-[#560B18]">Synchronized DPO + Cyber + Finance Retainers</span>
                 </div>
               </div>
-              <Link to="/services" className="text-xs font-bold text-white bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-lg transition-colors font-display">
+              <Link to="/services" className="text-xs font-bold text-[#F2E5C6] bg-[#75162D] hover:bg-[#3B010B] px-3.5 py-1.5 rounded-lg transition-colors font-display shadow-sm">
                 View Packages &rarr;
               </Link>
             </motion.div>
@@ -169,4 +193,5 @@ Hero.propTypes = {
 };
 
 export default Hero;
+
 

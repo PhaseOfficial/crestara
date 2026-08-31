@@ -98,31 +98,31 @@ const AboutMission = () => {
           </motion.div>
 
           <motion.div {...fadeIn} className="lg:col-span-6">
-            <div className="bg-gradient-to-br from-[#560B18] via-[#3B010B] to-[#75162D] rounded-3xl p-8 text-white shadow-2xl border border-[#F2D9A0]/30 space-y-6">
-              <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                <span className="material-symbols-outlined text-[#F2D9A0] text-3xl">verified_user</span>
+            <div className="bg-gradient-to-br from-[#F2E5C6] via-white to-[#F2D9A0]/80 rounded-3xl p-8 text-[#3B010B] shadow-xl border-2 border-[#F2D9A0] space-y-6">
+              <div className="flex items-center gap-3 border-b border-[#F2D9A0] pb-4">
+                <span className="material-symbols-outlined text-[#75162D] text-3xl">verified_user</span>
                 <div>
-                  <h3 className="font-bold text-base text-white">The Crestara Governance Standard</h3>
-                  <p className="text-xs text-[#F2D9A0]">Zimbabwe • Southern Africa • International</p>
+                  <h3 className="font-bold text-base text-[#3B010B] font-display">The Crestara Governance Standard</h3>
+                  <p className="text-xs text-[#75162D] font-semibold">Zimbabwe • Southern Africa • International</p>
                 </div>
               </div>
               
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <span className="text-[#F2D9A0] font-bold block">POTRAZ Regulated</span>
-                  <span className="text-white/70 font-light">Data Protection Act Compliance</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
+                  <span className="text-[#75162D] font-bold block">POTRAZ Regulated</span>
+                  <span className="text-gray-600 font-light">Data Protection Act Compliance</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <span className="text-[#F2D9A0] font-bold block">CEH / Security+</span>
-                  <span className="text-white/70 font-light">Offensive Security Operations</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
+                  <span className="text-[#75162D] font-bold block">CEH / Security+</span>
+                  <span className="text-gray-600 font-light">Offensive Security Operations</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <span className="text-[#F2D9A0] font-bold block">FMVA® Modelling</span>
-                  <span className="text-white/70 font-light">3-Statement Financial Models</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
+                  <span className="text-[#75162D] font-bold block">FMVA® Modelling</span>
+                  <span className="text-gray-600 font-light">3-Statement Financial Models</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <span className="text-[#F2D9A0] font-bold block">BIDA® Analytics</span>
-                  <span className="text-white/70 font-light">Executive BI KPI Dashboards</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
+                  <span className="text-[#75162D] font-bold block">BIDA® Analytics</span>
+                  <span className="text-gray-600 font-light">Executive BI KPI Dashboards</span>
                 </div>
               </div>
             </div>
@@ -131,34 +131,45 @@ const AboutMission = () => {
       </section>
 
       {/* Leadership Spotlight - Natasha Zama */}
-      <section className="py-16 px-6 md:px-12 bg-[#FAF7F2] border-b border-[#F2E5C6]/60 font-sans">
+      <section className="py-16 px-6 md:px-12 bg-[#FAF7F2] border-b border-[#F2D9A0] font-sans">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#F2D9A0]/40 bg-[#3B010B] relative p-8 text-white flex flex-col justify-between h-full min-h-[380px]">
+            <div className="rounded-3xl overflow-hidden shadow-xl border-2 border-[#F2D9A0] bg-gradient-to-b from-white via-[#FAF7F2] to-[#F2E5C6]/60 relative p-6 sm:p-8 text-[#3B010B] flex flex-col justify-between h-full min-h-[420px]">
               <div className="space-y-4">
-                <div className="w-16 h-16 rounded-2xl bg-[#75162D] text-[#F2D9A0] border border-[#F2D9A0]/30 flex items-center justify-center font-bold">
-                  <span className="text-3xl font-display">NZ</span>
+                <div className="relative w-full h-48 rounded-2xl overflow-hidden border border-[#F2D9A0] shadow-sm mb-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                    alt="Natasha Zama - Executive Director"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B010B]/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-3 left-3 text-white">
+                    <span className="text-[10px] font-bold uppercase tracking-widest bg-[#75162D] px-2.5 py-0.5 rounded-full border border-[#F2D9A0]/50 font-display">
+                      Executive Leadership
+                    </span>
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-extrabold text-white font-display">Natasha Zama</h3>
-                  <p className="text-xs text-[#F2D9A0] uppercase tracking-widest font-bold mt-0.5">Executive Director & Practice Head</p>
+                  <h3 className="text-2xl font-extrabold text-[#3B010B] font-display">Natasha Zama</h3>
+                  <p className="text-xs text-[#75162D] uppercase tracking-widest font-bold mt-0.5 font-display">Executive Director & Practice Head</p>
                 </div>
-                <p className="text-xs text-white/80 font-light leading-relaxed">
+                <p className="text-xs text-gray-700 font-light leading-relaxed">
                   Steering Crestara Advisory Group&apos;s multidisciplinary vision across corporate compliance, cybersecurity risk mitigation, and quantitative financial strategy.
                 </p>
               </div>
 
-              <div className="pt-6 border-t border-white/15 space-y-2 text-xs">
-                <div className="flex items-center gap-2 text-white/80">
-                  <span className="material-symbols-outlined text-[#F2D9A0] text-sm">mail</span>
-                  <a href="mailto:natashazama@crestaraadvisorygroup.com" className="text-[#F2E5C6] hover:underline">
-                    natashazama@crestaraadvisorygroup.com
+              <div className="pt-6 border-t border-[#F2D9A0] space-y-2 text-xs">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <span className="material-symbols-outlined text-[#75162D] text-sm">mail</span>
+                  <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] hover:underline font-mono font-semibold">
+                    director@crestaraadvisorygroup.com
                   </a>
                 </div>
-                <div className="flex items-center gap-2 text-white/80">
-                  <span className="material-symbols-outlined text-[#F2D9A0] text-sm">mail</span>
-                  <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#F2E5C6] hover:underline">
-                    director@crestaraadvisorygroup.com
+                <div className="flex items-center gap-2 text-gray-700">
+                  <span className="material-symbols-outlined text-[#75162D] text-sm">phone_iphone</span>
+                  <a href="tel:+263775040725" className="text-[#75162D] hover:underline font-mono font-semibold">
+                    +263 775 040 725
                   </a>
                 </div>
               </div>
@@ -166,8 +177,8 @@ const AboutMission = () => {
           </div>
 
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-4 py-1.5 rounded-full border border-[#75162D]/20">
-              <span className="material-symbols-outlined text-sm">military_tech</span>
+            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 shadow-sm font-display">
+              <span className="material-symbols-outlined text-sm text-[#75162D]">military_tech</span>
               Executive Leadership & Credentials
             </div>
 
@@ -184,7 +195,7 @@ const AboutMission = () => {
                 "CompTIA Security+ Certified",
                 "Banking & Investment Management (CFA Standards)"
               ].map((badge, idx) => (
-                <span key={idx} className="bg-[#3B010B] text-[#F2D9A0] px-3 py-1 rounded-lg text-[11px] font-bold tracking-wide border border-[#F2D9A0]/20 shadow-sm">
+                <span key={idx} className="bg-[#F2E5C6] text-[#75162D] px-3 py-1 rounded-lg text-[11px] font-bold tracking-wide border border-[#F2D9A0] shadow-sm">
                   ✓ {badge}
                 </span>
               ))}
@@ -195,7 +206,7 @@ const AboutMission = () => {
             </p>
 
             <div className="pt-3 flex flex-wrap gap-3">
-              <Link to="/contact" className="bg-[#3B010B] text-[#F2D9A0] px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#75162D] hover:text-white transition-all uppercase tracking-wider flex items-center gap-2 shadow-md">
+              <Link to="/contact" className="bg-[#75162D] text-[#F2E5C6] px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all uppercase tracking-wider flex items-center gap-2 shadow-md font-display border border-[#F2D9A0]/30">
                 <span>Contact Executive Desk</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
@@ -203,7 +214,7 @@ const AboutMission = () => {
                 href="https://wa.me/263775040725?text=Hello%20Natasha%20Zama%2C%20I%20would%20like%20to%20enquire%20about%20Crestara%20Advisory%20Group."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#20ba5a] transition-all uppercase tracking-wider flex items-center gap-2 shadow-md"
+                className="bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#20ba5a] transition-all uppercase tracking-wider flex items-center gap-2 shadow-md font-display"
               >
                 <FaWhatsapp className="text-base" />
                 <span>Direct WhatsApp Desk</span>

@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
             <p><strong>Practice Name:</strong> Crestara Advisory Group</p>
             <p><strong>Headquarters / Jurisdiction:</strong> Harare, Zimbabwe (Operating Regionally & Globally)</p>
             <p><strong>Official Website:</strong> crestaraadvisorygroup.com</p>
-            <p><strong>Executive Director:</strong> Natasha Zama (<a href="mailto:natashazama@crestaraadvisorygroup.com" className="text-[#75162D] underline">natashazama@crestaraadvisorygroup.com</a>)</p>
+            <p><strong>Executive Director Desk:</strong> Natasha Zama (<a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] underline">director@crestaraadvisorygroup.com</a>)</p>
             <p><strong>Data Protection Officer (DPO) Desk:</strong> <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#75162D] underline">compliance@crestaraadvisorygroup.com</a></p>
             <p><strong>General Client Desk:</strong> <a href="mailto:info@crestaraadvisorygroup.com" className="text-[#75162D] underline">info@crestaraadvisorygroup.com</a></p>
           </div>
@@ -180,24 +180,24 @@ const PrivacyPolicy = () => {
       />
 
       {/* Hero Header */}
-      <div className="bg-[#3B010B] text-white py-16 px-6 md:px-12 border-b border-[#F2D9A0]/20 relative overflow-hidden animate-hero-gradient">
+      <div className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 text-[#3B010B] py-16 px-6 md:px-12 border-b border-[#F2D9A0] relative overflow-hidden animate-hero-gradient">
         <div className="max-w-5xl mx-auto space-y-4 relative z-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-xs font-bold text-[#F2D9A0] uppercase tracking-widest hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-bold text-[#75162D] uppercase tracking-widest hover:text-[#3B010B] transition-colors font-display"
           >
             <FaArrowLeft size={12} /> Back to Home
           </Link>
           <div className="flex items-center gap-3">
-            <span className="text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-3.5 py-1 rounded-full border border-[#F2D9A0]/30">
+            <span className="text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3.5 py-1 rounded-full border border-[#75162D]/30 font-display">
               Legal & Compliance • Part 1
             </span>
-            <span className="text-xs text-[#F2E5C6]/70">Last Updated: {lastUpdated}</span>
+            <span className="text-xs text-gray-600">Last Updated: {lastUpdated}</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white font-display">
-            Privacy Notice
+          <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-[#3B010B] font-display">
+            Privacy <span className="burgundy-gradient-text">Notice</span>
           </h1>
-          <p className="text-[#F2E5C6]/85 max-w-2xl text-sm md:text-base leading-relaxed font-light">
+          <p className="text-gray-700 max-w-2xl text-sm md:text-base leading-relaxed font-light">
             How Crestara Advisory Group safeguards your personal data, client confidentiality, and advisory records under the Data Protection Act [Chapter 12:07] and POTRAZ directives.
           </p>
         </div>

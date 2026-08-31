@@ -157,12 +157,11 @@ const TermsOfService = () => {
           <p className="leading-relaxed text-gray-700">
             For questions regarding these Terms of Service or to execute an enterprise advisory contract, contact our executive desk:
           </p>
-          <div className="mt-4 p-6 rounded-2xl bg-[#3B010B] text-white space-y-3">
-            <h4 className="text-sm font-bold text-[#F2D9A0] uppercase tracking-widest font-display">Crestara Advisory Group — Executive Desk</h4>
-            <p className="text-xs text-[#F2E5C6]/90">Email: <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#F2D9A0] hover:underline font-semibold">director@crestaraadvisorygroup.com</a></p>
-            <p className="text-xs text-[#F2E5C6]/90">Executive Director: <a href="mailto:natashazama@crestaraadvisorygroup.com" className="text-[#F2D9A0] hover:underline font-semibold">natashazama@crestaraadvisorygroup.com</a></p>
-            <p className="text-xs text-[#F2E5C6]/90">Compliance Desk: <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#F2D9A0] hover:underline font-semibold">compliance@crestaraadvisorygroup.com</a></p>
-            <p className="text-xs text-[#F2E5C6]/90">Direct Phone: <a href="tel:+263775040725" className="text-white hover:text-[#F2D9A0]">+263 775 040 725</a></p>
+          <div className="mt-4 p-6 rounded-2xl bg-gradient-to-br from-[#F2E5C6] via-white to-[#F2D9A0]/80 border border-[#F2D9A0] text-[#3B010B] space-y-3">
+            <h4 className="text-sm font-bold text-[#75162D] uppercase tracking-widest font-display">Crestara Advisory Group — Executive Desk</h4>
+            <p className="text-xs text-gray-700">Email: <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] hover:underline font-semibold font-mono">director@crestaraadvisorygroup.com</a></p>
+            <p className="text-xs text-gray-700">Compliance Desk: <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#75162D] hover:underline font-semibold font-mono">compliance@crestaraadvisorygroup.com</a></p>
+            <p className="text-xs text-gray-700">Direct Phone: <a href="tel:+263775040725" className="text-[#75162D] hover:underline font-mono font-semibold">+263 775 040 725</a></p>
           </div>
         </>
       )
@@ -179,24 +178,24 @@ const TermsOfService = () => {
       />
 
       {/* Hero Header */}
-      <div className="bg-[#3B010B] text-white py-16 px-6 md:px-12 border-b border-[#F2D9A0]/20 relative overflow-hidden animate-hero-gradient">
+      <div className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 text-[#3B010B] py-16 px-6 md:px-12 border-b border-[#F2D9A0] relative overflow-hidden animate-hero-gradient">
         <div className="max-w-5xl mx-auto space-y-4 relative z-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-xs font-bold text-[#F2D9A0] uppercase tracking-widest hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-bold text-[#75162D] uppercase tracking-widest hover:text-[#3B010B] transition-colors font-display"
           >
             <FaArrowLeft size={12} /> Back to Home
           </Link>
           <div className="flex items-center gap-3">
-            <span className="text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-3.5 py-1 rounded-full border border-[#F2D9A0]/30">
+            <span className="text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3.5 py-1 rounded-full border border-[#75162D]/30 font-display">
               Legal & Compliance • Part 3
             </span>
-            <span className="text-xs text-[#F2E5C6]/70">Last Updated: {lastUpdated}</span>
+            <span className="text-xs text-gray-600">Last Updated: {lastUpdated}</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white font-display">
-            Terms of Service
+          <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-[#3B010B] font-display">
+            Terms of <span className="burgundy-gradient-text">Service</span>
           </h1>
-          <p className="text-[#F2E5C6]/85 max-w-2xl text-sm md:text-base leading-relaxed font-light">
+          <p className="text-gray-700 max-w-2xl text-sm md:text-base leading-relaxed font-light">
             Clear, transparent terms governing our multidisciplinary advisory retainers, offensive cybersecurity assessments, and financial modelling services.
           </p>
         </div>

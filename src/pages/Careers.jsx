@@ -216,33 +216,33 @@ const Careers = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-[#3B010B] py-20 px-6 md:px-12 text-white animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]/20 text-center">
+      <section className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-20 px-6 md:px-12 text-[#3B010B] animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0] text-center">
         <div className="max-w-5xl mx-auto relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
-            <span className="material-symbols-outlined text-sm text-[#F2D9A0]">work</span>
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
+            <span className="material-symbols-outlined text-sm text-[#75162D]">work</span>
             Join Our Multidisciplinary Advisory Team
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-display">
-            Build Your Career at <span className="gold-gradient-text">Crestara</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-display text-[#3B010B]">
+            Build Your Career at <span className="burgundy-gradient-text">Crestara</span>
           </h1>
 
-          <p className="text-base md:text-xl text-[#F2E5C6]/90 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-base md:text-xl text-[#560B18]/90 max-w-3xl mx-auto font-light leading-relaxed">
             We are assembling Africa’s finest practitioners across Cybersecurity, Data Protection, and Quantitative Financial Intelligence. Work on mission-critical engagements, earn sponsored certifications, and shape corporate resilience.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <a
               href="#open-positions"
-              className="bg-[#F2D9A0] text-[#3B010B] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#F2E5C6] transition-all shadow-xl font-display"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl font-display border border-[#F2D9A0]/40"
             >
               Explore Open Positions
             </a>
             <a
               href="mailto:careers@crestaraadvisorygroup.com"
-              className="bg-white/10 text-white hover:bg-white/20 border border-[#F2D9A0]/30 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center gap-2 font-mono"
+              className="bg-white/80 text-[#3B010B] hover:bg-[#F2E5C6] border-2 border-[#F2D9A0] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2 font-mono"
             >
-              <span className="material-symbols-outlined text-sm text-[#F2D9A0]">mail</span>
+              <span className="material-symbols-outlined text-sm text-[#75162D]">mail</span>
               <span>careers@crestaraadvisorygroup.com</span>
             </a>
           </div>
@@ -251,17 +251,27 @@ const Careers = () => {
 
       {/* Company Culture & Core Values */}
       <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
-        <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full font-display">
-            <span className="material-symbols-outlined text-sm">groups</span>
-            Culture & Philosophy
+        <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-48 sm:h-56">
+          <img
+            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
+            alt="Crestara Advisory Group Modern Workplace Culture"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
+            <div className="space-y-2 text-white max-w-2xl">
+              <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
+                <span className="material-symbols-outlined text-sm">groups</span>
+                Culture & Philosophy
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight text-white">
+                What Drives Life at Crestara
+              </h2>
+              <p className="text-xs sm:text-sm text-[#F2E5C6]/90 font-light hidden sm:block">
+                We foster an environment of relentless curiosity, mathematical precision, ethical confidentiality, and peer collaboration.
+              </p>
+            </div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#3B010B] font-display">
-            What Drives Life at Crestara
-          </h2>
-          <p className="text-gray-600 text-sm font-light leading-relaxed">
-            We foster an environment of relentless curiosity, mathematical precision, ethical confidentiality, and peer collaboration.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -272,9 +282,9 @@ const Careers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08 }}
-              className="bg-white p-7 rounded-3xl border border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D] transition-all space-y-3"
+              className="bg-white p-7 rounded-3xl border border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D] transition-all space-y-3"
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center shadow-md">
                 <span className="material-symbols-outlined text-xl">{val.icon}</span>
               </div>
               <h3 className="text-lg font-bold text-[#3B010B] font-display">{val.title}</h3>
@@ -285,10 +295,10 @@ const Careers = () => {
       </section>
 
       {/* Team Perks & Benefits */}
-      <section className="py-20 px-6 md:px-12 bg-white border-y border-[#F2E5C6]/60">
+      <section className="py-20 px-6 md:px-12 bg-white border-y border-[#F2D9A0]">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full font-display">
+            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
               <span className="material-symbols-outlined text-sm">redeem</span>
               Why Join Us
             </div>
@@ -304,7 +314,7 @@ const Careers = () => {
             {benefits.map((b, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAF7F2] p-7 rounded-3xl border border-[#F2E5C6] shadow-sm hover:border-[#75162D] transition-all space-y-3"
+                className="bg-[#FAF7F2] p-7 rounded-3xl border border-[#F2D9A0] shadow-sm hover:border-[#75162D] transition-all space-y-3"
               >
                 <div className="w-12 h-12 rounded-2xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center shadow-sm">
                   <span className="material-symbols-outlined text-xl">{b.icon}</span>
@@ -320,7 +330,7 @@ const Careers = () => {
       {/* Open Positions */}
       <section id="open-positions" className="py-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full font-display">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
             <span className="material-symbols-outlined text-sm">list_alt</span>
             Current Opportunities
           </div>
@@ -336,15 +346,15 @@ const Careers = () => {
           {jobListings.map((job) => (
             <div
               key={job.id}
-              className="bg-white rounded-3xl p-7 md:p-9 border border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D] transition-all space-y-6"
+              className="bg-white rounded-3xl p-7 md:p-9 border border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D] transition-all space-y-6"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#FAF7F2] pb-5">
                 <div className="space-y-2">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#75162D]/10 text-[#75162D] px-2.5 py-1 rounded-full font-mono">
+                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#75162D]/10 text-[#75162D] px-2.5 py-1 rounded-full font-mono border border-[#75162D]/20">
                       {job.department}
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#3B010B] text-[#F2D9A0] px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#F2E5C6] text-[#75162D] px-2.5 py-1 rounded-full border border-[#F2D9A0] font-semibold">
                       {job.badge}
                     </span>
                   </div>
@@ -367,7 +377,7 @@ const Careers = () => {
 
                 <button
                   onClick={() => handleApply(job.title)}
-                  className="bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md whitespace-nowrap self-start md:self-center font-display"
+                  className="bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md whitespace-nowrap self-start md:self-center font-display border border-[#F2D9A0]/30"
                 >
                   Apply for Position
                 </button>
@@ -409,9 +419,9 @@ const Careers = () => {
 
       {/* Application Form Section */}
       <section id="application-form" className="py-12 px-6 md:px-12 max-w-5xl mx-auto">
-        <div className="bg-white rounded-3xl p-8 md:p-12 border border-[#F2E5C6] shadow-2xl space-y-6">
+        <div className="bg-white rounded-3xl p-8 md:p-12 border-2 border-[#F2D9A0] shadow-2xl space-y-6">
           <div className="space-y-2 border-b border-[#FAF7F2] pb-4">
-            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full font-display">
+            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
               <span className="material-symbols-outlined text-sm">send</span>
               Application Submission
             </div>
@@ -419,7 +429,7 @@ const Careers = () => {
               Submit Your Candidacy
             </h2>
             <p className="text-xs text-gray-500 font-light">
-              Send your profile directly to our Talent Acquisition desk at <strong className="text-[#3B010B] font-mono">careers@crestaraadvisorygroup.com</strong>.
+              Send your profile directly to our Talent Acquisition desk at <strong className="text-[#75162D] font-mono">careers@crestaraadvisorygroup.com</strong>.
             </p>
           </div>
 
@@ -428,11 +438,11 @@ const Careers = () => {
               <span className="material-symbols-outlined text-5xl text-emerald-600">check_circle</span>
               <h3 className="text-xl font-bold text-[#3B010B] font-display">Application Initiated</h3>
               <p className="text-xs text-gray-600 font-light max-w-md mx-auto leading-relaxed">
-                Thank you for applying. Please email your full CV/Resume and relevant certification certificates to <strong className="font-mono">careers@crestaraadvisorygroup.com</strong> referencing your name.
+                Thank you for applying. Please email your full CV/Resume and relevant certification certificates to <strong className="font-mono text-[#75162D]">careers@crestaraadvisorygroup.com</strong> referencing your name.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="px-6 py-2.5 bg-[#3B010B] text-[#F2D9A0] rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#75162D] font-display"
+                className="px-6 py-2.5 bg-[#75162D] text-[#F2E5C6] rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#3B010B] font-display"
               >
                 Submit Another Application
               </button>
@@ -450,7 +460,7 @@ const Careers = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
+                    className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
                     placeholder="e.g. Farai Ndlovu"
                   />
                 </div>
@@ -465,7 +475,7 @@ const Careers = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
+                    className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
                     placeholder="f.ndlovu@example.com"
                   />
                 </div>
@@ -482,7 +492,7 @@ const Careers = () => {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
+                    className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
                     placeholder="+263 77..."
                   />
                 </div>
@@ -495,7 +505,7 @@ const Careers = () => {
                     name="position"
                     value={formData.position}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
+                    className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
                   >
                     {jobListings.map(j => (
                       <option key={j.id} value={j.title}>{j.title}</option>
@@ -512,7 +522,7 @@ const Careers = () => {
                     name="experience"
                     value={formData.experience}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
+                    className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
                   >
                     <option value="0-1 years (Graduate)">0-1 years (Graduate)</option>
                     <option value="1-3 years (Associate)">1-3 years (Associate)</option>
@@ -531,7 +541,7 @@ const Careers = () => {
                   name="linkedin"
                   value={formData.linkedin}
                   onChange={handleChange}
-                  className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
+                  className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
                   placeholder="https://linkedin.com/in/..."
                 />
               </div>
@@ -546,7 +556,7 @@ const Careers = () => {
                   required
                   value={formData.coverNote}
                   onChange={handleChange}
-                  className="w-full bg-[#FAF7F2] border border-[#F2E5C6] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
+                  className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none"
                   placeholder="Summarize your key technical / legal certifications, current career stage, and what motivates you to join Crestara Advisory Group..."
                 ></textarea>
               </div>
@@ -560,7 +570,7 @@ const Careers = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 font-display"
+                className="w-full bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 font-display border border-[#F2D9A0]/30"
               >
                 <FaWhatsapp className="text-lg text-[#25D366]" />
                 <span>Submit Application & Notify Talent Team</span>
@@ -572,12 +582,12 @@ const Careers = () => {
 
       {/* Direct Talent Contact Strip */}
       <section className="max-w-5xl mx-auto px-6 md:px-12 pt-8">
-        <div className="bg-[#3B010B] p-8 rounded-3xl text-center text-white space-y-4 border border-[#F2D9A0]/20">
-          <h3 className="text-xl font-bold font-display text-[#F2D9A0]">
+        <div className="bg-gradient-to-br from-[#F2E5C6] via-white to-[#F2D9A0]/70 p-8 rounded-3xl text-center text-[#3B010B] space-y-4 border-2 border-[#F2D9A0] shadow-xl">
+          <h3 className="text-xl font-bold font-display text-[#75162D]">
             Direct Talent & Recruitment Desk
           </h3>
-          <p className="text-xs text-white/80 font-light max-w-xl mx-auto">
-            Questions regarding open opportunities or executive placements? Contact our Talent team directly at <strong className="font-mono text-[#F2E5C6]">careers@crestaraadvisorygroup.com</strong> or via WhatsApp Desk at <strong className="text-[#F2D9A0]">+263 775 040 725</strong>.
+          <p className="text-xs text-gray-700 font-light max-w-xl mx-auto">
+            Questions regarding open opportunities or executive placements? Contact our Talent team directly at <strong className="font-mono text-[#75162D]">careers@crestaraadvisorygroup.com</strong> or via WhatsApp Desk at <strong className="text-[#75162D] font-mono">+263 775 040 725</strong>.
           </p>
         </div>
       </section>

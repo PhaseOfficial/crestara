@@ -90,25 +90,25 @@ const Cybersecurity = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-[#3B010B] py-20 px-6 md:px-12 text-white animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]/20">
+      <section className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-20 px-6 md:px-12 text-[#3B010B] animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]">
         <div className="max-w-6xl mx-auto text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
-            <span className="material-symbols-outlined text-sm text-[#F2D9A0]">security</span>
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
+            <span className="material-symbols-outlined text-sm text-[#75162D]">security</span>
             Pillar 02 • Offensive Defense & Forensics
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-display">
-            Cybersecurity & <span className="gold-gradient-text">Offensive Security</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-display text-[#3B010B]">
+            Cybersecurity & <span className="burgundy-gradient-text">Offensive Security</span>
           </h1>
 
-          <p className="text-base md:text-xl text-[#F2E5C6]/90 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-base md:text-xl text-[#560B18]/90 max-w-3xl mx-auto font-light leading-relaxed">
             Ethical hacking, authorized web application penetration testing, vulnerability diagnostics, and digital forensic investigations led by EC-Council CEH Practical and CompTIA Security+ certified specialists.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
               to="/contact"
-              className="bg-[#F2D9A0] text-[#3B010B] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#F2E5C6] transition-all shadow-xl font-semibold font-display"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl font-semibold font-display border border-[#F2D9A0]/40"
             >
               Request Penetration Test Scope
             </Link>
@@ -116,7 +116,7 @@ const Cybersecurity = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20Cybersecurity%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl"
+              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl font-display"
             >
               <FaWhatsapp className="text-lg" />
               <span>WhatsApp Cyber Desk</span>
@@ -128,7 +128,7 @@ const Cybersecurity = () => {
       {/* Core Capabilities */}
       <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
             <span className="material-symbols-outlined text-sm">terminal</span>
             Offensive Security Operations
           </div>
@@ -148,9 +148,9 @@ const Cybersecurity = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08 }}
-              className="bg-white p-6 rounded-3xl border border-[#F2E5C6] shadow-sm hover:shadow-lg hover:border-[#75162D] transition-all space-y-3"
+              className="bg-white p-6 rounded-3xl border border-[#F2D9A0] shadow-sm hover:shadow-lg hover:border-[#75162D] transition-all space-y-3"
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-2xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center shadow-sm">
                 <span className="material-symbols-outlined text-xl">{pillar.icon}</span>
               </div>
               <h3 className="text-lg font-bold text-[#3B010B] font-display">{pillar.title}</h3>
@@ -161,10 +161,10 @@ const Cybersecurity = () => {
       </section>
 
       {/* Cybersecurity Packages */}
-      <section className="py-20 px-6 md:px-12 bg-white border-y border-[#F2E5C6]/60">
+      <section className="py-20 px-6 md:px-12 bg-white border-y border-[#F2D9A0]">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-3 py-1 rounded-full">
+            <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
               <span className="material-symbols-outlined text-sm">shield</span>
               Cybersecurity Packages
             </div>
@@ -182,60 +182,54 @@ const Cybersecurity = () => {
                 key={idx}
                 className={`rounded-3xl p-6 flex flex-col justify-between transition-all ${
                   pkg.popular
-                    ? "bg-[#3B010B] text-white shadow-2xl border-2 border-[#F2D9A0] relative"
-                    : "bg-[#FAF7F2] text-[#3B010B] border border-[#F2E5C6] shadow-sm hover:shadow-xl hover:border-[#75162D]"
+                    ? "bg-gradient-to-b from-[#F2E5C6]/60 via-white to-[#F2D9A0]/70 text-[#3B010B] shadow-xl border-2 border-[#75162D] relative"
+                    : "bg-[#FAF7F2] text-[#3B010B] border border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D]"
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#F2D9A0] text-[#3B010B] text-[9px] font-black uppercase tracking-widest px-3 py-0.5 rounded-full shadow-md font-sans">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#75162D] text-[#F2E5C6] text-[9px] font-black uppercase tracking-widest px-3 py-0.5 rounded-full shadow-md font-sans border border-[#F2D9A0]">
                     Most Requested
                   </div>
                 )}
 
                 <div className="space-y-4">
                   <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
-                    pkg.popular ? "bg-white/10 text-[#F2D9A0]" : "bg-[#75162D]/10 text-[#75162D]"
+                    pkg.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
                   }`}>
                     {pkg.type}
                   </span>
 
-                  <h3 className={`text-xl font-bold font-display ${pkg.popular ? "text-white" : "text-[#3B010B]"}`}>
+                  <h3 className="text-xl font-bold font-display text-[#3B010B]">
                     {pkg.title}
                   </h3>
 
-                  <p className={`text-xs font-light leading-relaxed ${pkg.popular ? "text-white/80" : "text-gray-600"}`}>
+                  <p className="text-xs font-light leading-relaxed text-gray-600">
                     {pkg.desc}
                   </p>
 
-                  <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10">
-                    <span className={`text-[10px] font-bold uppercase tracking-wider block ${pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"}`}>
+                  <div className="p-3 rounded-xl bg-[#F2E5C6]/40 border border-[#F2D9A0]">
+                    <span className="text-[10px] font-bold uppercase tracking-wider block text-[#75162D]">
                       Key Benefit:
                     </span>
-                    <p className={`text-xs font-light mt-0.5 ${pkg.popular ? "text-white/90" : "text-gray-700"}`}>
+                    <p className="text-xs font-light mt-0.5 text-gray-700">
                       {pkg.benefit}
                     </p>
                   </div>
 
-                  <ul className="space-y-2 pt-2 border-t border-black/10 dark:border-white/10">
+                  <ul className="space-y-2 pt-2 border-t border-black/5">
                     {pkg.features.map((f, i) => (
-                      <li key={i} className="text-xs font-light flex items-start gap-2">
-                        <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
-                          pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
-                        }`}>check_circle</span>
+                      <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
+                        <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
                         <span>{f}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-6 mt-4 border-t border-black/10 dark:border-white/10">
+                <div className="pt-6 mt-4 border-t border-black/5">
                   <Link
                     to="/contact"
-                    className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display ${
-                      pkg.popular
-                        ? "bg-[#F2D9A0] text-[#3B010B] hover:bg-[#F2E5C6]"
-                        : "bg-[#3B010B] text-[#F2D9A0] hover:bg-[#75162D] hover:text-white"
-                    }`}
+                    className="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-all font-display bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] shadow-md border border-[#F2D9A0]/30"
                   >
                     <span>Request Scope / RoE</span>
                     <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -249,7 +243,7 @@ const Cybersecurity = () => {
 
       {/* Rules of Engagement & Ethical Hacking Notice */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-12">
-        <div className="bg-white p-8 rounded-3xl border border-[#F2E5C6] space-y-2">
+        <div className="bg-white p-8 rounded-3xl border border-[#F2D9A0] space-y-2 shadow-sm">
           <div className="flex items-center gap-2 text-[#75162D] font-bold text-xs uppercase tracking-wider font-display">
             <span className="material-symbols-outlined text-base">verified</span>
             <span>Ethical Hacking Authorization & Legal Boundaries</span>

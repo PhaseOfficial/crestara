@@ -53,7 +53,7 @@ const FAQAndProfessionalBoundaries = () => {
   ];
 
   const AccordionRow = ({ item, isOpen, onToggle, icon }) => (
-    <div className="border border-[#F2E5C6] rounded-2xl overflow-hidden bg-white shadow-sm">
+    <div className="border border-[#F2D9A0] rounded-2xl overflow-hidden bg-white shadow-sm">
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
@@ -61,7 +61,7 @@ const FAQAndProfessionalBoundaries = () => {
       >
         <span className="flex items-center gap-3 min-w-0">
           {icon && <span className="material-symbols-outlined text-[#75162D] flex-shrink-0 text-xl">{icon}</span>}
-          <span className="font-bold text-[#3B010B] text-xs sm:text-sm pr-2">{item.question || item.title}</span>
+          <span className="font-bold text-[#3B010B] text-xs sm:text-sm pr-2 font-display">{item.question || item.title}</span>
         </span>
         <span className={`material-symbols-outlined text-[#75162D] flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
           expand_more
@@ -97,12 +97,12 @@ const FAQAndProfessionalBoundaries = () => {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-[#FAF7F2] py-20 font-sans border-b border-[#F2E5C6]/60"
+      className="bg-[#FAF7F2] py-20 font-sans border-b border-[#F2D9A0]"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
         
         <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-4 py-1 rounded-full border border-[#75162D]/20">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1 rounded-full border border-[#75162D]/30 shadow-sm font-display">
             <span className="material-symbols-outlined text-sm">help_center</span>
             Clarity & Governance
           </div>
@@ -117,13 +117,13 @@ const FAQAndProfessionalBoundaries = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* FAQ Section */}
           <div className="space-y-4">
-            <div className="flex items-center justify-between pb-2 border-b border-[#F2E5C6]">
-              <h3 className="text-lg font-bold text-[#3B010B]">
+            <div className="flex items-center justify-between pb-2 border-b border-[#F2D9A0]">
+              <h3 className="text-lg font-bold text-[#3B010B] font-display">
                 Engagement & Commercial FAQs
               </h3>
               <button
                 onClick={() => setOpenFaq(openFaq === "all" ? null : "all")}
-                className="text-xs font-bold uppercase tracking-wider text-[#75162D] hover:text-[#3B010B] transition-colors"
+                className="text-xs font-bold uppercase tracking-wider text-[#75162D] hover:text-[#3B010B] transition-colors font-display"
               >
                 {openFaq === "all" ? "Collapse All" : "Expand All"}
               </button>
@@ -145,13 +145,13 @@ const FAQAndProfessionalBoundaries = () => {
 
           {/* Professional Boundaries Section */}
           <div className="space-y-4">
-            <div className="flex items-center justify-between pb-2 border-b border-[#F2E5C6]">
-              <h3 className="text-lg font-bold text-[#3B010B]">
+            <div className="flex items-center justify-between pb-2 border-b border-[#F2D9A0]">
+              <h3 className="text-lg font-bold text-[#3B010B] font-display">
                 Professional Boundaries & Ethics
               </h3>
               <button
                 onClick={() => setOpenBoundary(openBoundary === "all" ? null : "all")}
-                className="text-xs font-bold uppercase tracking-wider text-[#75162D] hover:text-[#3B010B] transition-colors"
+                className="text-xs font-bold uppercase tracking-wider text-[#75162D] hover:text-[#3B010B] transition-colors font-display"
               >
                 {openBoundary === "all" ? "Collapse All" : "Expand All"}
               </button>

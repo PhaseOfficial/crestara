@@ -13,14 +13,16 @@ const CookiePolicy = () => {
       />
 
       {/* Header */}
-      <section className="bg-[#3B010B] py-16 px-6 md:px-12 text-white animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]/20 text-center">
+      <section className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-16 px-6 md:px-12 text-[#3B010B] animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0] text-center">
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1 rounded-full border border-[#F2D9A0]/30">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1 rounded-full border border-[#75162D]/30 font-display">
             <span className="material-symbols-outlined text-sm">cookie</span>
             Legal & Compliance • Part 2
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold font-display">Cookie Policy</h1>
-          <p className="text-xs md:text-sm text-[#F2E5C6]/80 font-light">
+          <h1 className="text-3xl md:text-5xl font-extrabold font-display text-[#3B010B]">
+            Cookie <span className="burgundy-gradient-text">Policy</span>
+          </h1>
+          <p className="text-xs md:text-sm text-gray-600 font-light">
             Effective Date: 1 September 2026 • Domain: crestaraadvisorygroup.com
           </p>
         </div>

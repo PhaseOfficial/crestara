@@ -19,10 +19,10 @@ const About = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden text-white bg-[#3B010B] py-20 px-6 md:px-12 animate-hero-gradient border-b border-[#F2D9A0]/20">
+      <section className="relative overflow-hidden text-[#3B010B] bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-20 px-6 md:px-12 animate-hero-gradient border-b border-[#F2D9A0]">
         <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
-            <span className="material-symbols-outlined text-sm text-[#F2D9A0]">verified_user</span>
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
+            <span className="material-symbols-outlined text-sm text-[#75162D]">verified_user</span>
             Multidisciplinary Corporate Practice
           </div>
 
@@ -30,16 +30,16 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-extrabold tracking-tight font-display"
+            className="text-4xl md:text-6xl font-extrabold tracking-tight font-display text-[#3B010B]"
           >
-            About <span className="gold-gradient-text">Crestara Advisory Group</span>
+            About <span className="burgundy-gradient-text">Crestara Advisory Group</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-xl text-[#F2E5C6]/90 max-w-3xl mx-auto font-light leading-relaxed"
+            className="text-base md:text-xl text-[#560B18]/90 max-w-3xl mx-auto font-light leading-relaxed"
           >
             Empowering modern enterprises with synchronized Data Protection & Outsourced DPO governance (POTRAZ compliant), Certified Offensive Cybersecurity & Digital Forensics, and Quantitative Financial Modelling.
           </motion.p>
@@ -52,7 +52,7 @@ const About = () => {
           >
             <Link
               to="/contact"
-              className="bg-[#F2D9A0] text-[#3B010B] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#F2E5C6] transition-all shadow-xl uppercase tracking-wider flex items-center gap-2 font-semibold"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl uppercase tracking-wider flex items-center gap-2 font-semibold font-display border border-[#F2D9A0]/40"
             >
               <span>Consult Our Leadership</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -61,11 +61,36 @@ const About = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20practice."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#20ba5a] transition-all flex items-center gap-2 uppercase tracking-wider shadow-xl"
+              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#20ba5a] transition-all flex items-center gap-2 uppercase tracking-wider shadow-xl font-display"
             >
               <FaWhatsapp className="text-xl" />
               <span>WhatsApp Advisory Desk</span>
             </a>
+          </motion.div>
+
+          {/* Visual Boardroom Stock Showcase */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-2xl h-56 sm:h-72 mt-8"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+              alt="Crestara Advisory Group Executive Boardroom & Strategy Consultation"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3B010B]/80 via-transparent to-transparent flex items-end p-6 sm:p-8">
+              <div className="text-white text-left space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-widest bg-[#75162D] text-[#F2E5C6] px-3 py-1 rounded-full border border-[#F2D9A0]/40 font-display">
+                  Senior Director Advisory
+                </span>
+                <p className="text-sm sm:text-base font-bold text-white font-display">
+                  Cross-Disciplinary Mastery Across Governance, Cyber Defense & Financial Modelling
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
