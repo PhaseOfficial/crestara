@@ -91,10 +91,10 @@ const IndustriesWeSupport = () => {
 
               <div className="pt-6 mt-4 border-t border-[#F2E5C6]/80 flex items-center justify-between">
                 <Link 
-                  to="/who-we-support" 
+                  to="/services" 
                   className="text-xs font-bold text-[#3B010B] group-hover:text-[#75162D] flex items-center gap-1 uppercase tracking-wider transition-colors"
                 >
-                  <span>Explore Solutions</span>
+                  <span>Explore Services</span>
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
               </div>

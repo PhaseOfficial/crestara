@@ -42,10 +42,10 @@ const WhoWeSupport = () => {
             <a 
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20discuss%20advisory%20support%20for%20our%20sector."
               target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs hover:bg-[#20ba5a] transition-all uppercase tracking-wider flex items-center gap-2 shadow-xl font-display"
+              rel="noopener noreferrer" 
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-xs hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all uppercase tracking-wider flex items-center gap-2 shadow-md font-display"
             >
-              <FaWhatsapp className="text-lg" />
+              <FaWhatsapp className="text-[#25D366] text-lg flex-shrink-0" />
               <span>WhatsApp Advisory (+263 775 040 725)</span>
             </a>
           </div>

@@ -297,9 +297,9 @@ const Collection = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20service%20packages."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl font-display"
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center gap-2 shadow-md font-display"
             >
-              <FaWhatsapp className="text-lg" />
+              <FaWhatsapp className="text-[#25D366] text-lg flex-shrink-0" />
               <span>WhatsApp Advisory Desk</span>
             </a>
           </div>
@@ -367,8 +367,8 @@ const Collection = () => {
                   Select an authorized testing scope or continuous defense retainer below.
                 </p>
               </div>
-              <Link to="/cybersecurity" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
-                <span>View Dedicated Cyber Practice</span>
+              <Link to="/contact" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
+                <span>Request Cyber Consultation</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
             </div>
@@ -390,27 +390,29 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    {/* Top Animated SVG Stage */}
-                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
-                      <div className="absolute top-2.5 left-2.5">
+                    {/* TOP TEXT: Badge, Type & Title */}
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
                         <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
                           srv.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
                         }`}>
                           {srv.tag}
                         </span>
-                      </div>
-                      <div className="absolute top-2.5 right-2.5">
                         <span className="text-[10px] font-medium text-gray-500">
                           {srv.type}
                         </span>
                       </div>
-                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                      <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors leading-snug">
+                        {srv.title}
+                      </h3>
                     </div>
 
-                    <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
-                      {srv.title}
-                    </h3>
+                    {/* CENTER IMAGE: Unobstructed Animated SVG Stage */}
+                    <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] p-4 flex items-center justify-center shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-24 h-24 sm:w-28 sm:h-28" />
+                    </div>
 
+                    {/* BOTTOM TEXT: Description */}
                     <p className="text-xs font-light leading-relaxed text-gray-600">
                       {srv.desc}
                     </p>
@@ -484,14 +486,14 @@ const Collection = () => {
         {/* 2. Data Protection & Outsourced DPO */}
         {(activePillar === "all" || activePillar === "dp") && (
           <div className="space-y-8">
-            <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
+            <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-44 sm:h-52">
               <img
                 src="/images/data-protection.jpg"
-                alt="Data Protection & Regulatory Compliance"
-                className="w-full h-full object-cover"
+                alt="Digital Data Protection, Encryption & Regulatory Compliance"
+                className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/60 to-black/25 flex items-center p-6 sm:p-10">
                 <div className="space-y-2 text-white max-w-2xl">
                   <div className="flex items-center gap-2">
                     <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
@@ -518,8 +520,8 @@ const Collection = () => {
                   Appoint an independent accredited DPO or launch your organization-wide compliance roadmap.
                 </p>
               </div>
-              <Link to="/data-protection" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
-                <span>View Dedicated DPO Practice</span>
+              <Link to="/contact" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
+                <span>Appoint DPO / Request Roadmap</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
             </div>
@@ -541,27 +543,29 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    {/* Top Animated SVG Stage */}
-                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
-                      <div className="absolute top-2.5 left-2.5">
+                    {/* TOP TEXT: Badge, Type & Title */}
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
                         <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
                           srv.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
                         }`}>
                           {srv.tag}
                         </span>
-                      </div>
-                      <div className="absolute top-2.5 right-2.5">
                         <span className="text-[10px] font-medium text-gray-500">
                           {srv.type}
                         </span>
                       </div>
-                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                      <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors leading-snug">
+                        {srv.title}
+                      </h3>
                     </div>
 
-                    <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
-                      {srv.title}
-                    </h3>
+                    {/* CENTER IMAGE: Unobstructed Animated SVG Stage */}
+                    <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] p-4 flex items-center justify-center shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-24 h-24 sm:w-28 sm:h-28" />
+                    </div>
 
+                    {/* BOTTOM TEXT: Description */}
                     <p className="text-xs font-light leading-relaxed text-gray-600">
                       {srv.desc}
                     </p>
@@ -664,8 +668,8 @@ const Collection = () => {
                   Commission bankable models or fractional CFO management reporting.
                 </p>
               </div>
-              <Link to="/financial-advisory" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
-                <span>View Dedicated Finance Practice</span>
+              <Link to="/contact" className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display">
+                <span>Commission Financial Advisory</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
             </div>
@@ -687,27 +691,29 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    {/* Top Animated SVG Stage */}
-                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
-                      <div className="absolute top-2.5 left-2.5">
+                    {/* TOP TEXT: Badge, Type & Title */}
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
                         <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
                           srv.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
                         }`}>
                           {srv.tag}
                         </span>
-                      </div>
-                      <div className="absolute top-2.5 right-2.5">
                         <span className="text-[10px] font-medium text-gray-500">
                           {srv.type}
                         </span>
                       </div>
-                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                      <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors leading-snug">
+                        {srv.title}
+                      </h3>
                     </div>
 
-                    <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
-                      {srv.title}
-                    </h3>
+                    {/* CENTER IMAGE: Unobstructed Animated SVG Stage */}
+                    <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] p-4 flex items-center justify-center shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-24 h-24 sm:w-28 sm:h-28" />
+                    </div>
 
+                    {/* BOTTOM TEXT: Description */}
                     <p className="text-xs font-light leading-relaxed text-gray-600">
                       {srv.desc}
                     </p>
@@ -833,22 +839,24 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    {/* Top Animated SVG Stage */}
-                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
-                      <div className="absolute top-2.5 left-2.5">
-                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
-                          pkg.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
-                        }`}>
-                          {pkg.tag}
-                        </span>
-                      </div>
-                      <ServiceAnimatedSVG type={pkg.id + " " + pkg.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                    {/* TOP TEXT: Badge & Title */}
+                    <div className="space-y-1.5">
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                        pkg.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                      }`}>
+                        {pkg.tag}
+                      </span>
+                      <h3 className="text-xl font-bold font-display text-[#3B010B] leading-snug">
+                        {pkg.title}
+                      </h3>
                     </div>
 
-                    <h3 className="text-xl font-bold font-display text-[#3B010B]">
-                      {pkg.title}
-                    </h3>
+                    {/* CENTER IMAGE: Unobstructed Animated SVG Stage */}
+                    <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] p-4 flex items-center justify-center shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <ServiceAnimatedSVG type={pkg.id + " " + pkg.title} className="w-24 h-24 sm:w-28 sm:h-28" />
+                    </div>
 
+                    {/* BOTTOM TEXT: Description */}
                     <p className="text-xs font-light leading-relaxed text-gray-600">
                       {pkg.desc}
                     </p>
@@ -954,9 +962,9 @@ const Collection = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20request%20a%20commercial%20quotation."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl font-display"
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center gap-2 shadow-md font-display"
             >
-              <FaWhatsapp className="text-lg" />
+              <FaWhatsapp className="text-[#25D366] text-lg flex-shrink-0" />
               <span>WhatsApp Desk (+263 775 040 725)</span>
             </a>
           </div>

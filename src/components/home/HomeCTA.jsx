@@ -28,9 +28,9 @@ const HomeCTA = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#20ba5a] transition-all shadow-xl shadow-[#25D366]/20 flex items-center justify-center gap-2 uppercase tracking-wider font-display"
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-sm hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all shadow-md flex items-center justify-center gap-2.5 uppercase tracking-wider font-display"
             >
-              <FaWhatsapp className="text-xl" />
+              <FaWhatsapp className="text-[#25D366] text-2xl flex-shrink-0" />
               <span>WHATSAPP DESK (+263 775 040 725)</span>
             </a>
             <Link to="/contact" className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl flex items-center justify-center uppercase tracking-wider font-semibold font-display border border-[#F2D9A0]/30">

@@ -1,14 +1,9 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Collection from "./pages/Collection";
-import DataProtection from "./pages/DataProtection";
-import Cybersecurity from "./pages/Cybersecurity";
-import FinancialAdvisory from "./pages/FinancialAdvisory";
-import WhoWeSupport from "./pages/WhoWeSupport";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
-import Insights from "./pages/Insights";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
@@ -32,25 +27,14 @@ const App = () => {
       
       <main className="min-h-screen relative z-10">
         <Routes location={location} key={location.pathname}>
+          {/* Main 5 Pages Only */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Collection />} />
-          
-          {/* Dedicated Practice Pillar Pages */}
-          <Route path="/cybersecurity" element={<Cybersecurity />} />
-          <Route path="/data-protection" element={<DataProtection />} />
-          <Route path="/financial-advisory" element={<FinancialAdvisory />} />
-          <Route path="/business" element={<FinancialAdvisory />} />
-          <Route path="/healthcare-expertise" element={<DataProtection />} />
-          <Route path="/homecare" element={<DataProtection />} />
-
-          {/* Sector, Careers & Insights */}
-          <Route path="/who-we-support" element={<WhoWeSupport />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
           
-          {/* Legal & Compliance Pack */}
+          {/* Legal & Governance Pages */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
@@ -58,6 +42,16 @@ const App = () => {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/cookies" element={<CookiePolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+
+          {/* Seamless Redirects for Previous Sub-pages to /services */}
+          <Route path="/cybersecurity" element={<Navigate to="/services" replace />} />
+          <Route path="/data-protection" element={<Navigate to="/services" replace />} />
+          <Route path="/financial-advisory" element={<Navigate to="/services" replace />} />
+          <Route path="/business" element={<Navigate to="/services" replace />} />
+          <Route path="/who-we-support" element={<Navigate to="/about" replace />} />
+          <Route path="/insights" element={<Navigate to="/services" replace />} />
+          <Route path="/healthcare-expertise" element={<Navigate to="/services" replace />} />
+          <Route path="/homecare" element={<Navigate to="/services" replace />} />
           
           <Route
             path="*"

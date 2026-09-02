@@ -131,9 +131,9 @@ const Cybersecurity = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20Cybersecurity%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl font-display"
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center gap-2 shadow-md font-display"
             >
-              <FaWhatsapp className="text-lg" />
+              <FaWhatsapp className="text-[#25D366] text-lg flex-shrink-0" />
               <span>WhatsApp Cyber Desk</span>
             </a>
           </div>
@@ -232,22 +232,24 @@ const Cybersecurity = () => {
                 )}
 
                 <div className="space-y-4">
-                  {/* Top Animated SVG Stage */}
-                  <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
-                    <div className="absolute top-2.5 left-2.5">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
-                        pkg.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
-                      }`}>
-                        {pkg.type}
-                      </span>
-                    </div>
-                    <ServiceAnimatedSVG type={pkg.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                  {/* TOP TEXT: Badge & Title */}
+                  <div className="space-y-1.5">
+                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                      pkg.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                    }`}>
+                      {pkg.type}
+                    </span>
+                    <h3 className="text-xl font-bold font-display text-[#3B010B] leading-snug">
+                      {pkg.title}
+                    </h3>
                   </div>
 
-                  <h3 className="text-xl font-bold font-display text-[#3B010B]">
-                    {pkg.title}
-                  </h3>
+                  {/* CENTER IMAGE: Unobstructed Animated SVG Stage */}
+                  <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] p-4 flex items-center justify-center shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                    <ServiceAnimatedSVG type={pkg.title} className="w-24 h-24 sm:w-28 sm:h-28" />
+                  </div>
 
+                  {/* BOTTOM TEXT: Description */}
                   <p className="text-xs font-light leading-relaxed text-gray-600">
                     {pkg.desc}
                   </p>

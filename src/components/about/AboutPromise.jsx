@@ -64,9 +64,9 @@ const AboutPromise = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20discuss%20an%20advisory%20mandate."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#20ba5a] transition-all flex items-center gap-2 uppercase tracking-wider shadow-xl font-display"
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-sm hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center gap-2.5 uppercase tracking-wider shadow-md font-display"
             >
-              <FaWhatsapp className="text-xl" />
+              <FaWhatsapp className="text-[#25D366] text-2xl flex-shrink-0" />
               <span>WhatsApp Desk (+263 775 040 725)</span>
             </a>
           </motion.div>

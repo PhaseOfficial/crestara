@@ -156,9 +156,9 @@ const Contact = () => {
                   href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20request%20an%20advisory%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-2 shadow-lg font-display"
+                  className="w-full bg-white text-[#3B010B] border-2 border-[#25D366]/50 py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center justify-center gap-2 shadow-sm font-display"
                 >
-                  <FaWhatsapp className="text-lg" />
+                  <FaWhatsapp className="text-lg text-[#25D366]" />
                   <span>Instant WhatsApp Advisory</span>
                 </a>
               </div>

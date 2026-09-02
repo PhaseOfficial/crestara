@@ -124,10 +124,10 @@ const Certification = () => {
               </div>
             </div>
             <Link
-              to="/data-protection"
+              to="/services"
               className="text-xs font-bold text-[#75162D] hover:text-[#3B010B] uppercase tracking-wider flex items-center gap-1 font-display whitespace-nowrap"
             >
-              <span>View</span>
+              <span>View Packages</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
           </div>

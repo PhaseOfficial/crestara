@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import SEO from "../components/common/SEO";
+import ServiceAnimatedSVG from "../components/common/ServiceAnimatedSVG";
 
 const DataProtection = () => {
   const [openDeliverables, setOpenDeliverables] = useState({});
@@ -10,12 +11,13 @@ const DataProtection = () => {
   const toggleDeliverables = (title) => {
     setOpenDeliverables(prev => ({
       ...prev,
-      [title]: prev[title] === undefined ? false : !prev[title]
+      [title]: !prev[title]
     }));
   };
 
   const isCardOpen = (title) => {
-    return openDeliverables[title] === undefined ? true : openDeliverables[title];
+    // Defaults to closed (false), toggles open on user click
+    return Boolean(openDeliverables[title]);
   };
   const packages = [
     {
@@ -109,6 +111,9 @@ const DataProtection = () => {
 
       {/* Hero Section */}
       <section className="bg-[#3B010B] py-20 px-6 md:px-12 text-white animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0]/20">
+        <div className="absolute inset-0 opacity-20 mix-blend-luminosity pointer-events-none">
+          <img src="/images/data-protection.jpg" alt="Digital Data Protection Network" className="w-full h-full object-cover" />
+        </div>
         <div className="max-w-6xl mx-auto text-center space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-[#F2D9A0]/30 backdrop-blur-md">
             <span className="material-symbols-outlined text-sm text-[#F2D9A0]">policy</span>
@@ -134,9 +139,9 @@ const DataProtection = () => {
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20DPO%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#20ba5a] transition-all flex items-center gap-2 shadow-xl"
+              className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center gap-2 shadow-md font-display"
             >
-              <FaWhatsapp className="text-lg" />
+              <FaWhatsapp className="text-[#25D366] text-lg flex-shrink-0" />
               <span>WhatsApp DPO Desk</span>
             </a>
           </div>
@@ -236,16 +241,28 @@ const DataProtection = () => {
                 )}
 
                 <div className="space-y-4">
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
-                    pkg.popular ? "bg-white/10 text-[#F2D9A0]" : "bg-[#75162D]/10 text-[#75162D]"
+                  {/* TOP TEXT: Badge & Title */}
+                  <div className="space-y-1.5">
+                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                      pkg.popular ? "bg-[#F2D9A0] text-[#3B010B]" : "bg-[#75162D]/10 text-[#75162D]"
+                    }`}>
+                      {pkg.type}
+                    </span>
+                    <h3 className={`text-xl font-bold font-display leading-snug ${pkg.popular ? "text-white" : "text-[#3B010B]"}`}>
+                      {pkg.title}
+                    </h3>
+                  </div>
+
+                  {/* CENTER IMAGE: Unobstructed Animated SVG Stage */}
+                  <div className={`w-full h-36 rounded-2xl p-4 flex items-center justify-center shadow-inner transition-all ${
+                    pkg.popular
+                      ? "bg-white/10 border border-white/20"
+                      : "bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] group-hover:border-[#75162D]/60"
                   }`}>
-                    {pkg.type}
-                  </span>
+                    <ServiceAnimatedSVG type={pkg.title} className="w-24 h-24 sm:w-28 sm:h-28" />
+                  </div>
 
-                  <h3 className={`text-xl font-bold font-display ${pkg.popular ? "text-white" : "text-[#3B010B]"}`}>
-                    {pkg.title}
-                  </h3>
-
+                  {/* BOTTOM TEXT: Description */}
                   <p className={`text-xs font-light leading-relaxed ${pkg.popular ? "text-white/80" : "text-gray-600"}`}>
                     {pkg.desc}
                   </p>

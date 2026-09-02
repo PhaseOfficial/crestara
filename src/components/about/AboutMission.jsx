@@ -244,9 +244,9 @@ const AboutMission = () => {
                 href="https://wa.me/263775040725?text=Hello%20Crestara%20Team%2C%20I%20would%20like%20to%20enquire%20about%20Crestara%20Advisory%20Group."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#20ba5a] transition-all uppercase tracking-wider flex items-center gap-2 shadow-md font-display"
+                className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 px-6 py-3 rounded-xl font-bold text-xs hover:bg-white hover:border-[#25D366] hover:shadow-lg transition-all uppercase tracking-wider flex items-center gap-2 shadow-sm font-display"
               >
-                <FaWhatsapp className="text-base" />
+                <FaWhatsapp className="text-[#25D366] text-lg flex-shrink-0" />
                 <span>Direct WhatsApp Desk</span>
               </a>
             </div>

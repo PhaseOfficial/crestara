@@ -30,7 +30,7 @@ const Services = () => {
         "Technical remediation blueprint & executive risk report",
         "Complimentary 30-day remediation re-test"
       ],
-      link: "/cybersecurity"
+      link: "/services"
     },
     {
       category: "cyber",
@@ -45,7 +45,7 @@ const Services = () => {
         "Access control & privilege escalation audit",
         "Prioritized technical vulnerability remediation roadmap"
       ],
-      link: "/cybersecurity"
+      link: "/services"
     },
     {
       category: "cyber",
@@ -60,7 +60,7 @@ const Services = () => {
         "Threat actor isolation & system containment",
         "Admissible Board & Litigation Forensic Report"
       ],
-      link: "/cybersecurity"
+      link: "/services"
     },
     {
       category: "cyber",
@@ -75,7 +75,7 @@ const Services = () => {
         "Priority emergency incident containment support",
         "Quarterly threat intelligence & risk posture briefing"
       ],
-      link: "/cybersecurity"
+      link: "/services"
     },
 
     // --- PILLAR: DATA PROTECTION & DPO ---
@@ -92,7 +92,7 @@ const Services = () => {
         "POTRAZ compliance readiness & registration support",
         "Executive data protection gap report"
       ],
-      link: "/data-protection"
+      link: "/services"
     },
     {
       category: "dpo",
@@ -107,7 +107,7 @@ const Services = () => {
         "Data Subject Access Request (DSAR) handling protocols",
         "Quarterly compliance reviews & board reporting"
       ],
-      link: "/data-protection"
+      link: "/services"
     },
 
     // --- PILLAR: FINANCIAL ADVISORY & MODELLING ---
@@ -124,7 +124,7 @@ const Services = () => {
         "DCF, IRR, NPV & payback period analytics",
         "Bankable investor & board-ready presentation spreadsheets"
       ],
-      link: "/financial-advisory"
+      link: "/services"
     },
     {
       category: "finance",
@@ -139,7 +139,7 @@ const Services = () => {
         "Cost-effectiveness & unit economics variance analysis",
         "Executive decision-support framework for leadership"
       ],
-      link: "/financial-advisory"
+      link: "/services"
     },
     {
       category: "finance",
@@ -154,7 +154,7 @@ const Services = () => {
         "Working capital cycle & cash management advice",
         "Monthly strategic consultation with senior practice leads"
       ],
-      link: "/financial-advisory"
+      link: "/services"
     },
 
     // --- PILLAR: INTEGRATED PROTECTION RETAINERS ---
@@ -259,31 +259,34 @@ const Services = () => {
                 transition={{ duration: 0.3 }}
                 className="bg-white rounded-3xl p-8 border border-[#F2E5C6]/60 shadow-lg hover:shadow-2xl hover:border-[#75162D]/50 transition-all flex flex-col justify-between group space-y-6"
               >
-                  {/* Top Animated SVG Stage */}
-                  <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-4 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
-                    <div className="absolute top-3 left-3">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#75162D] bg-[#75162D]/10 px-2.5 py-0.5 rounded-full border border-[#75162D]/20">
+                <div className="space-y-4">
+                  {/* TOP TEXT: Badges & Headings */}
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center gap-3">
+                      <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#75162D] bg-[#75162D]/10 px-3 py-1 rounded-full border border-[#75162D]/20">
                         {service.badge}
                       </span>
-                    </div>
-                    <div className="absolute top-3 right-3">
-                      <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider font-mono">
+                      <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider font-mono bg-[#FAF7F2] px-2 py-0.5 rounded-md border border-[#F2D9A0]/50">
                         {service.category}
                       </span>
                     </div>
+                    <div>
+                      <span className="text-xs text-[#75162D] font-bold uppercase tracking-wider block">{service.type}</span>
+                      <h3 className="text-xl font-bold text-[#3B010B] group-hover:text-[#75162D] transition-colors leading-snug font-display mt-0.5">
+                        {service.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* CENTER IMAGE: Unobstructed Animated SVG Illustration Stage */}
+                  <div className="w-full h-36 sm:h-40 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/40 border border-[#F2D9A0] p-4 flex items-center justify-center shadow-inner group-hover:border-[#75162D]/60 transition-all">
                     <ServiceAnimatedSVG
                       type={service.title + " " + service.badge + " " + service.category}
                       className="w-24 h-24 sm:w-28 sm:h-28"
                     />
                   </div>
 
-                  <div>
-                    <span className="text-xs text-[#75162D] font-bold uppercase tracking-wider block">{service.type}</span>
-                    <h3 className="text-xl font-bold text-[#3B010B] group-hover:text-[#75162D] transition-colors leading-snug font-display mt-1">
-                      {service.title}
-                    </h3>
-                  </div>
-
+                  {/* BOTTOM TEXT: Description */}
                   <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
                     {service.desc}
                   </p>

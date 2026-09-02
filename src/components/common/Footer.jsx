@@ -38,12 +38,12 @@ const Footer = () => {
             <a 
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." 
               target="_blank" 
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center hover:scale-105 transition-all shadow-md"
+              rel="noopener noreferrer" 
+              className="w-10 h-10 rounded-xl bg-white text-[#25D366] border border-[#25D366]/50 flex items-center justify-center hover:scale-105 hover:border-[#25D366] transition-all shadow-sm"
               title="Chat on WhatsApp (+263 775 040 725)"
               aria-label="WhatsApp"
             >
-              <FaWhatsapp size={20} />
+              <FaWhatsapp size={20} className="text-[#25D366]" />
             </a>
             <div className="text-xs text-[#3B010B]">
               <span className="text-[#75162D] font-bold block font-display">Executive Advisory Desk</span>

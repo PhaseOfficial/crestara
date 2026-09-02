@@ -184,9 +184,9 @@ const Header = () => {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   onClick={toggleMenu}
-                  className="flex items-center justify-center gap-2 bg-[#25D366] text-white p-3.5 rounded-xl font-bold uppercase text-center text-xs shadow-lg hover:bg-[#20ba5a] transition-all"
+                  className="flex items-center justify-center gap-2 bg-white text-[#3B010B] border-2 border-[#25D366]/40 p-3.5 rounded-xl font-bold uppercase text-center text-xs shadow-sm hover:border-[#25D366] transition-all font-display"
                 >
-                  <FaWhatsapp className="text-lg" />
+                  <FaWhatsapp className="text-lg text-[#25D366]" />
                   WHATSAPP ADVISORY DESK
                 </a>
                 <Link 
