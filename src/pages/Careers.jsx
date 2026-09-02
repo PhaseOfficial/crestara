@@ -8,8 +8,8 @@ const Careers = () => {
     name: "",
     email: "",
     phone: "",
-    position: "Senior Penetration Testing & Cybersecurity Specialist",
-    experience: "3-5 years",
+    position: "Cybersecurity & Offensive Penetration Testing",
+    experience: "1-3 years (Associate)",
     linkedin: "",
     coverNote: ""
   });
@@ -61,114 +61,27 @@ const Careers = () => {
     }
   ];
 
-  const jobListings = [
+  const practiceDisciplines = [
     {
-      id: "cyber-lead",
-      title: "Senior Penetration Testing & Cybersecurity Specialist",
-      department: "Offensive Security & Digital Forensics",
-      location: "Harare, Zimbabwe (Hybrid)",
-      type: "Full-Time",
-      experience: "3+ Years",
-      badge: "Priority Hire",
-      summary: "Lead offensive penetration testing engagements across web applications, APIs, cloud environments, and internal networks for banking and enterprise clients.",
-      responsibilities: [
-        "Conduct authorized web, API, network, and cloud penetration tests under formal Rules of Engagement (RoE).",
-        "Produce detailed technical vulnerability reports with proof-of-concept exploits and remediation blueprints.",
-        "Perform digital forensic investigations and malware containment during active incident response.",
-        "Collaborate with client development teams on secure coding practices and post-audit re-testing."
-      ],
-      requirements: [
-        "Certified in CEH Practical, OSCP, CompTIA Security+, or equivalent offensive cybersecurity certification.",
-        "Strong proficiency with Burp Suite Pro, Metasploit, Nmap, Wireshark, and Linux environments.",
-        "Solid understanding of OWASP Top 10 vulnerabilities, API security, and network protocol fundamentals.",
-        "Impeccable ethical standing and ability to handle strictly confidential client infrastructure."
-      ]
+      id: "cyber",
+      icon: "security",
+      title: "Cybersecurity & Offensive Penetration Testing",
+      certifications: "CEH Practical • CompTIA Security+ • OSCP",
+      desc: "Ethical hackers, web/API penetration testers, and digital forensics specialists conducting authorized vulnerability diagnostics and incident containment."
     },
     {
-      id: "dpo-consultant",
-      title: "Data Protection & Privacy Compliance Consultant",
-      department: "Data Protection & DPO Practice",
-      location: "Harare, Zimbabwe (Hybrid)",
-      type: "Full-Time",
-      experience: "2+ Years",
-      badge: "Regulatory Focus",
-      summary: "Advise commercial clients on compliance with the Data Protection Act [Chapter 12:07], conduct DPIAs, maintain processing registers, and liaise with POTRAZ.",
-      responsibilities: [
-        "Draft and review Data Protection Policies, employee privacy notices, and third-party data processing agreements.",
-        "Lead Data Protection Impact Assessments (DPIAs) on emerging digital platforms, AI tools, and fintech architectures.",
-        "Maintain statutory Data Processing Registers and Data Mapping inventories for client organizations.",
-        "Assist clients during regulatory inquiries, statutory POTRAZ filings, and data subject access requests (DSARs)."
-      ],
-      requirements: [
-        "Degree in Law (LLB), Information Governance, Computer Science, or Certified Data Protection Officer (DPO).",
-        "Deep familiarity with Zimbabwe's Data Protection Act [Chapter 12:07], POTRAZ regulations, GDPR, and POPIA.",
-        "Strong analytical, legal drafting, and presentation skills for executive board presentations.",
-        "Demonstrated experience in compliance auditing, risk assessments, or corporate governance."
-      ]
+      id: "dpo",
+      icon: "policy",
+      title: "Data Protection & DPO Statutory Governance",
+      certifications: "Certified DPO • Legal (LLB) • GDPR / POTRAZ Standards",
+      desc: "Privacy consultants, outsourced DPOs, and legal practitioners managing statutory data protection registers, DPIAs, and regulatory compliance."
     },
     {
-      id: "finance-model",
-      title: "Financial Modelling & Valuation Associate",
-      department: "Financial Advisory & Corporate Modelling",
-      location: "Harare, Zimbabwe (Hybrid)",
-      type: "Full-Time",
-      experience: "2+ Years",
-      badge: "FMVA / BIDA Track",
-      summary: "Build institutional 3-statement dynamic financial models, DCF company valuations, and automated PowerBI management dashboards for scaling enterprises.",
-      responsibilities: [
-        "Construct integrated 3-statement forecast models (P&L, Balance Sheet, Cash Flow) in Excel adhering to CFI standards.",
-        "Perform DCF company valuations, scenario/sensitivity analyses, and capital project investment appraisals.",
-        "Design and deploy automated executive KPI dashboards in Microsoft PowerBI and Excel.",
-        "Deliver monthly budget-vs-actual variance reports and cash-flow management advisory to client leadership."
-      ],
-      requirements: [
-        "Degree in Finance, Accounting, Economics, or Quantitative discipline; FMVA® / BIDA® or CFA candidate preferred.",
-        "Expert Excel modelling skills (dynamic array formulas, INDEX/MATCH, scenario managers, circular reference avoidance).",
-        "Proficiency in Microsoft PowerBI, DAX, Power Query, and financial statement analysis.",
-        "Strong commercial acumen and understanding of Zimbabwean macroeconomic dynamics and multi-currency environments."
-      ]
-    },
-    {
-      id: "dfir-analyst",
-      title: "Digital Forensics & Incident Response (DFIR) Analyst",
-      department: "Offensive Security & Digital Forensics",
-      location: "Harare, Zimbabwe (Hybrid / On-Call)",
-      type: "Full-Time",
-      experience: "2+ Years",
-      badge: "Specialist",
-      summary: "Conduct digital evidence preservation, disk/memory timeline reconstruction, and root-cause analysis for cybersecurity breaches and corporate fraud cases.",
-      responsibilities: [
-        "Execute forensic acquisitions of servers, workstations, mobile devices, and cloud logs maintaining chain-of-custody.",
-        "Analyze disk images, memory dumps, and Windows/Linux event logs to reconstruct adversary attack paths.",
-        "Draft board-admissible, legally defensible forensic investigation reports for litigation and law enforcement.",
-        "Assist in rapid threat containment and threat actor eradication during emergency incident response."
-      ],
-      requirements: [
-        "Experience with forensic tools (Autopsy, FTK Imager, Volatility, EnCase, Wireshark, SANS SIFT).",
-        "Understanding of file systems (NTFS, EXT4, APFS), memory structures, and persistence mechanisms.",
-        "Clear technical writing ability and strict adherence to evidence-handling jurisprudence."
-      ]
-    },
-    {
-      id: "grad-associate",
-      title: "Graduate Advisory Associate (Multidisciplinary)",
-      department: "Cross-Pillar Graduate Program",
-      location: "Harare, Zimbabwe",
-      type: "Graduate Program (12-Month Rotation)",
-      experience: "Entry-Level",
-      badge: "Early Career",
-      summary: "Fast-track rotational program spanning Cybersecurity, Data Protection, and Financial Advisory with dedicated mentorship and sponsored certifications.",
-      responsibilities: [
-        "Rotate through all 3 advisory pillars, supporting senior consultants on live client engagements.",
-        "Conduct industry research, regulatory bench-marking, and financial data gathering.",
-        "Assist in vulnerability scans, policy documentation, and financial model testing.",
-        "Complete assigned professional certifications (FMVA, CompTIA Sec+, DPO) within the 12-month program."
-      ],
-      requirements: [
-        "Recent graduate (First or Upper Second Class) in Computer Science, Cybersecurity, Law, Finance, or Accounting.",
-        "Passionate problem-solver with exceptional analytical curiosity and strong work ethic.",
-        "Excellent written and verbal communication skills."
-      ]
+      id: "finance",
+      icon: "calculate",
+      title: "Financial Modelling & Quantitative Advisory",
+      certifications: "FMVA® • BIDA® • CFA Standards • Accounting",
+      desc: "Financial analysts and modellers constructing 3-statement forecasting models, DCF valuations, and automated PowerBI management dashboards."
     }
   ];
 
@@ -180,8 +93,8 @@ const Careers = () => {
     }));
   };
 
-  const handleApply = (jobTitle) => {
-    setFormData(prev => ({ ...prev, position: jobTitle }));
+  const handleApply = (disciplineTitle) => {
+    setFormData(prev => ({ ...prev, position: disciplineTitle }));
     const formElement = document.getElementById("application-form");
     if (formElement) {
       formElement.scrollIntoView({ behavior: "smooth" });
@@ -233,10 +146,10 @@ const Careers = () => {
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <a
-              href="#open-positions"
+              href="#talent-inquiry"
               className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl font-display border border-[#F2D9A0]/40"
             >
-              Explore Open Positions
+              Submit Expression of Interest
             </a>
             <a
               href="mailto:careers@crestaraadvisorygroup.com"
@@ -327,90 +240,53 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
+      {/* Talent & Specialist Network / Expressions of Interest */}
+      <section id="talent-inquiry" className="py-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-3 py-1 rounded-full font-display border border-[#75162D]/20">
-            <span className="material-symbols-outlined text-sm">list_alt</span>
-            Current Opportunities
+            <span className="material-symbols-outlined text-sm">handshake</span>
+            Talent & Specialist Network
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#3B010B] font-display">
-            Open Advisory Positions
+            Expressions of Interest & Specialist Roster
           </h2>
-          <p className="text-gray-600 text-sm font-light">
-            Review our active openings and apply directly. We evaluate applications on a rolling basis.
+          <p className="text-gray-600 text-sm font-light leading-relaxed">
+            While permanent and mandate-based advisory positions are appointed on an ongoing basis, we actively welcome profiles, consultant registrations, and speculative applications from certified specialists across our practice pillars.
           </p>
         </div>
 
-        <div className="space-y-6">
-          {jobListings.map((job) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {practiceDisciplines.map((discipline) => (
             <div
-              key={job.id}
-              className="bg-white rounded-3xl p-7 md:p-9 border border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D] transition-all space-y-6"
+              key={discipline.id}
+              className="bg-white rounded-3xl p-8 border border-[#F2D9A0] shadow-sm hover:shadow-xl hover:border-[#75162D] transition-all flex flex-col justify-between group space-y-6"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#FAF7F2] pb-5">
-                <div className="space-y-2">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#75162D]/10 text-[#75162D] px-2.5 py-1 rounded-full font-mono border border-[#75162D]/20">
-                      {job.department}
-                    </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#F2E5C6] text-[#75162D] px-2.5 py-1 rounded-full border border-[#F2D9A0] font-semibold">
-                      {job.badge}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#3B010B] font-display">{job.title}</h3>
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 font-light">
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-sm text-[#75162D]">location_on</span>
-                      {job.location}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-sm text-[#75162D]">schedule</span>
-                      {job.type}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span className="material-symbols-outlined text-sm text-[#75162D]">trending_up</span>
-                      {job.experience} Experience
-                    </span>
-                  </div>
+              <div className="space-y-4">
+                <div className="w-14 h-14 rounded-2xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center shadow-md">
+                  <span className="material-symbols-outlined text-2xl">{discipline.icon}</span>
                 </div>
-
-                <button
-                  onClick={() => handleApply(job.title)}
-                  className="bg-[#75162D] text-[#F2E5C6] hover:bg-[#3B010B] hover:text-[#F2D9A0] px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md whitespace-nowrap self-start md:self-center font-display border border-[#F2D9A0]/30"
-                >
-                  Apply for Position
-                </button>
+                <div>
+                  <span className="text-[10px] font-mono text-[#75162D] font-bold block pb-1 uppercase tracking-wider">
+                    {discipline.certifications}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#3B010B] font-display group-hover:text-[#75162D] transition-colors leading-snug">
+                    {discipline.title}
+                  </h3>
+                </div>
+                <p className="text-xs text-gray-600 font-light leading-relaxed">
+                  {discipline.desc}
+                </p>
               </div>
 
-              <p className="text-sm text-gray-700 font-light leading-relaxed">
-                {job.summary}
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6 pt-2">
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#3B010B] font-display">Key Responsibilities:</h4>
-                  <ul className="space-y-1.5">
-                    {job.responsibilities.map((res, i) => (
-                      <li key={i} className="text-xs text-gray-600 font-light flex items-start gap-2">
-                        <span className="material-symbols-outlined text-sm text-[#75162D] flex-shrink-0 mt-0.5">check_circle</span>
-                        <span>{res}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#3B010B] font-display">Candidate Requirements:</h4>
-                  <ul className="space-y-1.5">
-                    {job.requirements.map((req, i) => (
-                      <li key={i} className="text-xs text-gray-600 font-light flex items-start gap-2">
-                        <span className="material-symbols-outlined text-sm text-[#75162D] flex-shrink-0 mt-0.5">arrow_right</span>
-                        <span>{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="pt-4 border-t border-[#FAF7F2]">
+                <button
+                  type="button"
+                  onClick={() => handleApply(discipline.title)}
+                  className="w-full bg-[#FAF7F2] hover:bg-[#75162D] text-[#3B010B] hover:text-[#F2E5C6] py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all border border-[#F2D9A0] hover:border-transparent flex items-center justify-center gap-2 font-display"
+                >
+                  <span>Express Interest in {discipline.id.toUpperCase()}</span>
+                  <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
               </div>
             </div>
           ))}
@@ -499,7 +375,7 @@ const Careers = () => {
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-[#3B010B] uppercase tracking-wider">
-                    Position Applied For <span className="text-red-500">*</span>
+                    Discipline / Practice Area <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="position"
@@ -507,10 +383,10 @@ const Careers = () => {
                     onChange={handleChange}
                     className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
                   >
-                    {jobListings.map(j => (
-                      <option key={j.id} value={j.title}>{j.title}</option>
+                    {practiceDisciplines.map(d => (
+                      <option key={d.id} value={d.title}>{d.title}</option>
                     ))}
-                    <option value="General Spontaneous Application">General Spontaneous Application</option>
+                    <option value="General Corporate Advisory / Multidisciplinary">General Corporate Advisory / Multidisciplinary</option>
                   </select>
                 </div>
 
