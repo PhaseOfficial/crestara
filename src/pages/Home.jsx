@@ -56,14 +56,14 @@ const Home = () => {
       />
       {/* Global Background Animations */}
 
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
         {[
-          { icon: "public", top: "15%", left: "8%", size: "40px" },
+          { icon: "shield", top: "15%", left: "8%", size: "40px" },
           { icon: "verified_user", top: "35%", left: "88%", size: "55px" },
           { icon: "analytics", top: "60%", left: "5%", size: "45px" },
-          { icon: "medical_services", top: "80%", left: "82%", size: "50px" },
+          { icon: "privacy_tip", top: "80%", left: "82%", size: "50px" },
           { icon: "gavel", top: "45%", left: "12%", size: "35px" },
-          { icon: "handshake", top: "25%", left: "75%", size: "40px" }
+          { icon: "hub", top: "25%", left: "75%", size: "40px" }
         ].map((item, i) => (
           <motion.div
             key={i}
@@ -78,7 +78,7 @@ const Home = () => {
               repeat: Infinity, 
               delay: i * 1.5 
             }}
-            className="absolute text-[#B6924A]"
+            className="absolute text-[#75162D]"
             style={{ 
               top: item.top, 
               left: item.left,
@@ -91,16 +91,16 @@ const Home = () => {
 
         <motion.div 
           {...floatAnimation} 
-          className="absolute top-[25%] right-[5%] text-[#1E2A38] opacity-[0.03]"
+          className="absolute top-[25%] right-[5%] text-[#75162D] opacity-[0.035]"
         >
           <span className="material-symbols-outlined text-[240px]">shield</span>
         </motion.div>
         <motion.div 
           {...floatAnimation} 
           transition={{ duration: 7, repeat: Infinity }}
-          className="absolute bottom-[15%] left-[3%] text-[#B6924A] opacity-[0.03]"
+          className="absolute bottom-[15%] left-[3%] text-[#F2D9A0] opacity-[0.05]"
         >
-          <span className="material-symbols-outlined text-[220px]">public</span>
+          <span className="material-symbols-outlined text-[220px]">hub</span>
         </motion.div>
       </div>
 

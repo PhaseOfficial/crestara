@@ -1,7 +1,7 @@
-﻿{
-  "short_name": "Elysian Global",
-  "name": "Elysian Consulting Ltd | International Professional Services & Advisory",
-  "description": "International professional services, independent project oversight, UK healthcare governance, and diaspora advisory across Southern Africa and Europe.",
+{
+  "short_name": "Crestara Advisory",
+  "name": "Crestara Advisory Group | Data Protection, Cybersecurity & Financial Advisory",
+  "description": "Multidisciplinary advisory firm providing outsourced DPO governance (POTRAZ compliant), Cybersecurity & Digital Forensics, and Financial Modelling across Southern Africa and globally.",
   "icons": [
     {
       "src": "/favicon.png",
@@ -16,7 +16,7 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#1E2A38",
-  "background_color": "#F7F4EE",
+  "theme_color": "#3B010B",
+  "background_color": "#FAF7F2",
   "orientation": "portrait-primary"
 }

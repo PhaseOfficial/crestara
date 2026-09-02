@@ -22,7 +22,21 @@ const App = () => {
   }, [location.pathname]);
 
   return (
-    <div className="bg-[#FAF7F2] min-h-screen selection:bg-[#75162D] selection:text-[#F2E5C6] relative">
+    <div className="bg-[#FAF7F2] min-h-screen selection:bg-[#75162D] selection:text-[#F2E5C6] relative overflow-x-hidden">
+      {/* Global Atmospheric Background Textures & Ambient Lighting */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+        {/* Fine Noise Paper Grain Overlay */}
+        <div className="absolute inset-0 bg-texture-grain opacity-90" />
+        {/* Subtle Architectural Grid Mesh */}
+        <div className="absolute inset-0 bg-texture-grid opacity-70" />
+        {/* Ambient Top Champagne Gold Glow */}
+        <div className="absolute -top-24 -right-24 w-[650px] h-[650px] bg-gradient-to-br from-[#F2D9A0]/35 via-[#F2E5C6]/20 to-transparent rounded-full blur-3xl" />
+        {/* Ambient Left Burgundy Depth Warmth */}
+        <div className="absolute top-1/3 -left-48 w-[500px] h-[500px] bg-gradient-to-tr from-[#75162D]/10 via-[#560B18]/05 to-transparent rounded-full blur-3xl" />
+        {/* Ambient Lower Sand Gold Orb */}
+        <div className="absolute bottom-20 right-5 w-[600px] h-[600px] bg-[#F2D9A0]/25 rounded-full blur-3xl" />
+      </div>
+
       <Header />
       
       <main className="min-h-screen relative z-10">

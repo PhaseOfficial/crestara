@@ -83,8 +83,12 @@ const Contact = () => {
 
       {/* Hero Header */}
       <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 animate-hero-gradient text-[#3B010B] relative overflow-hidden text-center space-y-6 border-b border-[#F2D9A0]">
+        {/* Background Texture Overlays */}
+        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none" />
+        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none" />
+
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-xs font-display">
             <span className="material-symbols-outlined text-sm text-[#75162D]">contact_support</span>
             Direct Executive & Practice Desk
           </div>
@@ -265,7 +269,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none transition-all shadow-xs" 
                         placeholder="e.g. Tendai Moyo" 
                       />
                     </div>
@@ -280,7 +284,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none transition-all shadow-xs" 
                         placeholder="t.moyo@enterprise.co.zw" 
                       />
                     </div>
@@ -297,7 +301,7 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none transition-all shadow-xs" 
                         placeholder="+263 77... or international" 
                       />
                     </div>
@@ -311,7 +315,7 @@ const Contact = () => {
                         name="organization"
                         value={formData.organization}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none transition-all shadow-xs" 
                         placeholder="e.g. Apex Financial Services" 
                       />
                     </div>
@@ -326,7 +330,7 @@ const Contact = () => {
                         name="pillar"
                         value={formData.pillar}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none cursor-pointer transition-all shadow-xs" 
                       >
                         <option>Data Protection & Outsourced DPO</option>
                         <option>Cybersecurity & Penetration Testing</option>
@@ -344,7 +348,7 @@ const Contact = () => {
                         name="packageInterest"
                         value={formData.packageInterest}
                         onChange={handleChange}
-                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none cursor-pointer"
+                        className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none cursor-pointer transition-all shadow-xs" 
                       >
                         <option>Compliance Starter Pack</option>
                         <option>Essential DPO Retainer</option>
@@ -375,7 +379,7 @@ const Contact = () => {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:bg-white outline-none transition-colors" 
+                      className="w-full bg-[#FAF7F2] border border-[#F2D9A0] rounded-xl px-4 py-3 text-sm focus:border-[#75162D] focus:ring-2 focus:ring-[#75162D]/15 focus:bg-white outline-none transition-all shadow-xs" 
                       placeholder="Please outline your entity size, current compliance status, technical environment, or required deliverables..."
                     ></textarea>
                   </div>

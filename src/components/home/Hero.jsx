@@ -6,9 +6,13 @@ import { FaWhatsapp } from "react-icons/fa";
 const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
   return (
     <section className="relative min-h-screen flex items-center pt-36 pb-24 px-6 md:px-12 overflow-hidden animate-hero-gradient text-[#3B010B] border-b border-[#F2D9A0]">
+      {/* Texture Grain & Grid Atmospheric Overlays */}
+      <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none" />
+      <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none" />
+
       {/* Subtle Warm Amber & Champagne Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F2D9A0]/40 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-[#F2E5C6]/60 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F2D9A0]/35 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-[#F2E5C6]/60 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
         
@@ -20,7 +24,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
           className="lg:col-span-7 space-y-8 text-center lg:text-left"
         >
           {/* Badge - Sand Gold & Burgundy */}
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm">
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/60 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm">
             <span className="material-symbols-outlined text-sm text-[#75162D] font-bold">verified_user</span>
             Multidisciplinary Corporate Advisory
           </motion.div>
@@ -39,16 +43,16 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 pt-2 justify-center lg:justify-start">
             <Link 
               to="/contact" 
-              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-[#3B010B] hover:text-[#F2D9A0] hover:scale-105 transition-all flex items-center gap-3 uppercase tracking-wider font-semibold border border-[#F2D9A0]/40 font-display"
+              className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-sm shadow-xl hover:bg-[#3B010B] hover:text-[#F2D9A0] hover:-translate-y-0.5 transition-all flex items-center gap-3 uppercase tracking-wider border border-[#F2D9A0]/50 font-display"
             >
-              REQUEST A QUOTATION
+              <span>REQUEST A QUOTATION</span>
               <span className="material-symbols-outlined text-sm font-bold">arrow_forward</span>
             </Link>
             <a 
               href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-[#F2D9A0] bg-white/90 text-[#3B010B] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#F2E5C6] hover:border-[#75162D] transition-all flex items-center gap-3 shadow-md font-display"
+              className="border-2 border-[#F2D9A0] bg-white/95 text-[#3B010B] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#F2E5C6] hover:border-[#75162D] hover:-translate-y-0.5 transition-all flex items-center gap-3 shadow-md font-display"
             >
               <FaWhatsapp className="text-[#25D366] text-lg" />
               <span>WHATSAPP DESK</span>
@@ -79,7 +83,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-2xl bg-gradient-to-b from-white via-[#FAF7F2] to-[#F2E5C6]/60 p-6 sm:p-8 space-y-5">
+          <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-2xl bg-gradient-to-b from-white/95 via-[#FAF7F2]/95 to-[#F2E5C6]/70 backdrop-blur-md p-6 sm:p-8 space-y-5">
             
             {/* Top Corporate Visual Header */}
             <div className="relative h-28 sm:h-32 rounded-2xl overflow-hidden border border-[#F2D9A0] shadow-sm">
@@ -122,7 +126,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
 
             {/* 3 Core Interactive Pillar Cards - Sand Gold & Champagne Surface with Burgundy Accents */}
             <div className="space-y-3">
-              <div className="p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md transition-all flex items-start gap-4 shadow-sm">
+              <div className="p-4 rounded-2xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md hover:-translate-y-0.5 transition-all flex items-start gap-4 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                   <span className="material-symbols-outlined text-xl">privacy_tip</span>
                 </div>
@@ -135,7 +139,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md transition-all flex items-start gap-4 shadow-sm">
+              <div className="p-4 rounded-2xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md hover:-translate-y-0.5 transition-all flex items-start gap-4 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                   <span className="material-symbols-outlined text-xl">security</span>
                 </div>
@@ -148,7 +152,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md transition-all flex items-start gap-4 shadow-sm">
+              <div className="p-4 rounded-2xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:shadow-md hover:-translate-y-0.5 transition-all flex items-start gap-4 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#75162D] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                   <span className="material-symbols-outlined text-xl">analytics</span>
                 </div>

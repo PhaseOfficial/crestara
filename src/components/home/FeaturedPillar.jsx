@@ -41,12 +41,17 @@ const FeaturedPillar = () => {
   ];
 
   return (
-    <section className="bg-[#FAF7F2] py-20 px-6 md:px-12 border-b border-[#F2E5C6]/60 relative overflow-hidden font-sans">
-      <div className="max-w-7xl mx-auto space-y-16">
+    <section className="bg-[#FAF7F2] py-20 px-6 md:px-12 border-b border-[#F2D9A0]/60 relative overflow-hidden font-sans">
+      {/* Background Texture & Ambient Glow */}
+      <div className="absolute inset-0 bg-texture-grain opacity-70 pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#F2D9A0]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#F2E5C6]/30 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
         {/* Main Heading Block */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-4 py-1.5 rounded-full border border-[#75162D]/20">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/20 shadow-xs font-display">
             <span className="material-symbols-outlined text-sm">hub</span>
             Unified Corporate Advisory
           </div>
@@ -65,10 +70,10 @@ const FeaturedPillar = () => {
         </div>
 
         {/* Showcase Grid: Practice Areas */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-[#F2E5C6]/60 space-y-6">
+        <div className="bg-white/95 rounded-3xl p-8 md:p-12 shadow-xl border border-[#F2D9A0] space-y-6 backdrop-blur-sm">
           <div className="text-center md:text-left space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#75162D]">Specialist Advisory Capabilities</span>
-            <h4 className="text-2xl font-bold text-[#3B010B]">How We Safeguard and Empower Your Organization:</h4>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#75162D] font-display">Specialist Advisory Capabilities</span>
+            <h4 className="text-2xl font-bold text-[#3B010B] font-display">How We Safeguard and Empower Your Organization:</h4>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
@@ -79,9 +84,9 @@ const FeaturedPillar = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05, duration: 0.4 }}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F2] border border-[#F2E5C6]/60 hover:border-[#75162D] hover:bg-white hover:shadow-md transition-all group"
+                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F2] border border-[#F2D9A0] hover:border-[#75162D] hover:bg-white hover:shadow-md hover:-translate-y-0.5 transition-all group cursor-default"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 group-hover:bg-[#75162D] group-hover:text-white transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 group-hover:bg-[#75162D] group-hover:text-white transition-colors shadow-xs">
                   <span className="material-symbols-outlined text-lg">{item.icon}</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#3B010B] font-bold text-sm">
@@ -96,8 +101,8 @@ const FeaturedPillar = () => {
         {/* 4-Step Methodology Grid */}
         <div className="space-y-8">
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#75162D]">Structured Delivery Framework</span>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3B010B]">Our 4-Stage Advisory Lifecycle</h3>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#75162D] font-display">Structured Delivery Framework</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#3B010B] font-display">Our 4-Stage Advisory Lifecycle</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -108,16 +113,16 @@ const FeaturedPillar = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="bg-white rounded-3xl p-6 shadow-md border border-[#F2E5C6]/60 hover:shadow-xl hover:border-[#75162D]/50 transition-all flex flex-col justify-between space-y-4 group"
+                className="bg-white/95 rounded-3xl p-6 shadow-md border border-[#F2D9A0] hover:shadow-xl hover:border-[#75162D] hover:-translate-y-1 transition-all flex flex-col justify-between space-y-4 group"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-black text-[#75162D] font-display">STEP {node.step}</span>
-                    <div className="w-11 h-11 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 group-hover:bg-[#75162D] group-hover:text-white transition-colors">
+                    <div className="w-11 h-11 rounded-xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center flex-shrink-0 group-hover:bg-[#75162D] group-hover:text-white transition-colors shadow-xs">
                       <span className="material-symbols-outlined text-xl">{node.icon}</span>
                     </div>
                   </div>
-                  <h4 className="font-bold text-[#3B010B] text-base group-hover:text-[#75162D] transition-colors">{node.title}</h4>
+                  <h4 className="font-bold text-[#3B010B] text-base group-hover:text-[#75162D] transition-colors font-display">{node.title}</h4>
                   <p className="text-xs md:text-sm text-gray-600 font-light leading-relaxed">{node.desc}</p>
                 </div>
               </motion.div>

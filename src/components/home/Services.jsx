@@ -209,12 +209,18 @@ const Services = () => {
     : servicesData.filter(s => s.category === activeTab);
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#FAF7F2] font-sans border-b border-[#F2E5C6]/60">
-      <div className="max-w-7xl mx-auto space-y-12">
+    <section className="py-24 px-6 md:px-12 bg-[#FAF7F2] font-sans border-b border-[#F2D9A0]/60 relative overflow-hidden">
+      {/* Background Texture & Ambient Orbs */}
+      <div className="absolute inset-0 bg-texture-grain opacity-70 pointer-events-none" />
+      <div className="absolute inset-0 bg-texture-grid opacity-40 pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#F2D9A0]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-0 w-96 h-96 bg-[#F2E5C6]/30 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto space-y-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#75162D]/10 px-4 py-1.5 rounded-full border border-[#75162D]/20">
+          <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/20 shadow-xs font-display">
             <span className="material-symbols-outlined text-sm">grid_view</span>
             Core Capabilities & Advisory Packages
           </div>
@@ -236,8 +242,8 @@ const Services = () => {
               onClick={() => setActiveTab(cat.id)}
               className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs md:text-sm font-bold transition-all ${
                 activeTab === cat.id
-                  ? "bg-[#3B010B] text-[#F2D9A0] shadow-lg scale-105 border border-[#F2D9A0]/30"
-                  : "bg-white text-[#3B010B] border border-[#F2E5C6]/80 hover:bg-[#F2E5C6]/20 hover:border-[#75162D]"
+                  ? "bg-[#3B010B] text-[#F2D9A0] shadow-lg scale-105 border border-[#F2D9A0]/40 font-display"
+                  : "bg-white/95 text-[#3B010B] border border-[#F2D9A0] hover:bg-[#F2E5C6]/30 hover:border-[#75162D] font-display"
               }`}
             >
               <span className="material-symbols-outlined text-base">{cat.icon}</span>
@@ -257,7 +263,7 @@ const Services = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-3xl p-8 border border-[#F2E5C6]/60 shadow-lg hover:shadow-2xl hover:border-[#75162D]/50 transition-all flex flex-col justify-between group space-y-6"
+                className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 border border-[#F2D9A0] shadow-md hover:shadow-2xl hover:border-[#75162D] hover:-translate-y-1 transition-all flex flex-col justify-between group space-y-6"
               >
                 <div className="space-y-4">
                   {/* TOP TEXT: Badges & Headings */}
@@ -331,19 +337,19 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[#F2E5C6]/60 flex gap-3">
+                <div className="pt-4 border-t border-[#F2D9A0]/60 flex gap-3">
                   <Link
                     to="/contact"
-                    className="flex-1 bg-[#3B010B] text-[#F2D9A0] py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-center hover:bg-[#75162D] hover:text-white transition-all shadow-md font-display"
+                    className="flex-1 bg-[#3B010B] text-[#F2D9A0] py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-center hover:bg-[#75162D] hover:text-white hover:shadow-lg transition-all shadow-md font-display border border-[#F2D9A0]/30"
                   >
                     Request Scope / Proposal
                   </Link>
                   <Link
                     to={service.link}
-                    className="px-4 py-3 rounded-xl border border-[#F2E5C6]/80 text-[#3B010B] hover:bg-[#FAF7F2] text-xs font-bold transition-all flex items-center justify-center"
+                    className="px-4 py-3 rounded-xl border border-[#F2D9A0] text-[#3B010B] hover:bg-[#F2E5C6]/40 hover:border-[#75162D] text-xs font-bold transition-all flex items-center justify-center shadow-xs"
                     title="View Practice Details"
                   >
-                    <span className="material-symbols-outlined text-base">arrow_forward</span>
+                    <span className="material-symbols-outlined text-base text-[#75162D]">arrow_forward</span>
                   </Link>
                 </div>
               </motion.div>
@@ -352,8 +358,11 @@ const Services = () => {
         </motion.div>
 
         {/* Custom Scope Card */}
-        <div className="bg-[#3B010B] text-white p-6 sm:p-8 rounded-3xl border border-[#F2D9A0]/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-1 flex-1">
+        <div className="bg-[#3B010B] text-white p-6 sm:p-8 rounded-3xl border border-[#F2D9A0]/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+          {/* Texture grain overlay */}
+          <div className="absolute inset-0 bg-texture-grain opacity-20 pointer-events-none" />
+
+          <div className="space-y-1 flex-1 relative z-10">
             <span className="text-xs font-bold text-[#F2D9A0] uppercase tracking-widest font-display">Enterprise & Conglomerate Scoping</span>
             <p className="text-xs text-white/80 font-light leading-relaxed">
               Require a tailored combination of offensive penetration testing, outsourced DPO coverage, and complex financial valuations? Our advisory team will structure a customized proposal tailored to your operational scale.
@@ -361,7 +370,7 @@ const Services = () => {
           </div>
           <Link
             to="/contact"
-            className="bg-[#F2D9A0] text-[#3B010B] px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-[#F2E5C6] transition-all whitespace-nowrap shadow-lg font-display"
+            className="bg-[#F2D9A0] text-[#3B010B] px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-[#F2E5C6] hover:shadow-xl hover:-translate-y-0.5 transition-all whitespace-nowrap shadow-lg font-display relative z-10 border border-[#FAF7F2]/40"
           >
             Request Custom Scope
           </Link>

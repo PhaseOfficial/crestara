@@ -23,21 +23,23 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const linkClasses = ({ isActive }) => 
-    `font-semibold text-xs xl:text-sm px-3 py-2 transition-all duration-300 border-b-2 rounded-t-lg ${
+    `font-semibold text-xs xl:text-sm px-3.5 py-2 rounded-xl transition-all duration-300 relative ${
       isActive 
-        ? "text-[#75162D] border-[#75162D] bg-[#F2D9A0]/30 font-bold" 
-        : "text-[#3B010B] border-transparent hover:text-[#75162D] hover:bg-[#F2E5C6]/40"
+        ? "text-[#75162D] bg-[#F2D9A0]/40 font-bold shadow-xs border border-[#75162D]/20" 
+        : "text-[#3B010B] hover:text-[#75162D] hover:bg-[#F2E5C6]/40"
     }`;
 
   const mobileLinkClasses = ({ isActive }) => 
-    `text-base py-3.5 px-3 rounded-xl border-b border-[#F2D9A0]/50 w-full text-left flex justify-between items-center transition-colors ${
-      isActive ? "text-[#75162D] bg-[#F2D9A0]/40 font-bold" : "text-[#3B010B] hover:text-[#75162D] hover:bg-[#F2E5C6]/30"
+    `text-sm font-semibold py-3.5 px-4 rounded-xl border border-transparent w-full text-left flex justify-between items-center transition-all ${
+      isActive 
+        ? "text-[#75162D] bg-[#F2D9A0]/50 border-[#75162D]/30 font-bold shadow-xs" 
+        : "text-[#3B010B] hover:text-[#75162D] hover:bg-[#F2E5C6]/40"
     }`;
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 shadow-sm transition-all duration-300">
       {/* Top Global Trust & Contact Banner - Sand Gold & Champagne Beige with Burgundy Accents */}
       <div className="bg-gradient-to-r from-[#F2E5C6] via-[#F2D9A0] to-[#F2E5C6] text-[#3B010B] py-1.5 md:py-2 px-4 sm:px-6 md:px-12 flex justify-between items-center text-[11px] sm:text-xs tracking-wider border-b border-[#F2D9A0]">
         <div className="flex items-center gap-3 sm:gap-6 min-w-0">
@@ -139,7 +141,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#FAF7F2] text-[#3B010B] shadow-2xl z-[100] lg:hidden flex flex-col p-6 overflow-y-auto border-r border-[#F2D9A0]"
+              className="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#FAF7F2] bg-texture-grain text-[#3B010B] shadow-2xl z-[100] lg:hidden flex flex-col p-6 overflow-y-auto border-r border-[#F2D9A0]"
             >
               <div className="flex justify-between items-center mb-6 pb-4 border-b border-[#F2D9A0]">
                 <CrestaraTextLogo isDark={false} />

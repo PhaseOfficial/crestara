@@ -4,6 +4,10 @@ import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-[#F2E5C6]/90 via-[#FAF7F2] to-[#F2D9A0] text-[#3B010B] py-16 px-6 md:px-12 border-t-2 border-[#F2D9A0] font-sans relative overflow-hidden">
+      {/* Background Texture Overlays */}
+      <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none" />
+      <div className="absolute inset-0 bg-texture-grid opacity-40 pointer-events-none" />
+
       {/* Subtle Background Glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#F2D9A0]/50 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -85,25 +89,25 @@ const Footer = () => {
             Direct Email Directory
           </h3>
           <ul className="space-y-2 text-xs text-gray-800 font-light">
-            <li className="flex items-center justify-between p-2 rounded-lg bg-white border border-[#F2D9A0] hover:border-[#75162D] transition-colors shadow-sm">
+            <li className="flex items-center justify-between p-2.5 rounded-xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:-translate-y-0.5 transition-all shadow-xs">
               <span className="text-gray-500 text-[11px]">Executive Advisory:</span>
               <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] hover:text-[#3B010B] font-semibold transition-colors lowercase font-mono">
                 director@crestaraadvisorygroup.com
               </a>
             </li>
-            <li className="flex items-center justify-between p-2 rounded-lg bg-white border border-[#F2D9A0] hover:border-[#75162D] transition-colors shadow-sm">
+            <li className="flex items-center justify-between p-2.5 rounded-xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:-translate-y-0.5 transition-all shadow-xs">
               <span className="text-gray-500 text-[11px]">General Inquiries:</span>
               <a href="mailto:info@crestaraadvisorygroup.com" className="text-[#75162D] hover:text-[#3B010B] font-semibold transition-colors lowercase font-mono">
                 info@crestaraadvisorygroup.com
               </a>
             </li>
-            <li className="flex items-center justify-between p-2 rounded-lg bg-white border border-[#F2D9A0] hover:border-[#75162D] transition-colors shadow-sm">
+            <li className="flex items-center justify-between p-2.5 rounded-xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:-translate-y-0.5 transition-all shadow-xs">
               <span className="text-gray-500 text-[11px]">Compliance & Privacy:</span>
               <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#75162D] hover:text-[#3B010B] font-semibold transition-colors lowercase font-mono">
                 compliance@crestaraadvisorygroup.com
               </a>
             </li>
-            <li className="flex items-center justify-between p-2 rounded-lg bg-white border border-[#F2D9A0] hover:border-[#75162D] transition-colors shadow-sm">
+            <li className="flex items-center justify-between p-2.5 rounded-xl bg-white/95 border border-[#F2D9A0] hover:border-[#75162D] hover:-translate-y-0.5 transition-all shadow-xs">
               <span className="text-gray-500 text-[11px]">Careers & Talent:</span>
               <a href="mailto:careers@crestaraadvisorygroup.com" className="text-[#75162D] hover:text-[#3B010B] font-semibold transition-colors lowercase font-mono">
                 careers@crestaraadvisorygroup.com

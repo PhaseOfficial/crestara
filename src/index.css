@@ -10,6 +10,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom Scrollbar - Luxury Wine & Champagne Gold */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 9999px;
+  border: 2px solid #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #75162D;
+}
+
 body {
   @apply bg-background text-on-surface font-sans overflow-x-hidden;
   min-height: 100dvh;
@@ -25,9 +45,44 @@ body {
   color: #F2E5C6;
 }
 
-/* Crestara Advisory Group Design System Utilities */
+/* ==========================================================================
+   BACKGROUND TEXTURE & ATMOSPHERIC PATTERNS
+   ========================================================================== */
+
+/* High-DPI Subtle Noise & Fine Paper Grain Texture (pure SVG data URI) */
+.bg-texture-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* Architectural Luxury Grid Line Pattern */
+.bg-texture-grid {
+  background-image: 
+    linear-gradient(to right, rgba(117, 22, 45, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(117, 22, 45, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Subtle Geometric Dot Matrix Pattern */
+.bg-texture-dots {
+  background-image: radial-gradient(rgba(117, 22, 45, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Luxury Combined Architectural Mesh */
+.bg-texture-mesh {
+  background-image: 
+    radial-gradient(rgba(117, 22, 45, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(242, 217, 160, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 217, 160, 0.25) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+}
+
+/* ==========================================================================
+   GLASSMORPHISM & LUXURY SURFACE UTILITIES
+   ========================================================================== */
+
 .glass-morphism {
-  @apply bg-white/90 backdrop-blur-md border border-[#F2D9A0]/60 shadow-xl;
+  @apply bg-white/90 backdrop-blur-md border border-[#F2D9A0]/70 shadow-xl;
 }
 
 .glass-morphism-sand {
@@ -35,13 +90,23 @@ body {
 }
 
 .glass-morphism-gold {
-  @apply bg-[#F2D9A0]/80 backdrop-blur-md border border-[#75162D]/20 shadow-xl;
+  @apply bg-[#F2D9A0]/85 backdrop-blur-md border border-[#75162D]/20 shadow-xl;
 }
 
 .glass-morphism-dark {
   @apply bg-[#3B010B]/90 backdrop-blur-md border border-[#F2D9A0]/20 shadow-2xl;
 }
 
+/* Luxury Interactive Card with Smooth Elevation */
+.luxury-card {
+  @apply bg-white/95 rounded-3xl border border-[#F2D9A0] shadow-sm transition-all duration-300;
+}
+
+.luxury-card:hover {
+  @apply border-[#75162D]/60 shadow-xl -translate-y-1 bg-white;
+}
+
+/* Shimmer & Glow Effects */
 .service-card-shadow {
   box-shadow: 0px 8px 30px rgba(117, 22, 45, 0.08);
 }
@@ -52,6 +117,26 @@ body {
 
 .burgundy-glow {
   box-shadow: 0 0 25px rgba(117, 22, 45, 0.25);
+}
+
+.gold-foil-border {
+  border-image: linear-gradient(135deg, #F2D9A0 0%, #D4AF37 50%, #F2E5C6 100%) 1;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(242, 217, 160, 0.4) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s infinite;
 }
 
 /* Animation Utilities */
