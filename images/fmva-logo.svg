@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 70" fill="none">
+  <!-- FMVA Badge Icon -->
+  <g transform="translate(10, 5)">
+    <rect x="0" y="0" width="55" height="55" rx="12" fill="#0A2540" />
+    <polygon points="27,10 44,20 27,30 10,20" fill="#00C2CB" />
+    <polygon points="10,22 27,32 27,48 10,38" fill="#1A73E8" />
+    <polygon points="44,22 44,38 27,48 27,32" fill="#F2D9A0" />
+  </g>
+  <!-- Text -->
+  <text x="75" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22" fill="#0A2540">FMVA<tspan font-size="12" dy="-8">®</tspan></text>
+  <text x="75" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="8.5" fill="#75162D" letter-spacing="0.5">FINANCIAL MODELLING</text>
+  <text x="75" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="8" fill="#5A6E85" letter-spacing="0.5">CFI GLOBAL STANDARDS</text>
+</svg>
