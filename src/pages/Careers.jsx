@@ -57,7 +57,7 @@ const Careers = () => {
     {
       icon: "supervisor_account",
       title: "Executive Mentorship",
-      desc: "Direct pair-programming and client-facing advisory experience alongside Executive Director Natasha Zama and senior partners."
+      desc: "Direct pair-programming and client-facing advisory experience alongside senior certified practice leads."
     }
   ];
 
@@ -211,7 +211,7 @@ const Careers = () => {
       <SEO
         title="Careers at Crestara Advisory Group | Build Your Advisory Career"
         description="Join Crestara Advisory Group. Explore exciting career opportunities in Cybersecurity, Penetration Testing, Data Protection (POTRAZ compliant), and FMVA® Financial Modelling."
-        keywords="Careers Crestara, Cybersecurity jobs Harare, Penetration testing jobs Zimbabwe, DPO jobs Zimbabwe, Financial analyst jobs Harare, Natasha Zama"
+        keywords="Careers Crestara, Cybersecurity jobs Harare, Penetration testing jobs Zimbabwe, DPO jobs Zimbabwe, Financial analyst jobs Harare, advisory careers"
         canonical="https://www.crestaraadvisorygroup.com/careers"
       />
 
@@ -253,7 +253,7 @@ const Careers = () => {
       <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
         <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-48 sm:h-56">
           <img
-            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
+            src="/images/careers-workspace.jpg"
             alt="Crestara Advisory Group Modern Workplace Culture"
             className="w-full h-full object-cover"
             loading="lazy"
@@ -527,7 +527,7 @@ const Careers = () => {
                     <option value="0-1 years (Graduate)">0-1 years (Graduate)</option>
                     <option value="1-3 years (Associate)">1-3 years (Associate)</option>
                     <option value="3-5 years (Senior)">3-5 years (Senior)</option>
-                    <option value="5+ years (Lead / Director)">5+ years (Lead / Director)</option>
+                    <option value="5+ years (Senior / Practice Lead)">5+ years (Senior / Practice Lead)</option>
                   </select>
                 </div>
               </div>

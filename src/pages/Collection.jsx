@@ -1,11 +1,25 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import SEO from "../components/common/SEO";
+import ServiceAnimatedSVG from "../components/common/ServiceAnimatedSVG";
 
 const Collection = () => {
   const [activePillar, setActivePillar] = useState("all");
+  const [openDeliverables, setOpenDeliverables] = useState({});
+
+  const toggleDeliverables = (id) => {
+    setOpenDeliverables(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const isCardOpen = (id) => {
+    // Defaults to closed (false), toggles open on user click
+    return Boolean(openDeliverables[id]);
+  };
 
   const cyberServices = [
     {
@@ -240,7 +254,7 @@ const Collection = () => {
         "Data Protection: Enterprise DPO Retainer & multi-entity POTRAZ compliance",
         "Cybersecurity: Comprehensive offensive pentesting + continuous security operations",
         "Financial Advisory: Fractional CFO & board advisory + monthly KPI dashboards",
-        "Dedicated Director lead (Natasha Zama) + priority escalation"
+        "Dedicated Practice Lead + priority escalation"
       ],
       benefits: "Complete executive governance and strategic oversight for mission-critical organizations.",
       idealFor: "Financial institutions, conglomerates, and multinational entities"
@@ -326,7 +340,7 @@ const Collection = () => {
           <div className="space-y-8">
             <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
               <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+                src="/images/cyber-operations.jpg"
                 alt="Cybersecurity & Offensive Security Operations"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -376,15 +390,21 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                        srv.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
-                      }`}>
-                        {srv.tag}
-                      </span>
-                      <span className="text-[11px] font-medium text-gray-500">
-                        {srv.type}
-                      </span>
+                    {/* Top Animated SVG Stage */}
+                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <div className="absolute top-2.5 left-2.5">
+                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                          srv.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                        }`}>
+                          {srv.tag}
+                        </span>
+                      </div>
+                      <div className="absolute top-2.5 right-2.5">
+                        <span className="text-[10px] font-medium text-gray-500">
+                          {srv.type}
+                        </span>
+                      </div>
+                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-20 h-20 sm:w-24 sm:h-24" />
                     </div>
 
                     <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
@@ -404,18 +424,45 @@ const Collection = () => {
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/5">
-                      <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B]">
-                        Deliverables Include:
-                      </span>
-                      <ul className="space-y-1.5">
-                        {srv.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
-                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="pt-2 border-t border-black/5">
+                      <button
+                        type="button"
+                        onClick={() => toggleDeliverables(srv.id)}
+                        className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-[#FAF7F2] hover:bg-[#F2E5C6]/50 border border-[#F2D9A0]/60 transition-all text-left cursor-pointer group/drop"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B] font-display">
+                            Deliverables Include:
+                          </span>
+                          <span className="text-[10px] font-bold text-[#75162D] bg-[#75162D]/10 px-2 py-0.5 rounded-full">
+                            {srv.features.length}
+                          </span>
+                        </div>
+                        <span className={`material-symbols-outlined text-[#75162D] text-base transition-transform duration-300 ${isCardOpen(srv.id) ? 'rotate-180' : ''}`}>
+                          expand_more
+                        </span>
+                      </button>
+
+                      <AnimatePresence initial={false}>
+                        {isCardOpen(srv.id) && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden space-y-1.5 pt-3"
+                          >
+                            <ul className="space-y-1.5">
+                              {srv.features.map((f, i) => (
+                                <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700 p-1 rounded-md hover:bg-[#FAF7F2]">
+                                  <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
+                                  <span>{f}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </div>
 
@@ -439,16 +486,21 @@ const Collection = () => {
           <div className="space-y-8">
             <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
               <img
-                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80"
+                src="/images/data-protection.jpg"
                 alt="Data Protection & Regulatory Compliance"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/90 via-[#75162D]/70 to-transparent flex items-center p-6 sm:p-10">
                 <div className="space-y-2 text-white max-w-2xl">
-                  <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
-                    <span className="material-symbols-outlined text-sm">policy</span>
-                    Pillar 02 • POTRAZ Statutory Compliance
+                  <div className="flex items-center gap-2">
+                    <div className="inline-flex items-center gap-2 text-[#F2D9A0] text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-[#F2D9A0]/30 font-display">
+                      <span className="material-symbols-outlined text-sm">policy</span>
+                      Pillar 02 • POTRAZ Statutory Compliance
+                    </div>
+                    <div className="h-6 px-2 bg-white/95 rounded-md flex items-center shadow-sm">
+                      <img src="/images/potraz-logo-large.png" alt="POTRAZ" className="h-4 object-contain" />
+                    </div>
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight text-white">
                     Data Protection & Outsourced DPO Packages
@@ -489,15 +541,21 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                        srv.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
-                      }`}>
-                        {srv.tag}
-                      </span>
-                      <span className="text-[11px] font-medium text-gray-500">
-                        {srv.type}
-                      </span>
+                    {/* Top Animated SVG Stage */}
+                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <div className="absolute top-2.5 left-2.5">
+                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                          srv.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                        }`}>
+                          {srv.tag}
+                        </span>
+                      </div>
+                      <div className="absolute top-2.5 right-2.5">
+                        <span className="text-[10px] font-medium text-gray-500">
+                          {srv.type}
+                        </span>
+                      </div>
+                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-20 h-20 sm:w-24 sm:h-24" />
                     </div>
 
                     <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
@@ -517,18 +575,45 @@ const Collection = () => {
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/5">
-                      <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B]">
-                        Deliverables Include:
-                      </span>
-                      <ul className="space-y-1.5">
-                        {srv.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
-                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="pt-2 border-t border-black/5">
+                      <button
+                        type="button"
+                        onClick={() => toggleDeliverables(srv.id)}
+                        className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-[#FAF7F2] hover:bg-[#F2E5C6]/50 border border-[#F2D9A0]/60 transition-all text-left cursor-pointer group/drop"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B] font-display">
+                            Deliverables Include:
+                          </span>
+                          <span className="text-[10px] font-bold text-[#75162D] bg-[#75162D]/10 px-2 py-0.5 rounded-full">
+                            {srv.features.length}
+                          </span>
+                        </div>
+                        <span className={`material-symbols-outlined text-[#75162D] text-base transition-transform duration-300 ${isCardOpen(srv.id) ? 'rotate-180' : ''}`}>
+                          expand_more
+                        </span>
+                      </button>
+
+                      <AnimatePresence initial={false}>
+                        {isCardOpen(srv.id) && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden space-y-1.5 pt-3"
+                          >
+                            <ul className="space-y-1.5">
+                              {srv.features.map((f, i) => (
+                                <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700 p-1 rounded-md hover:bg-[#FAF7F2]">
+                                  <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
+                                  <span>{f}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </div>
 
@@ -552,7 +637,7 @@ const Collection = () => {
           <div className="space-y-8">
             <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                src="/images/financial-analytics.jpg"
                 alt="Financial Analysis & FMVA Financial Modelling"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -602,15 +687,21 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                        srv.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
-                      }`}>
-                        {srv.tag}
-                      </span>
-                      <span className="text-[11px] font-medium text-gray-500">
-                        {srv.type}
-                      </span>
+                    {/* Top Animated SVG Stage */}
+                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <div className="absolute top-2.5 left-2.5">
+                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                          srv.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                        }`}>
+                          {srv.tag}
+                        </span>
+                      </div>
+                      <div className="absolute top-2.5 right-2.5">
+                        <span className="text-[10px] font-medium text-gray-500">
+                          {srv.type}
+                        </span>
+                      </div>
+                      <ServiceAnimatedSVG type={srv.id + " " + srv.title} className="w-20 h-20 sm:w-24 sm:h-24" />
                     </div>
 
                     <h3 className="text-xl font-bold font-display text-[#3B010B] group-hover:text-[#75162D] transition-colors">
@@ -630,18 +721,45 @@ const Collection = () => {
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/5">
-                      <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B]">
-                        Deliverables Include:
-                      </span>
-                      <ul className="space-y-1.5">
-                        {srv.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
-                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="pt-2 border-t border-black/5">
+                      <button
+                        type="button"
+                        onClick={() => toggleDeliverables(srv.id)}
+                        className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-[#FAF7F2] hover:bg-[#F2E5C6]/50 border border-[#F2D9A0]/60 transition-all text-left cursor-pointer group/drop"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B] font-display">
+                            Deliverables Include:
+                          </span>
+                          <span className="text-[10px] font-bold text-[#75162D] bg-[#75162D]/10 px-2 py-0.5 rounded-full">
+                            {srv.features.length}
+                          </span>
+                        </div>
+                        <span className={`material-symbols-outlined text-[#75162D] text-base transition-transform duration-300 ${isCardOpen(srv.id) ? 'rotate-180' : ''}`}>
+                          expand_more
+                        </span>
+                      </button>
+
+                      <AnimatePresence initial={false}>
+                        {isCardOpen(srv.id) && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden space-y-1.5 pt-3"
+                          >
+                            <ul className="space-y-1.5">
+                              {srv.features.map((f, i) => (
+                                <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700 p-1 rounded-md hover:bg-[#FAF7F2]">
+                                  <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
+                                  <span>{f}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </div>
 
@@ -665,7 +783,7 @@ const Collection = () => {
           <div className="space-y-8">
             <div className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md h-40 sm:h-48">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+                src="/images/advisory-team.jpg"
                 alt="Integrated Corporate Governance Retainers"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -715,11 +833,17 @@ const Collection = () => {
                   )}
 
                   <div className="space-y-4">
-                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full inline-block ${
-                      pkg.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
-                    }`}>
-                      {pkg.tag}
-                    </span>
+                    {/* Top Animated SVG Stage */}
+                    <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                      <div className="absolute top-2.5 left-2.5">
+                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                          pkg.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                        }`}>
+                          {pkg.tag}
+                        </span>
+                      </div>
+                      <ServiceAnimatedSVG type={pkg.id + " " + pkg.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                    </div>
 
                     <h3 className="text-xl font-bold font-display text-[#3B010B]">
                       {pkg.title}
@@ -738,18 +862,45 @@ const Collection = () => {
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-black/5">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#75162D]">
-                        Included Disciplines:
-                      </p>
-                      <ul className="space-y-1.5">
-                        {pkg.features.map((f, i) => (
-                          <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
-                            <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="pt-2 border-t border-black/5">
+                      <button
+                        type="button"
+                        onClick={() => toggleDeliverables(pkg.id)}
+                        className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-[#FAF7F2] hover:bg-[#F2E5C6]/50 border border-[#F2D9A0]/60 transition-all text-left cursor-pointer group/drop"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B] font-display">
+                            Included Disciplines:
+                          </span>
+                          <span className="text-[10px] font-bold text-[#75162D] bg-[#75162D]/10 px-2 py-0.5 rounded-full">
+                            {pkg.features.length}
+                          </span>
+                        </div>
+                        <span className={`material-symbols-outlined text-[#75162D] text-base transition-transform duration-300 ${isCardOpen(pkg.id) ? 'rotate-180' : ''}`}>
+                          expand_more
+                        </span>
+                      </button>
+
+                      <AnimatePresence initial={false}>
+                        {isCardOpen(pkg.id) && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden space-y-1.5 pt-3"
+                          >
+                            <ul className="space-y-1.5">
+                              {pkg.features.map((f, i) => (
+                                <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700 p-1 rounded-md hover:bg-[#FAF7F2]">
+                                  <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
+                                  <span>{f}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </div>
 
@@ -790,7 +941,7 @@ const Collection = () => {
             Need a Custom Advisory Proposal or Multi-Entity SLA?
           </h2>
           <p className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto font-light">
-            Our directors will prepare a structured Request for Proposal (RFP) tailored to your operational volume, system infrastructure, and regulatory requirements.
+            Our advisory team will prepare a structured Request for Proposal (RFP) tailored to your operational volume, system infrastructure, and regulatory requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link

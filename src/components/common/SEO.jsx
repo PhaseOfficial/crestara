@@ -11,7 +11,7 @@ const DEFAULT_IMAGE = "https://www.crestaraadvisorygroup.com/og-image.png";
 const SEO = ({
   title = "Crestara Advisory Group | Data Protection, Cybersecurity & Financial Advisory",
   description = "Crestara Advisory Group delivers premier multidisciplinary corporate advisory across Data Protection (POTRAZ compliant), Cybersecurity & Digital Forensics, and Financial Modelling & Business Intelligence in Southern Africa and globally.",
-  keywords = "Crestara Advisory Group, Data Protection Officer Zimbabwe, Outsourced DPO Harare, Cybersecurity Zimbabwe, Ethical Hacking Africa, Digital Forensics Harare, Financial Modelling FMVA Zimbabwe, Business Intelligence BIDA, POTRAZ compliance, Natasha Zama",
+  keywords = "Crestara Advisory Group, Data Protection Officer Zimbabwe, Outsourced DPO Harare, Cybersecurity Zimbabwe, Ethical Hacking Africa, Digital Forensics Harare, Financial Modelling FMVA Zimbabwe, Business Intelligence BIDA, POTRAZ compliance, multidisciplinary advisory team",
   canonical,
   ogType = "website",
   ogImage = DEFAULT_IMAGE,

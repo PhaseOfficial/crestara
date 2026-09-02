@@ -52,7 +52,7 @@ const AboutApproach = () => {
     "Deliver quantitative, empirical FMVA® and BIDA® financial decision models.",
     "Maintain strict confidentiality and chain-of-custody for all digital forensic evidence.",
     "Provide structured, predictable commercial retainers and customized SLAs.",
-    "Guarantee direct executive access to Natasha Zama and practice directors."
+    "Guarantee direct executive access to dedicated senior practice specialists."
   ];
 
   const journey = [

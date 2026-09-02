@@ -67,7 +67,7 @@ const Disclaimer = () => {
           <div className="space-y-3">
             <h2 className="text-xl font-bold text-[#3B010B] font-display">5. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by applicable law, Crestara Advisory Group and its directors, officers, and associates shall not be liable for any direct, indirect, incidental, or consequential damages resulting from reliance on website content prior to executing a formal engagement contract.
+              To the maximum extent permitted by applicable law, Crestara Advisory Group and its partners, officers, employees, and associates shall not be liable for any direct, indirect, incidental, or consequential damages resulting from reliance on website content prior to executing a formal engagement contract.
             </p>
           </div>
 

@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
             <p><strong>Practice Name:</strong> Crestara Advisory Group</p>
             <p><strong>Headquarters / Jurisdiction:</strong> Harare, Zimbabwe (Operating Regionally & Globally)</p>
             <p><strong>Official Website:</strong> crestaraadvisorygroup.com</p>
-            <p><strong>Executive Director Desk:</strong> Natasha Zama (<a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] underline">director@crestaraadvisorygroup.com</a>)</p>
+            <p><strong>Executive Advisory Desk:</strong> <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] underline">director@crestaraadvisorygroup.com</a></p>
             <p><strong>Data Protection Officer (DPO) Desk:</strong> <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#75162D] underline">compliance@crestaraadvisorygroup.com</a></p>
             <p><strong>General Client Desk:</strong> <a href="mailto:info@crestaraadvisorygroup.com" className="text-[#75162D] underline">info@crestaraadvisorygroup.com</a></p>
           </div>
@@ -156,14 +156,19 @@ const PrivacyPolicy = () => {
           <p className="leading-relaxed text-gray-700">
             If you have questions, feedback, or formal privacy inquiries, please contact our Data Protection Officer:
           </p>
-          <div className="mt-4 p-6 rounded-2xl bg-[#3B010B] text-white space-y-3">
+          <div className="mt-4 p-6 rounded-2xl bg-[#3B010B] text-white space-y-4">
             <h4 className="text-sm font-bold text-[#F2D9A0] uppercase tracking-widest font-display">Crestara Advisory Group — DPO & Compliance Desk</h4>
             <p className="text-xs text-[#F2E5C6]/90">Email: <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#F2D9A0] hover:underline font-semibold">compliance@crestaraadvisorygroup.com</a></p>
-            <p className="text-xs text-[#F2E5C6]/90">Executive Director: <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#F2D9A0] hover:underline font-semibold">director@crestaraadvisorygroup.com</a></p>
+            <p className="text-xs text-[#F2E5C6]/90">Executive Advisory Desk: <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#F2D9A0] hover:underline font-semibold">director@crestaraadvisorygroup.com</a></p>
             <p className="text-xs text-[#F2E5C6]/90">Direct Phone: <a href="tel:+263775040725" className="text-white hover:text-[#F2D9A0]">+263 775 040 725</a></p>
-            <p className="text-xs text-white/60 pt-2 border-t border-white/15">
-              Supervisory Authority: <strong>Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)</strong> — Data Protection Division.
-            </p>
+            <div className="flex items-center gap-3 pt-3 border-t border-white/15">
+              <div className="w-12 h-12 bg-white rounded-lg p-1 flex items-center justify-center flex-shrink-0">
+                <img src="/images/potraz-logo-large.png" alt="POTRAZ" className="w-full h-full object-contain" />
+              </div>
+              <p className="text-xs text-white/80">
+                Supervisory Authority: <strong>Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)</strong> — Data Protection Affairs Division.
+              </p>
+            </div>
           </div>
         </>
       )

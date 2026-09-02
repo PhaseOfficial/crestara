@@ -1,9 +1,24 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import SEO from "../components/common/SEO";
+import ServiceAnimatedSVG from "../components/common/ServiceAnimatedSVG";
 
 const Cybersecurity = () => {
+  const [openDeliverables, setOpenDeliverables] = useState({});
+
+  const toggleDeliverables = (title) => {
+    setOpenDeliverables(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
+  const isCardOpen = (title) => {
+    // Defaults to closed (false), toggles open on user click
+    return Boolean(openDeliverables[title]);
+  };
   const securityPillars = [
     {
       icon: "lock_open",
@@ -122,6 +137,30 @@ const Cybersecurity = () => {
               <span>WhatsApp Cyber Desk</span>
             </a>
           </div>
+
+          {/* Offensive Cyber Accreditation Assurance Bar */}
+          <div className="pt-6 max-w-3xl mx-auto">
+            <div className="bg-white/95 rounded-2xl p-4 sm:p-5 border border-[#F2D9A0] shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="h-12 bg-white rounded-xl px-2.5 border border-[#F2D9A0]/60 flex items-center justify-center shadow-sm">
+                    <img src="/images/eccouncil-logo.svg" alt="EC-Council" className="h-7 object-contain" />
+                  </div>
+                  <div className="h-12 bg-white rounded-xl px-2.5 border border-[#F2D9A0]/60 flex items-center justify-center shadow-sm">
+                    <img src="/images/comptia-logo.svg" alt="CompTIA" className="h-6 object-contain" />
+                  </div>
+                </div>
+                <div className="space-y-0.5 text-[#3B010B]">
+                  <h3 className="text-sm font-extrabold font-display leading-tight">
+                    EC-Council CEH & CompTIA Security+ Standards
+                  </h3>
+                  <p className="text-[11px] text-gray-600 font-light">
+                    Offensive penetration testing executed under rigorous ethical frameworks and OWASP Top 10 guidelines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -193,11 +232,17 @@ const Cybersecurity = () => {
                 )}
 
                 <div className="space-y-4">
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
-                    pkg.popular ? "bg-[#75162D]/15 text-[#75162D] border border-[#75162D]/30" : "bg-[#75162D]/10 text-[#75162D]"
-                  }`}>
-                    {pkg.type}
-                  </span>
+                  {/* Top Animated SVG Stage */}
+                  <div className="w-full h-32 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-3 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block ${
+                        pkg.popular ? "bg-[#75162D] text-[#F2E5C6]" : "bg-[#75162D]/10 text-[#75162D]"
+                      }`}>
+                        {pkg.type}
+                      </span>
+                    </div>
+                    <ServiceAnimatedSVG type={pkg.title} className="w-20 h-20 sm:w-24 sm:h-24" />
+                  </div>
 
                   <h3 className="text-xl font-bold font-display text-[#3B010B]">
                     {pkg.title}
@@ -216,14 +261,43 @@ const Cybersecurity = () => {
                     </p>
                   </div>
 
-                  <ul className="space-y-2 pt-2 border-t border-black/5">
-                    {pkg.features.map((f, i) => (
-                      <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700">
-                        <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="pt-2 border-t border-black/5">
+                    <button
+                      type="button"
+                      onClick={() => toggleDeliverables(pkg.title)}
+                      className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-white hover:bg-[#F2E5C6]/50 border border-[#F2D9A0]/60 transition-all text-left cursor-pointer group/drop"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="text-[11px] font-bold uppercase tracking-wider block text-[#3B010B] font-display">
+                          Deliverables ({pkg.features.length})
+                        </span>
+                      </div>
+                      <span className={`material-symbols-outlined text-[#75162D] text-base transition-transform duration-300 ${isCardOpen(pkg.title) ? 'rotate-180' : ''}`}>
+                        expand_more
+                      </span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isCardOpen(pkg.title) && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="overflow-hidden space-y-1.5 pt-3"
+                        >
+                          <ul className="space-y-1.5">
+                            {pkg.features.map((f, i) => (
+                              <li key={i} className="text-xs font-light flex items-start gap-2 text-gray-700 p-1 rounded-md hover:bg-white/60">
+                                <span className="material-symbols-outlined text-sm flex-shrink-0 mt-0.5 text-[#75162D]">check_circle</span>
+                                <span>{f}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </div>
 
                 <div className="pt-6 mt-4 border-t border-black/5">

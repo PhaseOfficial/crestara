@@ -51,7 +51,7 @@ const Home = () => {
       <SEO
         title="Crestara Advisory Group | Data Protection, Cybersecurity & Financial Advisory"
         description="Premier multidisciplinary corporate advisory group delivering POTRAZ compliant Data Protection & Outsourced DPO services, EC-Council CEH certified Cybersecurity & Pentesting, and FMVA® Financial Intelligence."
-        keywords="Crestara Advisory Group, Natasha Zama, Cybersecurity Zimbabwe, Penetration testing Harare, Data Protection Officer Zimbabwe, POTRAZ compliance, FMVA financial modelling, BIDA dashboards Harare"
+        keywords="Crestara Advisory Group, Cybersecurity Zimbabwe, Penetration testing Harare, Data Protection Officer Zimbabwe, POTRAZ compliance, FMVA financial modelling, BIDA dashboards Harare, multidisciplinary advisory team"
         canonical="https://www.crestaraadvisorygroup.com/"
       />
       {/* Global Background Animations */}

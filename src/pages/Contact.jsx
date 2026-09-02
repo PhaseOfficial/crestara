@@ -20,9 +20,9 @@ const Contact = () => {
 
   const emailDirectory = [
     {
-      role: "Executive Director Desk",
+      role: "Executive Advisory Desk",
       email: "director@crestaraadvisorygroup.com",
-      desc: "Executive partner consultations, board advisory & strategic contracts",
+      desc: "Executive consultations, multidisciplinary advisory & strategic contracts",
       icon: "military_tech"
     },
     {
@@ -76,8 +76,8 @@ const Contact = () => {
     <div className="bg-[#FAF7F2] min-h-screen pt-24 pb-32 font-sans">
       <SEO
         title="Contact Us & Request a Quote | Crestara Advisory Group"
-        description="Connect with Crestara Advisory Group. Contact Natasha Zama and our multidisciplinary advisory desk for Data Protection, Outsourced DPO (POTRAZ compliant), Cybersecurity & Pentesting, and FMVA® Financial Modelling."
-        keywords="Contact Crestara, DPO Zimbabwe contact, Natasha Zama, POTRAZ compliance quote, penetration test enquiry Zimbabwe, financial modelling advisory Harare"
+        description="Connect with Crestara Advisory Group. Contact our multidisciplinary advisory team for Data Protection, Outsourced DPO (POTRAZ compliant), Cybersecurity & Pentesting, and FMVA® Financial Modelling."
+        keywords="Contact Crestara, DPO Zimbabwe contact, POTRAZ compliance quote, penetration test enquiry Zimbabwe, financial modelling advisory Harare, advisory team"
         canonical="https://www.crestaraadvisorygroup.com/contact"
       />
 
@@ -102,7 +102,7 @@ const Contact = () => {
             animate={{ opacity: 1 }}
             className="text-base md:text-xl text-[#560B18]/90 max-w-2xl mx-auto font-light leading-relaxed"
           >
-            Connect directly with Natasha Zama and our senior certified directors across Data Protection, Cybersecurity, and Financial Advisory.
+            Connect directly with our multidisciplinary team of certified specialists across Data Protection, Cybersecurity, and Financial Advisory.
           </motion.p>
         </div>
       </section>
@@ -117,7 +117,7 @@ const Contact = () => {
             {/* Visual Corporate Desk Banner */}
             <div className="relative h-36 rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                src="/images/contact-office.jpg"
                 alt="Crestara Advisory Group Client Engagement Desk"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -242,7 +242,7 @@ const Contact = () => {
                   <span className="material-symbols-outlined text-5xl text-emerald-600">check_circle</span>
                   <h3 className="text-xl font-bold text-[#3B010B] font-display">Inquiry Transmitted Successfully</h3>
                   <p className="text-xs text-gray-600 font-light max-w-md mx-auto leading-relaxed">
-                    Thank you. Your request has been directed to the relevant practice director. We will review your requirements and respond promptly.
+                    Thank you. Your request has been directed to the relevant practice team. We will review your requirements and respond promptly.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}

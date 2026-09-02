@@ -57,7 +57,7 @@ const Insights = () => {
           </h1>
 
           <p className="text-base md:text-xl text-[#F2E5C6]/90 max-w-3xl mx-auto font-light leading-relaxed">
-            Technical whitepapers, statutory compliance guides, offensive cybersecurity analyses, and institutional financial frameworks from Crestara directors.
+            Technical whitepapers, statutory compliance guides, offensive cybersecurity analyses, and institutional financial frameworks from Crestara practice specialists.
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ const Insights = () => {
             Latest Advisory Publications
           </h2>
           <p className="text-gray-600 text-sm font-light leading-relaxed">
-            In-depth analysis to guide executive leadership, audit committees, and boards of directors.
+            In-depth analysis to guide executive leadership, audit committees, and corporate boards.
           </p>
         </div>
 

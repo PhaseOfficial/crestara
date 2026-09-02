@@ -97,7 +97,7 @@ const CookiePolicy = () => {
             <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#F2E5C6] text-xs font-mono space-y-1 text-[#3B010B]">
               <p><strong>Crestara Advisory Group — DPO Desk</strong></p>
               <p>Email: <a href="mailto:compliance@crestaraadvisorygroup.com" className="text-[#75162D] underline">compliance@crestaraadvisorygroup.com</a></p>
-              <p>Director: <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] underline">director@crestaraadvisorygroup.com</a></p>
+              <p>Executive Desk: <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] underline">director@crestaraadvisorygroup.com</a></p>
             </div>
           </div>
 

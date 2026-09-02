@@ -84,7 +84,7 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
             {/* Top Corporate Visual Header */}
             <div className="relative h-28 sm:h-32 rounded-2xl overflow-hidden border border-[#F2D9A0] shadow-sm">
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                src="/images/hero-architecture.jpg"
                 alt="Crestara Advisory Group Corporate Headquarters"
                 className="w-full h-full object-cover"
                 loading="eager"

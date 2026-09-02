@@ -13,8 +13,8 @@ const About = () => {
     <div className="bg-[#FAF7F2] min-h-screen pt-24 pb-24 font-sans">
       <SEO
         title="About Us | Multidisciplinary Governance & Leadership | Crestara Advisory Group"
-        description="Learn about Crestara Advisory Group, led by Natasha Zama. Multidisciplinary corporate advisory delivering Data Protection & Outsourced DPO (POTRAZ compliant), Cybersecurity & Forensics, and FMVA® Financial Intelligence across Southern Africa and globally."
-        keywords="About Crestara Advisory Group, Natasha Zama, Data Protection Officer Zimbabwe, POTRAZ compliance, FMVA financial modelling, CEH cybersecurity Zimbabwe, BIDA analytics"
+        description="Learn about Crestara Advisory Group. Multidisciplinary corporate advisory delivering Data Protection & Outsourced DPO (POTRAZ compliant), Cybersecurity & Forensics, and FMVA® Financial Intelligence across Southern Africa and globally."
+        keywords="About Crestara Advisory Group, Data Protection Officer Zimbabwe, POTRAZ compliance, FMVA financial modelling, CEH cybersecurity Zimbabwe, BIDA analytics, advisory team"
         canonical="https://www.crestaraadvisorygroup.com/about"
       />
 
@@ -54,7 +54,7 @@ const About = () => {
               to="/contact"
               className="bg-[#75162D] text-[#F2E5C6] px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all shadow-xl uppercase tracking-wider flex items-center gap-2 font-semibold font-display border border-[#F2D9A0]/40"
             >
-              <span>Consult Our Leadership</span>
+              <span>Consult Our Advisory Team</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
             <a
@@ -76,7 +76,7 @@ const About = () => {
             className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-2xl h-56 sm:h-72 mt-8"
           >
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+              src="/images/team-collaboration.jpg"
               alt="Crestara Advisory Group Executive Boardroom & Strategy Consultation"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -84,7 +84,7 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#3B010B]/80 via-transparent to-transparent flex items-end p-6 sm:p-8">
               <div className="text-white text-left space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-widest bg-[#75162D] text-[#F2E5C6] px-3 py-1 rounded-full border border-[#F2D9A0]/40 font-display">
-                  Senior Director Advisory
+                  Multidisciplinary Team Advisory
                 </span>
                 <p className="text-sm sm:text-base font-bold text-white font-display">
                   Cross-Disciplinary Mastery Across Governance, Cyber Defense & Financial Modelling

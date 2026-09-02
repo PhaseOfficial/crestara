@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- CFI Geometric Hex / Cube Logo Icon -->
+  <g transform="translate(10, 5)">
+    <polygon points="30,5 55,19 30,33 5,19" fill="#00C2CB" />
+    <polygon points="5,22 30,36 30,62 5,48" fill="#0A2540" />
+    <polygon points="55,22 55,48 30,62 30,36" fill="#1A73E8" />
+    <!-- Inner Accent Cube -->
+    <polygon points="30,17 42,24 30,31 18,24" fill="#FFFFFF" opacity="0.4" />
+  </g>
+  <!-- CFI Typography -->
+  <text x="78" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" fill="#0A2540" letter-spacing="0.5">CFI</text>
+  <text x="78" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="9" fill="#5A6E85" letter-spacing="1">CORPORATE FINANCE INSTITUTE</text>
+</svg>

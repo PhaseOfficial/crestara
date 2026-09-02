@@ -271,14 +271,14 @@ const TermsOfService = () => {
           <div className="bg-[#3B010B] text-white p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-[#F2D9A0]/30">
             <div>
               <h3 className="text-lg font-bold uppercase tracking-tight text-white font-display">Questions about engagement terms?</h3>
-              <p className="text-xs text-[#F2E5C6]/80 mt-1 font-light">Speak directly with our executive director regarding client agreements and custom SLAs.</p>
+              <p className="text-xs text-[#F2E5C6]/80 mt-1 font-light">Speak directly with our advisory team regarding client agreements and custom SLAs.</p>
             </div>
             <div className="flex items-center gap-3">
               <a
                 href="mailto:director@crestaraadvisorygroup.com"
                 className="px-5 py-3 rounded-xl bg-[#F2D9A0] text-[#3B010B] font-bold text-xs uppercase tracking-wider hover:bg-[#F2E5C6] transition-all shadow-md font-semibold"
               >
-                Email Executive Desk
+                Email Advisory Desk
               </a>
               <a
                 href="https://wa.me/263775040725"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import ServiceAnimatedSVG from "../common/ServiceAnimatedSVG";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -136,7 +137,7 @@ const Services = () => {
         "Interactive executive KPI dashboards (PowerBI/Excel)",
         "Automated financial and operational metric tracking",
         "Cost-effectiveness & unit economics variance analysis",
-        "Executive decision-support framework for directors"
+        "Executive decision-support framework for leadership"
       ],
       link: "/financial-advisory"
     },
@@ -151,7 +152,7 @@ const Services = () => {
         "Monthly performance & margin profitability reviews",
         "Budget-vs-actual variance analysis & forecasts",
         "Working capital cycle & cash management advice",
-        "Monthly strategic consultation with Natasha Zama"
+        "Monthly strategic consultation with senior practice leads"
       ],
       link: "/financial-advisory"
     },
@@ -188,6 +189,20 @@ const Services = () => {
       link: "/services"
     }
   ];
+
+  const [openDeliverables, setOpenDeliverables] = useState({});
+
+  const toggleDeliverables = (title) => {
+    setOpenDeliverables(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
+  const isCardOpen = (title) => {
+    // Defaults to closed (false), toggles open on user click
+    return Boolean(openDeliverables[title]);
+  };
 
   const filteredServices = activeTab === "all" 
     ? servicesData 
@@ -244,14 +259,22 @@ const Services = () => {
                 transition={{ duration: 0.3 }}
                 className="bg-white rounded-3xl p-8 border border-[#F2E5C6]/60 shadow-lg hover:shadow-2xl hover:border-[#75162D]/50 transition-all flex flex-col justify-between group space-y-6"
               >
-                <div className="space-y-5">
-                  <div className="flex justify-between items-start">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-[#75162D] bg-[#75162D]/10 px-3 py-1 rounded-full border border-[#75162D]/20">
-                      {service.badge}
-                    </span>
-                    <div className="w-12 h-12 rounded-2xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center shadow-md group-hover:bg-[#75162D] group-hover:text-white transition-colors flex-shrink-0">
-                      <span className="material-symbols-outlined text-2xl">{service.icon}</span>
+                  {/* Top Animated SVG Stage */}
+                  <div className="w-full h-36 rounded-2xl bg-gradient-to-br from-[#FAF7F2] via-white to-[#F2E5C6]/50 border border-[#F2D9A0] p-4 flex flex-col items-center justify-center relative overflow-hidden shadow-inner group-hover:border-[#75162D]/60 transition-all">
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#75162D] bg-[#75162D]/10 px-2.5 py-0.5 rounded-full border border-[#75162D]/20">
+                        {service.badge}
+                      </span>
                     </div>
+                    <div className="absolute top-3 right-3">
+                      <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider font-mono">
+                        {service.category}
+                      </span>
+                    </div>
+                    <ServiceAnimatedSVG
+                      type={service.title + " " + service.badge + " " + service.category}
+                      className="w-24 h-24 sm:w-28 sm:h-28"
+                    />
                   </div>
 
                   <div>
@@ -265,14 +288,43 @@ const Services = () => {
                     {service.desc}
                   </p>
 
-                  <div className="space-y-2.5 pt-2 border-t border-[#FAF7F2]">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#3B010B] block font-display">Key Deliverables & Benefits:</span>
-                    {service.benefits.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-start gap-2 text-xs text-gray-700">
-                        <span className="material-symbols-outlined text-[#75162D] text-sm mt-0.5 flex-shrink-0">check_circle</span>
-                        <span className="font-light">{feat}</span>
+                  <div className="pt-2 border-t border-[#FAF7F2]">
+                    <button
+                      type="button"
+                      onClick={() => toggleDeliverables(service.title)}
+                      className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-[#FAF7F2] hover:bg-[#F2E5C6]/50 border border-[#F2D9A0]/60 transition-all text-left cursor-pointer group/drop"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#3B010B] block font-display">
+                          Key Deliverables & Benefits:
+                        </span>
+                        <span className="text-[10px] font-bold text-[#75162D] bg-[#75162D]/10 px-2 py-0.5 rounded-full">
+                          {service.benefits.length}
+                        </span>
                       </div>
-                    ))}
+                      <span className={`material-symbols-outlined text-[#75162D] text-lg transition-transform duration-300 ${isCardOpen(service.title) ? 'rotate-180' : ''}`}>
+                        expand_more
+                      </span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isCardOpen(service.title) && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="overflow-hidden space-y-2 pt-3"
+                        >
+                          {service.benefits.map((feat, fIdx) => (
+                            <div key={fIdx} className="flex items-start gap-2 text-xs text-gray-700 p-1.5 rounded-lg hover:bg-[#FAF7F2] transition-colors">
+                              <span className="material-symbols-outlined text-[#75162D] text-sm mt-0.5 flex-shrink-0">check_circle</span>
+                              <span className="font-light leading-snug">{feat}</span>
+                            </div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
 
@@ -301,7 +353,7 @@ const Services = () => {
           <div className="space-y-1 flex-1">
             <span className="text-xs font-bold text-[#F2D9A0] uppercase tracking-widest font-display">Enterprise & Conglomerate Scoping</span>
             <p className="text-xs text-white/80 font-light leading-relaxed">
-              Require a tailored combination of offensive penetration testing, outsourced DPO coverage, and complex financial valuations? Our executive directors will structure a customized proposal tailored to your operational scale.
+              Require a tailored combination of offensive penetration testing, outsourced DPO coverage, and complex financial valuations? Our advisory team will structure a customized proposal tailored to your operational scale.
             </p>
           </div>
           <Link

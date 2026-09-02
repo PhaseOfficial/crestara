@@ -1,9 +1,22 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import SEO from "../components/common/SEO";
 
 const DataProtection = () => {
+  const [openDeliverables, setOpenDeliverables] = useState({});
+
+  const toggleDeliverables = (title) => {
+    setOpenDeliverables(prev => ({
+      ...prev,
+      [title]: prev[title] === undefined ? false : !prev[title]
+    }));
+  };
+
+  const isCardOpen = (title) => {
+    return openDeliverables[title] === undefined ? true : openDeliverables[title];
+  };
   const packages = [
     {
       title: "Compliance Starter Pack",
@@ -127,6 +140,31 @@ const DataProtection = () => {
               <span>WhatsApp DPO Desk</span>
             </a>
           </div>
+
+          {/* Statutory Regulatory Alignment Seal */}
+          <div className="pt-6 max-w-2xl mx-auto">
+            <div className="bg-white/95 rounded-2xl p-4 sm:p-5 border border-[#F2D9A0] shadow-xl flex items-center gap-4 text-left">
+              <div className="w-16 sm:w-20 h-16 sm:h-20 bg-white rounded-xl p-2 border border-[#F2D9A0]/60 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <img
+                  src="/images/potraz-logo-large.png"
+                  alt="POTRAZ - Postal and Telecommunications Regulatory Authority of Zimbabwe"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="space-y-1 text-[#3B010B]">
+                <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-[#75162D] bg-[#75162D]/10 px-2.5 py-0.5 rounded-full font-display">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Statutory Regulatory Jurisdiction
+                </div>
+                <h3 className="text-sm sm:text-base font-extrabold font-display leading-tight">
+                  Data Protection Act [Chapter 12:07]
+                </h3>
+                <p className="text-[11px] sm:text-xs text-gray-600 font-light">
+                  Our Outsourced DPO mandates are structured in strict alignment with POTRAZ regulatory directives, registration guidelines, and statutory processing audits.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -221,16 +259,51 @@ const DataProtection = () => {
                     </p>
                   </div>
 
-                  <ul className="space-y-2 pt-2 border-t border-black/10 dark:border-white/10">
-                    {pkg.features.map((f, i) => (
-                      <li key={i} className="text-xs font-light flex items-start gap-2">
-                        <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
-                          pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
-                        }`}>check_circle</span>
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="pt-2 border-t border-black/10 dark:border-white/10">
+                    <button
+                      type="button"
+                      onClick={() => toggleDeliverables(pkg.title)}
+                      className={`w-full flex items-center justify-between py-2 px-3 rounded-xl border transition-all text-left cursor-pointer group/drop ${
+                        pkg.popular
+                          ? "bg-white/10 hover:bg-white/20 border-white/20 text-white"
+                          : "bg-white hover:bg-[#F2E5C6]/50 border-[#F2D9A0]/60 text-[#3B010B]"
+                      }`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="text-[11px] font-bold uppercase tracking-wider block font-display">
+                          Deliverables ({pkg.features.length})
+                        </span>
+                      </div>
+                      <span className={`material-symbols-outlined text-base transition-transform duration-300 ${
+                        pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
+                      } ${isCardOpen(pkg.title) ? 'rotate-180' : ''}`}>
+                        expand_more
+                      </span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isCardOpen(pkg.title) && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="overflow-hidden space-y-1.5 pt-3"
+                        >
+                          <ul className="space-y-1.5">
+                            {pkg.features.map((f, i) => (
+                              <li key={i} className="text-xs font-light flex items-start gap-2 p-1 rounded-md">
+                                <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${
+                                  pkg.popular ? "text-[#F2D9A0]" : "text-[#75162D]"
+                                }`}>check_circle</span>
+                                <span>{f}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </div>
 
                 <div className="pt-6 mt-4 border-t border-black/10 dark:border-white/10">

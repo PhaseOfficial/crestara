@@ -64,7 +64,7 @@ const AboutMission = () => {
     },
     {
       title: "Executive Partner Access",
-      desc: "Direct strategic consultations with Natasha Zama and certified directors.",
+      desc: "Direct strategic consultations with our senior certified practice leads.",
       icon: "military_tech"
     }
   ];
@@ -108,29 +108,59 @@ const AboutMission = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
-                  <span className="text-[#75162D] font-bold block">POTRAZ Regulated</span>
-                  <span className="text-gray-600 font-light">Data Protection Act Compliance</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#75162D] font-bold block">POTRAZ Regulated</span>
+                    <img src="/images/potraz-logo-large.png" alt="POTRAZ" className="h-5 object-contain" />
+                  </div>
+                  <span className="text-gray-600 font-light block">Data Protection Act Compliance</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
-                  <span className="text-[#75162D] font-bold block">CEH / Security+</span>
-                  <span className="text-gray-600 font-light">Offensive Security Operations</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#75162D] font-bold block">CEH / Security+</span>
+                    <img src="/images/eccouncil-logo.svg" alt="EC-Council" className="h-5 object-contain" />
+                  </div>
+                  <span className="text-gray-600 font-light block">Offensive Security Operations</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
-                  <span className="text-[#75162D] font-bold block">FMVA® Modelling</span>
-                  <span className="text-gray-600 font-light">3-Statement Financial Models</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#75162D] font-bold block">FMVA® Modelling</span>
+                    <img src="/images/fmva-logo.svg" alt="FMVA" className="h-5 object-contain" />
+                  </div>
+                  <span className="text-gray-600 font-light block">3-Statement Financial Models</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1">
-                  <span className="text-[#75162D] font-bold block">BIDA® Analytics</span>
-                  <span className="text-gray-600 font-light">Executive BI KPI Dashboards</span>
+                <div className="p-3.5 rounded-xl bg-white border border-[#F2D9A0] shadow-sm space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#75162D] font-bold block">BIDA® Analytics</span>
+                    <img src="/images/bida-logo.svg" alt="BIDA" className="h-5 object-contain" />
+                  </div>
+                  <span className="text-gray-600 font-light block">Executive BI KPI Dashboards</span>
                 </div>
+              </div>
+
+              {/* CIPZ Institutional Registration Verification Row */}
+              <div className="pt-3 border-t border-[#F2D9A0] flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                  <img src="/images/cipz-logo.png" alt="CIPZ" className="h-6 object-contain" />
+                  <span className="text-xs text-gray-700 font-semibold">CIPZ Registered Professional Body</span>
+                </div>
+                <a
+                  href="https://cipz.co.zw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Verify CIPZ Professional Registration (Verification Number: [PENDING])"
+                  className="text-[11px] font-bold text-[#75162D] hover:underline flex items-center gap-1 font-display"
+                >
+                  <span>Verify Registration</span>
+                  <span className="material-symbols-outlined text-xs">open_in_new</span>
+                </a>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Leadership Spotlight - Natasha Zama */}
+      {/* Team Spotlight */}
       <section className="py-16 px-6 md:px-12 bg-[#FAF7F2] border-b border-[#F2D9A0] font-sans">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 relative">
@@ -138,21 +168,21 @@ const AboutMission = () => {
               <div className="space-y-4">
                 <div className="relative w-full h-48 rounded-2xl overflow-hidden border border-[#F2D9A0] shadow-sm mb-4">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
-                    alt="Natasha Zama - Executive Director"
-                    className="w-full h-full object-cover object-top"
+                    src="/images/advisory-team.jpg"
+                    alt="Crestara Advisory Group Multidisciplinary Specialists"
+                    className="w-full h-full object-cover object-center"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B010B]/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-3 left-3 text-white">
                     <span className="text-[10px] font-bold uppercase tracking-widest bg-[#75162D] px-2.5 py-0.5 rounded-full border border-[#F2D9A0]/50 font-display">
-                      Executive Leadership
+                      Practice Specialists
                     </span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-extrabold text-[#3B010B] font-display">Natasha Zama</h3>
-                  <p className="text-xs text-[#75162D] uppercase tracking-widest font-bold mt-0.5 font-display">Executive Director & Practice Head</p>
+                  <h3 className="text-2xl font-extrabold text-[#3B010B] font-display">The Crestara Advisory Team</h3>
+                  <p className="text-xs text-[#75162D] uppercase tracking-widest font-bold mt-0.5 font-display">Data Protection • Cyber Defense • Financial Advisory</p>
                 </div>
                 <p className="text-xs text-gray-700 font-light leading-relaxed">
                   Steering Crestara Advisory Group&apos;s multidisciplinary vision across corporate compliance, cybersecurity risk mitigation, and quantitative financial strategy.
@@ -162,8 +192,8 @@ const AboutMission = () => {
               <div className="pt-6 border-t border-[#F2D9A0] space-y-2 text-xs">
                 <div className="flex items-center gap-2 text-gray-700">
                   <span className="material-symbols-outlined text-[#75162D] text-sm">mail</span>
-                  <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] hover:underline font-mono font-semibold">
-                    director@crestaraadvisorygroup.com
+                  <a href="mailto:info@crestaraadvisorygroup.com" className="text-[#75162D] hover:underline font-mono font-semibold">
+                    info@crestaraadvisorygroup.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
@@ -179,7 +209,7 @@ const AboutMission = () => {
           <div className="lg:col-span-7 space-y-4">
             <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 shadow-sm font-display">
               <span className="material-symbols-outlined text-sm text-[#75162D]">military_tech</span>
-              Executive Leadership & Credentials
+              Multidisciplinary Team Credentials
             </div>
 
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#3B010B] leading-tight font-display">
@@ -202,16 +232,16 @@ const AboutMission = () => {
             </div>
 
             <p className="text-gray-700 text-sm font-light leading-relaxed">
-              Under Natasha Zama&apos;s executive leadership, Crestara Advisory Group brings together accredited subject matter experts who understand both statutory nuances and technical realities. We do not deliver generic, template-driven consulting; every engagement is structured with empirical data, legal precision, and boardroom-level clarity.
+              Crestara Advisory Group brings together accredited subject matter experts who understand both statutory nuances and technical realities. We do not deliver generic, template-driven consulting; every engagement is structured with empirical data, legal precision, and boardroom-level clarity.
             </p>
 
             <div className="pt-3 flex flex-wrap gap-3">
               <Link to="/contact" className="bg-[#75162D] text-[#F2E5C6] px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all uppercase tracking-wider flex items-center gap-2 shadow-md font-display border border-[#F2D9A0]/30">
-                <span>Contact Executive Desk</span>
+                <span>Contact Advisory Team</span>
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
               <a
-                href="https://wa.me/263775040725?text=Hello%20Natasha%20Zama%2C%20I%20would%20like%20to%20enquire%20about%20Crestara%20Advisory%20Group."
+                href="https://wa.me/263775040725?text=Hello%20Crestara%20Team%2C%20I%20would%20like%20to%20enquire%20about%20Crestara%20Advisory%20Group."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold text-xs hover:bg-[#20ba5a] transition-all uppercase tracking-wider flex items-center gap-2 shadow-md font-display"

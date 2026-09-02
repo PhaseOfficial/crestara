@@ -39,9 +39,9 @@ const WhyElysian = () => {
     },
     {
       number: "06",
-      title: "Executive Director Accountability",
-      subtitle: "Direct Senior Leadership on Every Engagement",
-      desc: "Work directly with seasoned multidisciplinary directors who take personal responsibility for your organisation's compliance, defense, and fiscal health.",
+      title: "Dedicated Team Accountability",
+      subtitle: "Direct Senior Practice Leads on Every Mandate",
+      desc: "Work directly with seasoned multidisciplinary specialists who take personal responsibility for your organisation's compliance, defense, and fiscal health.",
       icon: "military_tech"
     }
   ];

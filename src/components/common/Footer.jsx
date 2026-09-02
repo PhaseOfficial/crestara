@@ -86,7 +86,7 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 text-xs text-gray-800 font-light">
             <li className="flex items-center justify-between p-2 rounded-lg bg-white border border-[#F2D9A0] hover:border-[#75162D] transition-colors shadow-sm">
-              <span className="text-gray-500 text-[11px]">Executive Director:</span>
+              <span className="text-gray-500 text-[11px]">Executive Advisory:</span>
               <a href="mailto:director@crestaraadvisorygroup.com" className="text-[#75162D] hover:text-[#3B010B] font-semibold transition-colors lowercase font-mono">
                 director@crestaraadvisorygroup.com
               </a>
@@ -119,13 +119,37 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Institutional Registration & Regulatory Alignment Bar */}
+      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-[#F2D9A0] flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center gap-6">
+          <div className="flex items-center gap-2.5">
+            <img src="/images/potraz-logo-large.png" alt="POTRAZ" className="h-6 object-contain" />
+            <span className="text-[11px] text-gray-700 font-medium">POTRAZ Regulated Data Protection Practice</span>
+          </div>
+          <div className="h-4 w-px bg-[#F2D9A0] hidden sm:block"></div>
+          <a
+            href="https://cipz.co.zw"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Verify CIPZ Professional Registration (Verification Number: [PENDING])"
+            className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
+          >
+            <img src="/images/cipz-logo.png" alt="CIPZ" className="h-6 object-contain" />
+            <div className="flex items-center gap-1">
+              <span className="text-[11px] text-gray-700 font-medium">CIPZ Registered Professional Body</span>
+              <span className="material-symbols-outlined text-[12px] text-[#75162D]">open_in_new</span>
+            </div>
+          </a>
+        </div>
+        <div className="text-[11px] text-gray-500 font-light">
+          Official Practice Registration • Southern Africa
+        </div>
+      </div>
+
       {/* Bottom Bar with Compliance Statement & Copyright */}
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#F2D9A0] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-        <div className="space-y-1 text-center md:text-left">
-          <p className="font-semibold text-[#3B010B]">© 2026 Crestara Advisory Group (crestaraadvisorygroup.com). All rights reserved.</p>
-          <p className="text-[11px] text-gray-500">
-            Multidisciplinary Corporate Advisory — Data Protection, Cybersecurity & Financial Advisory Services.
-          </p>
+      <div className="max-w-7xl mx-auto mt-6 pt-6 border-t border-[#F2D9A0]/60 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+        <div className="text-center md:text-left">
+          <p className="font-semibold text-[#3B010B]">© 2026 Crestara Advisory Group. All rights reserved.</p>
         </div>
         <div className="flex flex-wrap justify-center gap-5 text-xs text-[#75162D] font-medium">
           <Link to="/privacy-policy" className="hover:text-[#3B010B] transition-colors">Privacy Notice</Link>
