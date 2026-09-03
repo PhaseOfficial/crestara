@@ -2,20 +2,30 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import ShieldIcon from "./ShieldIcon";
 
 const CrestaraTextLogo = ({ isDark = false }) => (
-  <div className="flex flex-col select-none group">
-    <span className={`text-2xl sm:text-3xl font-extrabold tracking-tight lowercase leading-none font-display ${
-      isDark ? "text-white" : "text-[#3B010B]"
-    }`}>
-      crestara
-      <span className="text-[#75162D] group-hover:text-[#F2D9A0] transition-colors">.</span>
-    </span>
-    <span className={`text-[9px] sm:text-[10px] font-bold tracking-[0.25em] uppercase mt-0.5 ${
-      isDark ? "text-[#F2D9A0]" : "text-[#75162D]"
-    }`}>
-      Advisory Group
-    </span>
+  <div className="flex items-center gap-2 sm:gap-2.5 select-none group">
+    <ShieldIcon
+      className={`h-7 sm:h-8.5 w-auto transition-all duration-300 group-hover:scale-105 flex-shrink-0 ${
+        isDark
+          ? "text-[#F2D9A0] group-hover:text-white"
+          : "text-[#3B010B] group-hover:text-[#75162D]"
+      }`}
+    />
+    <div className="flex flex-col">
+      <span className={`text-2xl sm:text-3xl font-extrabold tracking-tight lowercase leading-none font-display ${
+        isDark ? "text-white" : "text-[#3B010B]"
+      }`}>
+        crestara
+        <span className="text-[#75162D] group-hover:text-[#F2D9A0] transition-colors">.</span>
+      </span>
+      <span className={`text-[9px] sm:text-[10px] font-bold tracking-[0.25em] uppercase mt-0.5 ${
+        isDark ? "text-[#F2D9A0]" : "text-[#75162D]"
+      }`}>
+        Advisory Group
+      </span>
+    </div>
   </div>
 );
 

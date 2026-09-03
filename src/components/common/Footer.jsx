@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import ShieldIcon from "./ShieldIcon";
 
 const Footer = () => {
   return (
@@ -15,14 +16,17 @@ const Footer = () => {
         
         {/* Company Identity & Bio */}
         <div className="lg:col-span-4 space-y-6">
-          <div className="flex flex-col select-none">
-            <span className="text-3xl font-extrabold tracking-tight text-[#3B010B] lowercase leading-none font-display">
-              crestara
-              <span className="text-[#75162D]">.</span>
-            </span>
-            <span className="text-[10px] text-[#75162D] uppercase tracking-[0.25em] font-bold mt-1 font-display">
-              Advisory Group
-            </span>
+          <div className="flex items-center gap-2.5 select-none group">
+            <ShieldIcon className="h-8 w-auto text-[#3B010B] group-hover:text-[#75162D] transition-colors duration-300 flex-shrink-0" />
+            <div className="flex flex-col">
+              <span className="text-3xl font-extrabold tracking-tight text-[#3B010B] lowercase leading-none font-display">
+                crestara
+                <span className="text-[#75162D]">.</span>
+              </span>
+              <span className="text-[10px] text-[#75162D] uppercase tracking-[0.25em] font-bold mt-1 font-display">
+                Advisory Group
+              </span>
+            </div>
           </div>
           
           <p className="text-gray-700 text-xs sm:text-sm leading-relaxed font-light">
