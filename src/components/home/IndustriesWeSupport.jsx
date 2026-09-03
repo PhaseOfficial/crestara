@@ -7,37 +7,43 @@ const IndustriesWeSupport = () => {
       title: "Banking, Fintech & Financial Services",
       desc: "Robust POTRAZ compliance, DPIAs for payment gateways, offensive ethical hacking, vulnerability assessments, and advanced FMVA® financial modelling.",
       icon: "account_balance",
-      tag: "FINANCIAL SECTOR"
+      tag: "FINANCIAL SECTOR",
+      image: "/images/industry-finance.jpg"
     },
     {
       title: "Healthcare Providers & Life Sciences",
       desc: "Sensitive patient data protection, health information security, medical device compliance, and clinical operational analytics.",
       icon: "medical_services",
-      tag: "HEALTH & LIFE SCIENCES"
+      tag: "HEALTH & LIFE SCIENCES",
+      image: "/images/industry-healthcare.jpg"
     },
     {
       title: "Retail, E-Commerce & FMCG",
       desc: "Securing customer checkout data, merchant processing privacy, POS network testing, inventory modelling, and working capital advisory.",
       icon: "shopping_cart",
-      tag: "RETAIL & COMMERCE"
+      tag: "RETAIL & COMMERCE",
+      image: "/images/industry-retail.jpg"
     },
     {
       title: "Telecommunications & Technology",
       desc: "POTRAZ registration, lawful data processing registers, high-volume cloud security audits, and penetration testing.",
       icon: "cell_tower",
-      tag: "TECH & TELECOMS"
+      tag: "TECH & TELECOMS",
+      image: "/images/industry-tech.jpg"
     },
     {
       title: "NGOs, Donors & Development Agencies",
       desc: "Beneficiary data protection frameworks, donor-mandated cyber hygiene, forensic reviews, and grant budget variance models.",
       icon: "volunteer_activism",
-      tag: "DEVELOPMENT & NGOS"
+      tag: "DEVELOPMENT & NGOS",
+      image: "/images/industry-ngo.jpg"
     },
     {
       title: "Corporations & Growing SMEs",
       desc: "Integrated monthly retainers combining outsourced DPO governance, ongoing cybersecurity check-ins, and fractional CFO dashboards.",
       icon: "domain",
-      tag: "CORPORATE & SMES"
+      tag: "CORPORATE & SMES",
+      image: "/images/industry-corporate.jpg"
     }
   ];
 
@@ -68,34 +74,50 @@ const IndustriesWeSupport = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08, duration: 0.5 }}
-              className="bg-[#FAF7F2] rounded-3xl p-8 border border-[#F2E5C6]/80 hover:border-[#75162D] hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-[#FAF7F2] rounded-3xl p-5 sm:p-6 border border-[#F2E5C6]/80 hover:border-[#75162D] hover:bg-white hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group overflow-hidden"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#75162D] bg-[#75162D]/10 px-3 py-1 rounded-full border border-[#75162D]/20">
-                    {ind.tag}
-                  </span>
-                  <div className="w-12 h-12 rounded-2xl bg-[#3B010B] text-[#F2D9A0] flex items-center justify-center group-hover:bg-[#75162D] group-hover:text-white transition-colors shadow-md">
-                    <span className="material-symbols-outlined text-xl">{ind.icon}</span>
+              <div className="space-y-4 flex-1 flex flex-col">
+                {/* Sector Image Header */}
+                <div className="relative h-48 sm:h-52 w-full rounded-2xl overflow-hidden bg-[#3B010B]/5 border border-[#F2E5C6]/60 shadow-inner">
+                  <img 
+                    src={ind.image} 
+                    alt={ind.title}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1C0006]/75 via-[#1C0006]/15 to-transparent pointer-events-none" />
+                  
+                  {/* Floating Tag */}
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-white bg-[#3B010B]/90 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 shadow-md">
+                      {ind.tag}
+                    </span>
+                  </div>
+
+                  {/* Floating Icon */}
+                  <div className="absolute bottom-3 right-3 z-10">
+                    <div className="w-10 h-10 rounded-xl bg-white/95 backdrop-blur-md text-[#3B010B] flex items-center justify-center group-hover:bg-[#75162D] group-hover:text-[#F2D9A0] transition-all shadow-lg border border-white/40">
+                      <span className="material-symbols-outlined text-xl">{ind.icon}</span>
+                    </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-[#3B010B] group-hover:text-[#75162D] transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-[#3B010B] group-hover:text-[#75162D] transition-colors leading-snug">
                   {ind.title}
                 </h3>
 
-                <p className="text-gray-600 text-xs sm:text-sm font-light leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm font-light leading-relaxed flex-1">
                   {ind.desc}
                 </p>
               </div>
 
-              <div className="pt-6 mt-4 border-t border-[#F2E5C6]/80 flex items-center justify-between">
+              <div className="pt-5 mt-6 border-t border-[#F2E5C6]/80 flex items-center justify-between">
                 <Link 
                   to="/services" 
-                  className="text-xs font-bold text-[#3B010B] group-hover:text-[#75162D] flex items-center gap-1 uppercase tracking-wider transition-colors"
+                  className="text-xs font-bold text-[#3B010B] group-hover:text-[#75162D] flex items-center gap-1.5 uppercase tracking-wider transition-colors"
                 >
-                  <span>Explore Services</span>
-                  <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  <span>Explore Sector Advisory</span>
+                  <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                 </Link>
               </div>
             </motion.div>
