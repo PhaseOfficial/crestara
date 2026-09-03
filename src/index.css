@@ -169,6 +169,33 @@ body {
   animation: crestaraHeroGradient 20s ease infinite;
 }
 
+/* Semi-transparent Moving Gradient Overlay for Hero Image Backgrounds */
+@keyframes movingGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-moving-gradient {
+  background: linear-gradient(
+    -45deg,
+    rgba(250, 247, 242, 0.76),
+    rgba(242, 229, 198, 0.62),
+    rgba(242, 217, 160, 0.54),
+    rgba(235, 215, 170, 0.62),
+    rgba(117, 22, 45, 0.16),
+    rgba(250, 240, 217, 0.70)
+  );
+  background-size: 300% 300%;
+  animation: movingGradientFlow 12s ease infinite;
+}
+
 .animate-champagne-gradient {
   background: linear-gradient(135deg, #FAF7F2 0%, #F2E5C6 40%, #F2D9A0 100%);
 }

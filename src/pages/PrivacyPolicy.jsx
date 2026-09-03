@@ -185,7 +185,24 @@ const PrivacyPolicy = () => {
       />
 
       {/* Hero Header */}
-      <div className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 text-[#3B010B] py-16 px-6 md:px-12 border-b border-[#F2D9A0] relative overflow-hidden animate-hero-gradient">
+      <div className="text-[#3B010B] py-16 px-6 md:px-12 border-b border-[#F2D9A0] relative overflow-hidden">
+        {/* Background Legal Integrity Photo Layer & Moving Gradient Overlay */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <img
+            src="/images/hero-legal.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-35 filter brightness-105 contrast-110 mix-blend-multiply"
+          />
+          {/* Animated Moving Champagne/Gold Gradient Overlay */}
+          <div className="absolute inset-0 animate-moving-gradient opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/80 via-transparent to-[#F2E5C6]/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF7F2]/30 to-[#FAF7F2]" />
+        </div>
+
+        {/* Background Texture Overlays */}
+        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none z-[1]" />
+        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none z-[1]" />
+
         <div className="max-w-5xl mx-auto space-y-4 relative z-10">
           <Link
             to="/"

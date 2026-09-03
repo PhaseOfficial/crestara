@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 import SEO from "../components/common/SEO";
 
 const Contact = () => {
@@ -82,10 +82,23 @@ const Contact = () => {
       />
 
       {/* Hero Header */}
-      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 animate-hero-gradient text-[#3B010B] relative overflow-hidden text-center space-y-6 border-b border-[#F2D9A0]">
+      <section className="py-20 px-6 md:px-12 text-[#3B010B] relative overflow-hidden text-center space-y-6 border-b border-[#F2D9A0]">
+        {/* Background Client Desk Photo Layer & Moving Gradient Overlay */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <img
+            src="/images/hero-contact.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-100"
+          />
+          {/* Animated Moving Champagne/Gold Gradient Overlay */}
+          <div className="absolute inset-0 animate-moving-gradient opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/75 via-transparent to-[#F2E5C6]/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF7F2]/30 to-[#FAF7F2]" />
+        </div>
+
         {/* Background Texture Overlays */}
-        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none" />
-        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none" />
+        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none z-[1]" />
+        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none z-[1]" />
 
         <div className="max-w-5xl mx-auto relative z-10 space-y-4">
           <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-xs font-display">
@@ -121,7 +134,7 @@ const Contact = () => {
             {/* Visual Corporate Desk Banner */}
             <div className="relative h-36 rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-md">
               <img
-                src="/images/contact-office.jpg"
+                src="/images/hero-contact.jpg"
                 alt="Crestara Advisory Group Client Engagement Desk"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -155,15 +168,24 @@ const Contact = () => {
                   Harare, Zimbabwe • Southern Africa • International Client Support
                 </p>
               </div>
-              <div className="pt-2">
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <a 
                   href="https://wa.me/263775040725?text=Hello%20Crestara%20Advisory%20Group%2C%20I%20would%20like%20to%20request%20an%20advisory%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-white text-[#3B010B] border-2 border-[#25D366]/50 py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-white hover:border-[#25D366] hover:shadow-xl transition-all flex items-center justify-center gap-2 shadow-sm font-display"
+                  className="bg-white text-[#3B010B] border-2 border-[#25D366]/50 py-3 px-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:border-[#25D366] hover:shadow-lg transition-all flex items-center justify-center gap-2 shadow-sm font-display"
                 >
-                  <FaWhatsapp className="text-lg text-[#25D366]" />
-                  <span>Instant WhatsApp Advisory</span>
+                  <FaWhatsapp className="text-lg text-[#25D366] flex-shrink-0" />
+                  <span>WhatsApp Desk</span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/crestara-advisory-group/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-[#3B010B] border-2 border-[#0A66C2]/40 py-3 px-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:border-[#0A66C2] hover:bg-[#0A66C2]/5 hover:shadow-lg transition-all flex items-center justify-center gap-2 shadow-sm font-display"
+                >
+                  <FaLinkedinIn className="text-lg text-[#0A66C2] flex-shrink-0" />
+                  <span>LinkedIn Profile</span>
                 </a>
               </div>
             </div>

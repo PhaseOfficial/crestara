@@ -19,10 +19,23 @@ const About = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden text-[#3B010B] bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-20 px-6 md:px-12 animate-hero-gradient border-b border-[#F2D9A0]">
+      <section className="relative overflow-hidden text-[#3B010B] py-20 px-6 md:px-12 border-b border-[#F2D9A0]">
+        {/* Background Team Photo Layer & Moving Gradient Overlay */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <img
+            src="/images/hero-about.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-100"
+          />
+          {/* Animated Moving Champagne/Gold Gradient Overlay */}
+          <div className="absolute inset-0 animate-moving-gradient opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/75 via-transparent to-[#F2E5C6]/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF7F2]/30 to-[#FAF7F2]" />
+        </div>
+
         {/* Background Texture Overlays */}
-        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none" />
-        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none" />
+        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none z-[1]" />
+        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none z-[1]" />
 
         <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-xs font-display">
@@ -80,9 +93,9 @@ const About = () => {
             className="relative rounded-3xl overflow-hidden border-2 border-[#F2D9A0] shadow-2xl h-56 sm:h-72 mt-8"
           >
             <img
-              src="/images/team-collaboration.jpg"
-              alt="Crestara Advisory Group Executive Boardroom & Strategy Consultation"
-              className="w-full h-full object-cover"
+              src="/images/team-advisory.jpg"
+              alt="Crestara Advisory Group Multidisciplinary Advisory Council"
+              className="w-full h-full object-cover object-center"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#3B010B]/80 via-transparent to-transparent flex items-end p-6 sm:p-8">

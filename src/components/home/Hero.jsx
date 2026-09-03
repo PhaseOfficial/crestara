@@ -5,14 +5,27 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
   return (
-    <section className="relative min-h-screen flex items-center pt-36 pb-24 px-6 md:px-12 overflow-hidden animate-hero-gradient text-[#3B010B] border-b border-[#F2D9A0]">
+    <section className="relative min-h-screen flex items-center pt-36 pb-24 px-6 md:px-12 overflow-hidden text-[#3B010B] border-b border-[#F2D9A0]">
+      {/* Background Architectural Photo Layer & Moving Gradient Overlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <img
+          src="/images/hero-architecture.jpg"
+          alt=""
+          className="w-full h-full object-cover object-center opacity-100"
+        />
+        {/* Animated Moving Champagne/Gold Gradient Overlay */}
+        <div className="absolute inset-0 animate-moving-gradient opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/75 via-transparent to-[#F2E5C6]/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF7F2]/30 to-[#FAF7F2]" />
+      </div>
+
       {/* Texture Grain & Grid Atmospheric Overlays */}
-      <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none" />
-      <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none z-[1]" />
 
       {/* Subtle Warm Amber & Champagne Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F2D9A0]/35 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-[#F2E5C6]/60 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F2D9A0]/30 rounded-full blur-3xl pointer-events-none z-[1]"></div>
+      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-[#F2E5C6]/50 rounded-full blur-3xl pointer-events-none z-[1]"></div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
         
@@ -88,9 +101,9 @@ const Hero = ({ fadeInUp, staggerContainer, floatAnimation }) => {
             {/* Top Corporate Visual Header */}
             <div className="relative h-28 sm:h-32 rounded-2xl overflow-hidden border border-[#F2D9A0] shadow-sm">
               <img
-                src="/images/hero-architecture.jpg"
-                alt="Crestara Advisory Group Corporate Headquarters"
-                className="w-full h-full object-cover"
+                src="/images/corporate-resilience.jpg"
+                alt="Crestara Advisory Group Corporate Resilience Architecture"
+                className="w-full h-full object-cover object-center"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#3B010B]/85 via-[#75162D]/65 to-transparent flex items-center p-4 sm:p-5">

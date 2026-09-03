@@ -129,7 +129,24 @@ const Careers = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-[#FAF7F2] via-[#F2E5C6] to-[#F2D9A0]/60 py-20 px-6 md:px-12 text-[#3B010B] animate-hero-gradient relative overflow-hidden border-b border-[#F2D9A0] text-center">
+      <section className="py-20 px-6 md:px-12 text-[#3B010B] relative overflow-hidden border-b border-[#F2D9A0] text-center">
+        {/* Background Workspace Photo Layer & Moving Gradient Overlay */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <img
+            src="/images/hero-careers.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center opacity-100"
+          />
+          {/* Animated Moving Champagne/Gold Gradient Overlay */}
+          <div className="absolute inset-0 animate-moving-gradient opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/75 via-transparent to-[#F2E5C6]/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAF7F2]/30 to-[#FAF7F2]" />
+        </div>
+
+        {/* Background Texture Overlays */}
+        <div className="absolute inset-0 bg-texture-grain opacity-80 pointer-events-none z-[1]" />
+        <div className="absolute inset-0 bg-texture-grid opacity-50 pointer-events-none z-[1]" />
+
         <div className="max-w-5xl mx-auto relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 text-[#75162D] text-xs font-bold uppercase tracking-widest bg-[#F2D9A0]/50 px-4 py-1.5 rounded-full border border-[#75162D]/30 backdrop-blur-md shadow-sm font-display">
             <span className="material-symbols-outlined text-sm text-[#75162D]">work</span>

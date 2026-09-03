@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -48,6 +48,16 @@ const Footer = () => {
               aria-label="WhatsApp"
             >
               <FaWhatsapp size={20} className="text-[#25D366]" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/crestara-advisory-group/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-10 h-10 rounded-xl bg-white text-[#0A66C2] border border-[#0A66C2]/40 flex items-center justify-center hover:scale-105 hover:border-[#0A66C2] hover:bg-[#0A66C2]/5 transition-all shadow-sm"
+              title="Connect with Crestara Advisory Group on LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn size={18} className="text-[#0A66C2]" />
             </a>
             <div className="text-xs text-[#3B010B]">
               <span className="text-[#75162D] font-bold block font-display">Executive Advisory Desk</span>

@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 const CrestaraTextLogo = ({ isDark = false }) => (
   <div className="flex flex-col select-none group">
@@ -73,6 +73,17 @@ const Header = () => {
             <FaWhatsapp className="text-xs sm:text-sm text-[#25D366]" />
             <span className="hidden xs:inline">WhatsApp Desk (+263 775 040 725)</span>
             <span className="xs:hidden">WhatsApp</span>
+          </a>
+          <span className="text-[#75162D]/30">|</span>
+          <a
+            href="https://www.linkedin.com/company/crestara-advisory-group/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 sm:gap-1.5 text-[#0A66C2] hover:text-[#75162D] transition-colors font-bold whitespace-nowrap"
+            title="Crestara Advisory Group on LinkedIn"
+          >
+            <FaLinkedinIn className="text-xs sm:text-sm text-[#0A66C2]" />
+            <span className="hidden sm:inline">LinkedIn</span>
           </a>
         </div>
       </div>
@@ -190,6 +201,16 @@ const Header = () => {
                 >
                   <FaWhatsapp className="text-lg text-[#25D366]" />
                   WHATSAPP ADVISORY DESK
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/crestara-advisory-group/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={toggleMenu}
+                  className="flex items-center justify-center gap-2 bg-white text-[#3B010B] border-2 border-[#0A66C2]/40 p-3.5 rounded-xl font-bold uppercase text-center text-xs shadow-sm hover:border-[#0A66C2] transition-all font-display"
+                >
+                  <FaLinkedinIn className="text-lg text-[#0A66C2]" />
+                  LINKEDIN COMPANY PAGE
                 </a>
                 <Link 
                   to="/contact" 
