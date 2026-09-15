@@ -1,6 +1,6 @@
-﻿# ==============================================================================
-# Elysian Consulting Ltd - Production Apache / cPanel Configuration
-# Domain: www.elysianglobalservices.com
+# ==============================================================================
+# Crestara Advisory Group - Production Apache / cPanel Configuration
+# Domain: www.crestaraadvisorygroup.com
 # High-Performance SPA Routing, HTTPS & WWW Canonicalization, Compression & Caching
 # ==============================================================================
 
@@ -32,9 +32,9 @@ AddDefaultCharset UTF-8
   RewriteEngine On
   RewriteBase /
 
-  # Redirect non-www to www for elysianglobalservices.com
-  RewriteCond %{HTTP_HOST} ^elysianglobalservices\.com [NC]
-  RewriteRule ^(.*)$ https://www.elysianglobalservices.com/$1 [L,R=301]
+  # Redirect non-www to www for crestaraadvisorygroup.com
+  RewriteCond %{HTTP_HOST} ^crestaraadvisorygroup\.com [NC]
+  RewriteRule ^(.*)$ https://www.crestaraadvisorygroup.com/$1 [L,R=301]
 
   # Redirect HTTP to HTTPS (standard for SSL-enabled cPanel)
   RewriteCond %{HTTPS} off

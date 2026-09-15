@@ -1,9 +1,9 @@
-﻿param (
+param (
     [Parameter(Mandatory=$true)]
     [string]$ApiToken,
 
     [string]$ServerIp = "104.160.240.35",
-    [string]$Domain = "elysianglobalservices.com"
+    [string]$Domain = "crestaraadvisorygroup.com"
 )
 
 $headers = @{

@@ -1,11 +1,13 @@
 {
-  "name": "landing-page",
+  "name": "crestara",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:cpanel": "npm run build && npm run package:cpanel",
+    "package:cpanel": "powershell -ExecutionPolicy Bypass -File ./scripts/package-cpanel.ps1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "deploy:cf": "wrangler pages deploy dist",
