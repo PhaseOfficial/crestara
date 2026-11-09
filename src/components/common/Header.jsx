@@ -135,6 +135,16 @@ const Header = () => {
         </nav>
         
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <a
+            href="https://crm.crestaraadvisorygroup.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#75162D] hover:text-[#3B010B] px-3.5 py-2 rounded-xl border border-[#75162D]/30 hover:border-[#75162D] hover:bg-[#F2E5C6]/40 transition-all font-display"
+            title="Login to CRM"
+          >
+            <span className="material-symbols-outlined text-sm sm:text-base">lock</span>
+            <span>Login</span>
+          </a>
           <Link 
             to="/contact" 
             className="bg-[#75162D] text-[#F2E5C6] font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm hover:bg-[#3B010B] hover:text-[#F2D9A0] transition-all flex items-center gap-1.5 shadow-md border border-[#F2D9A0]/50 font-display"
@@ -221,6 +231,16 @@ const Header = () => {
                 >
                   <FaLinkedinIn className="text-lg text-[#0A66C2]" />
                   LINKEDIN COMPANY PAGE
+                </a>
+                <a 
+                  href="https://crm.crestaraadvisorygroup.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={toggleMenu}
+                  className="flex items-center justify-center gap-2 bg-[#F2D9A0]/50 text-[#75162D] border border-[#75162D]/30 p-3.5 rounded-xl font-bold uppercase text-center text-xs shadow-sm hover:bg-[#F2D9A0] transition-all font-display"
+                >
+                  <span className="material-symbols-outlined text-sm">lock</span>
+                  LOGIN (CRM)
                 </a>
                 <Link 
                   to="/contact" 

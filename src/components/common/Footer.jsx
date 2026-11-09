@@ -81,6 +81,17 @@ const Footer = () => {
             <li><Link to="/services" className="hover:text-[#75162D] transition-colors">Services</Link></li>
             <li><Link to="/careers" className="hover:text-[#75162D] transition-colors font-medium text-[#75162D]">Careers</Link></li>
             <li><Link to="/contact" className="hover:text-[#75162D] transition-colors">Contact Us</Link></li>
+            <li>
+              <a
+                href="https://crm.crestaraadvisorygroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#75162D] transition-colors flex items-center gap-1 text-[#75162D] font-medium"
+              >
+                <span>Login</span>
+                <span className="material-symbols-outlined text-[12px]">open_in_new</span>
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -166,14 +177,35 @@ const Footer = () => {
 
       {/* Bottom Bar with Compliance Statement & Copyright */}
       <div className="max-w-7xl mx-auto mt-6 pt-6 border-t border-[#F2D9A0]/60 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
           <p className="font-semibold text-[#3B010B]">© 2026 Crestara Advisory Group. All rights reserved.</p>
+          <span className="hidden sm:inline text-[#75162D]/30">•</span>
+          <p className="text-gray-500">
+            Website by{" "}
+            <a
+              href="https://web.redcupseries.co.zw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#75162D] hover:underline font-medium transition-colors"
+            >
+              Red Cup Series
+            </a>
+          </p>
         </div>
         <div className="flex flex-wrap justify-center gap-5 text-xs text-[#75162D] font-medium">
           <Link to="/privacy-policy" className="hover:text-[#3B010B] transition-colors">Privacy Notice</Link>
           <Link to="/terms-of-service" className="hover:text-[#3B010B] transition-colors">Terms of Use</Link>
           <Link to="/cookie-policy" className="hover:text-[#3B010B] transition-colors">Cookie Policy</Link>
           <Link to="/disclaimer" className="hover:text-[#3B010B] transition-colors">Disclaimer</Link>
+          <a
+            href="https://crm.crestaraadvisorygroup.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#3B010B] transition-colors inline-flex items-center gap-1 font-semibold"
+          >
+            <span>Login</span>
+            <span className="material-symbols-outlined text-[11px]">open_in_new</span>
+          </a>
         </div>
       </div>
     </footer>
